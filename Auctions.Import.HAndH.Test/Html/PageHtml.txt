@@ -1,0 +1,539 @@
+﻿
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head><title>
+H&H - Auctioneers of Classic Motor Cars, Motorcycles, Bicycles, Watches &amp; Automobilia - Auction calendar
+</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="stylesheet" type="text/css" href="/Templates/hh//Css/salesandsearch.css" />
+	<link rel="stylesheet" type="text/css" href="/Modules/DropDownMenu/Css/menu.css" />
+	</head>
+	<body>
+	    <link rel="stylesheet" type="text/css" href='/Templates/hh/css/main.css?' />
+		<link rel="stylesheet" type="text/css" href='/Templates/hh/css/general.css' />
+		<link rel="stylesheet" type="text/css" href='/Templates/hh/css/blog.css' />
+		<!--[if IE 6]>
+           <link rel="stylesheet" type="text/css" href='/Templates/hh/css/ie6.css' />
+        <![endif]-->
+		<script type="text/javascript" src='/lightbox/js/prototype.js'> </script>
+        <script type="text/javascript" src='/lightbox/js/scriptaculous.js?load=effects,builder'> </script>
+        <script type="text/javascript" src='/lightbox/js/lightbox.js '></script>
+        <link rel="stylesheet" href='/lightbox/css/lightbox.css' type="text/css" media="screen" />
+
+	    <form name="aspnetForm" method="post" action="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTIzNjIzMDUzNg9kFgJmD2QWAgIBD2QWBAIFD2QWAmYPZBYCZg9kFgQCAQ8QDxYEHgdDaGVja2VkZx4EVGV4dAURRm9ydGhjb21pbmcgU2FsZXNkZGRkAgMPEA8WAh8BBQ5QcmV2aW91cyBTYWxlc2RkZGQCEw9kFgJmD2QWAmYPZBYIAgEPFgIeCWlubmVyaHRtbAUrSW1wZXJpYWwgV2FyIE11c2V1bSBEdXhmb3JkOiAyNC8wNC8yMDE0IENhcmQCAw9kFgJmDw8WBB4LQ3VycmVudFBhZ2UFATEeCVBhZ2VDb3VudAUBMRYCHgVjbGFzcwUSU2VhcmNoUmVzdWx0c1BhZ2VyZAIFD2QWBmYPDxYEHwMFATEfBAUCMTAWAh8FBRJTZWFyY2hSZXN1bHRzUGFnZXJkAgIPFgIeC18hSXRlbUNvdW50AgwWGmYPZBYEAgEPZBYCZg8VAUYvQXVjdGlvbnMvMjQtMDQtMjAxNC1JbXBlcmlhbFdhck11c2V1bUR1eGZvcmQtMTM2NS5hc3B4P3NvcnQ9TG90TnVtYmVyZAICDxUCRS9BdWN0aW9ucy8yNC0wNC0yMDE0LUltcGVyaWFsV2FyTXVzZXVtRHV4Zm9yZC0xMzY1LmFzcHg/c29ydD1Mb3RUaXRsZUYvQXVjdGlvbnMvMjQtMDQtMjAxNC1JbXBlcmlhbFdhck11c2V1bUR1eGZvcmQtMTM2NS5hc3B4P3NvcnQ9QmlkU3RhdHVzZAIBD2QWBmYPFQQHbGlnaHRlclovQXVjdGlvbnMvMjQtMDQtMjAxNC1JbXBlcmlhbFdhck11c2V1bUR1eGZvcmQtMTM2NS8xOTYwUm9sbHMtUm95Y2VTaWx2ZXJDbG91ZElJLTM3Njg0LmFzcHgfL0ltYWdlcy9SZXBvcnQvMTQxQy80OTc3NnNtLmpwZyAxOTYwIFJvbGxzLVJveWNlIFNpbHZlciBDbG91ZCBJSWQCAQ9kFgJmDxUBATFkAgIPFQNaL0F1Y3Rpb25zLzI0LTA0LTIwMTQtSW1wZXJpYWxXYXJNdXNldW1EdXhmb3JkLTEzNjUvMTk2MFJvbGxzLVJveWNlU2lsdmVyQ2xvdWRJSS0zNzY4NC5hc3B4IDE5NjAgUm9sbHMtUm95Y2UgU2lsdmVyIENsb3VkIElJFVNvbGQgRm9yICZwb3VuZDsyLDQ2NGQCAg9kFgZmDxUEBmRhcmtlclUvQXVjdGlvbnMvMjQtMDQtMjAxNC1JbXBlcmlhbFdhck11c2V1bUR1eGZvcmQtMTM2NS8xOTg1TGFuZFJvdmVyOTAyNURpZXNlbC0zNzY2NC5hc3B4Hy9JbWFnZXMvUmVwb3J0LzE0MUMvNDk3NTZzbS5qcGcdMTk4NSBMYW5kIFJvdmVyIDkwIDIuNSBEaWVzZWxkAgEPZBYCZg8VAQEyZAICDxUDVS9BdWN0aW9ucy8yNC0wNC0yMDE0LUltcGVyaWFsV2FyTXVzZXVtRHV4Zm9yZC0xMzY1LzE5ODVMYW5kUm92ZXI5MDI1RGllc2VsLTM3NjY0LmFzcHgdMTk4NSBMYW5kIFJvdmVyIDkwIDIuNSBEaWVzZWwVU29sZCBGb3IgJnBvdW5kOzQsOTI4ZAIDD2QWBmYPFQQHbGlnaHRlclIvQXVjdGlvbnMvMjQtMDQtMjAxNC1JbXBlcmlhbFdhck11c2V1bUR1eGZvcmQtMTM2NS8xOTk0RGFpbWxlckRvdWJsZVNpeC0zNzczNS5hc3B4Hy9JbWFnZXMvUmVwb3J0LzE0MUMvNDk4MThzbS5qcGcXMTk5NCBEYWltbGVyIERvdWJsZSBTaXhkAgEPZBYCZg8VAQEzZAICDxUDUi9BdWN0aW9ucy8yNC0wNC0yMDE0LUltcGVyaWFsV2FyTXVzZXVtRHV4Zm9yZC0xMzY1LzE5OTREYWltbGVyRG91YmxlU2l4LTM3NzM1LmFzcHgXMTk5NCBEYWltbGVyIERvdWJsZSBTaXgVU29sZCBGb3IgJnBvdW5kOzUsNDg4ZAIED2QWBmYPFQQGZGFya2VyWS9BdWN0aW9ucy8yNC0wNC0yMDE0LUltcGVyaWFsV2FyTXVzZXVtRHV4Zm9yZC0xMzY1LzE5NTRNZXJjZWRlcy1CZW56MzAwQlNhbG9vbi0zNzY5My5hc3B4Hy9JbWFnZXMvUmVwb3J0LzE0MUMvNDk3ODNzbS5qcGcfMTk1NCBNZXJjZWRlcy1CZW56IDMwMCBCIFNhbG9vbmQCAQ9kFgJmDxUBATRkAgIPFQNZL0F1Y3Rpb25zLzI0LTA0LTIwMTQtSW1wZXJpYWxXYXJNdXNldW1EdXhmb3JkLTEzNjUvMTk1NE1lcmNlZGVzLUJlbnozMDBCU2Fsb29uLTM3NjkzLmFzcHgfMTk1NCBNZXJjZWRlcy1CZW56IDMwMCBCIFNhbG9vbhVTb2xkIEZvciAmcG91bmQ7Nyw2MTZkAgUPZBYGZg8VBAdsaWdodGVyUi9BdWN0aW9ucy8yNC0wNC0yMDE0LUltcGVyaWFsV2FyTXVzZXVtRHV4Zm9yZC0xMzY1LzE5NjFBbHZpc1REMjFTcGVjaWFsLTM3Njg1LmFzcHgfL0ltYWdlcy9SZXBvcnQvMTQxQy80OTc3N3NtLmpwZxcxOTYxIEFsdmlzIFREMjEgU3BlY2lhbGQCAQ9kFgJmDxUBATVkAgIPFQNSL0F1Y3Rpb25zLzI0LTA0LTIwMTQtSW1wZXJpYWxXYXJNdXNldW1EdXhmb3JkLTEzNjUvMTk2MUFsdmlzVEQyMVNwZWNpYWwtMzc2ODUuYXNweBcxOTYxIEFsdmlzIFREMjEgU3BlY2lhbBZTb2xkIEZvciAmcG91bmQ7MTUsNDAwZAIGD2QWBmYPFQQGZGFya2VyUi9BdWN0aW9ucy8yNC0wNC0yMDE0LUltcGVyaWFsV2FyTXVzZXVtRHV4Zm9yZC0xMzY1LzE5NjFNZXJjZWRlcy1CZW56MTgwLTM3NjI2LmFzcHgfL0ltYWdlcy9SZXBvcnQvMTQxQy80OTcyOHNtLmpwZxYxOTYxIE1lcmNlZGVzLUJlbnogMTgwZAIBD2QWAmYPFQEBNmQCAg8VA1IvQXVjdGlvbnMvMjQtMDQtMjAxNC1JbXBlcmlhbFdhck11c2V1bUR1eGZvcmQtMTM2NS8xOTYxTWVyY2VkZXMtQmVuejE4MC0zNzYyNi5hc3B4FjE5NjEgTWVyY2VkZXMtQmVueiAxODAITm90IFNvbGRkAgcPZBYGZg8VBAdsaWdodGVySy9BdWN0aW9ucy8yNC0wNC0yMDE0LUltcGVyaWFsV2FyTXVzZXVtRHV4Zm9yZC0xMzY1LzE5NDhNb3JnYW40LTQtMzc3NjIuYXNweB8vSW1hZ2VzL1JlcG9ydC8xNDFDLzQ5ODQ2c20uanBnDzE5NDggTW9yZ2FuIDQtNGQCAQ9kFgJmDxUBATdkAgIPFQNLL0F1Y3Rpb25zLzI0LTA0LTIwMTQtSW1wZXJpYWxXYXJNdXNldW1EdXhmb3JkLTEzNjUvMTk0OE1vcmdhbjQtNC0zNzc2Mi5hc3B4DzE5NDggTW9yZ2FuIDQtNAlXaXRoZHJhd25kAggPZBYGZg8VBAZkYXJrZXJUL0F1Y3Rpb25zLzI0LTA0LTIwMTQtSW1wZXJpYWxXYXJNdXNldW1EdXhmb3JkLTEzNjUvMTkzM01vcmdhblRocmVlV2hlZWxlci0zNzc2MC5hc3B4Hy9JbWFnZXMvUmVwb3J0LzE0MUMvNDk4NDRzbS5qcGcZMTkzMyBNb3JnYW4gVGhyZWUgV2hlZWxlcmQCAQ9kFgJmDxUBAThkAgIPFQNUL0F1Y3Rpb25zLzI0LTA0LTIwMTQtSW1wZXJpYWxXYXJNdXNldW1EdXhmb3JkLTEzNjUvMTkzM01vcmdhblRocmVlV2hlZWxlci0zNzc2MC5hc3B4GTE5MzMgTW9yZ2FuIFRocmVlIFdoZWVsZXIJV2l0aGRyYXduZAIJD2QWBmYPFQQHbGlnaHRlclYvQXVjdGlvbnMvMjQtMDQtMjAxNC1JbXBlcmlhbFdhck11c2V1bUR1eGZvcmQtMTM2NS9Nb3JnYW5UaHJlZVdoZWVsZXJTcGFyZXMtMzc3NjMuYXNweB8vSW1hZ2VzL1JlcG9ydC8xNDFDLzQ5ODQ3c20uanBnHCBNb3JnYW4gVGhyZWUgV2hlZWxlciBTcGFyZXNkAgEPZBYCZg8VAQE5ZAICDxUDVi9BdWN0aW9ucy8yNC0wNC0yMDE0LUltcGVyaWFsV2FyTXVzZXVtRHV4Zm9yZC0xMzY1L01vcmdhblRocmVlV2hlZWxlclNwYXJlcy0zNzc2My5hc3B4HCBNb3JnYW4gVGhyZWUgV2hlZWxlciBTcGFyZXMJV2l0aGRyYXduZAIKD2QWBmYPFQQGZGFya2VyWC9BdWN0aW9ucy8yNC0wNC0yMDE0LUltcGVyaWFsV2FyTXVzZXVtRHV4Zm9yZC0xMzY1LzE5NjNNR0JDb21wZXRpdGlvblJvYWRzdGVyLTM3NzI3LmFzcHgfL0ltYWdlcy9SZXBvcnQvMTQxQy80OTgxMHNtLmpwZx4xOTYzIE1HIEIgQ29tcGV0aXRpb24gUm9hZHN0ZXJkAgEPZBYCZg8VAQIxMGQCAg8VA1gvQXVjdGlvbnMvMjQtMDQtMjAxNC1JbXBlcmlhbFdhck11c2V1bUR1eGZvcmQtMTM2NS8xOTYzTUdCQ29tcGV0aXRpb25Sb2Fkc3Rlci0zNzcyNy5hc3B4HjE5NjMgTUcgQiBDb21wZXRpdGlvbiBSb2Fkc3RlchZTb2xkIEZvciAmcG91bmQ7MTUsOTYwZAILD2QWBmYPFQQHbGlnaHRlcmMvQXVjdGlvbnMvMjQtMDQtMjAxNC1JbXBlcmlhbFdhck11c2V1bUR1eGZvcmQtMTM2NS8xOTQ4TmFzaDQ4NzFBbWJhc3NhZG9yQ3VzdG9tQ2FicmlvbGV0LTM3NjUzLmFzcHgfL0ltYWdlcy9SZXBvcnQvMTQxQy80OTc0OXNtLmpwZyoxOTQ4IE5hc2ggNDg3MSBBbWJhc3NhZG9yIEN1c3RvbSBDYWJyaW9sZXRkAgEPZBYCZg8VAQIxMWQCAg8VA2MvQXVjdGlvbnMvMjQtMDQtMjAxNC1JbXBlcmlhbFdhck11c2V1bUR1eGZvcmQtMTM2NS8xOTQ4TmFzaDQ4NzFBbWJhc3NhZG9yQ3VzdG9tQ2FicmlvbGV0LTM3NjUzLmFzcHgqMTk0OCBOYXNoIDQ4NzEgQW1iYXNzYWRvciBDdXN0b20gQ2FicmlvbGV0FlNvbGQgRm9yICZwb3VuZDszNSwyODBkAgwPZBYGZg8VBAZkYXJrZXJML0F1Y3Rpb25zLzI0LTA0LTIwMTQtSW1wZXJpYWxXYXJNdXNldW1EdXhmb3JkLTEzNjUvMTk1NFRyaXVtcGhUUjItMzc2ODAuYXNweB8vSW1hZ2VzL1JlcG9ydC8xNDFDLzQ5Nzczc20uanBnEDE5NTQgVHJpdW1waCBUUjJkAgEPZBYCZg8VAQIxMmQCAg8VA0wvQXVjdGlvbnMvMjQtMDQtMjAxNC1JbXBlcmlhbFdhck11c2V1bUR1eGZvcmQtMTM2NS8xOTU0VHJpdW1waFRSMi0zNzY4MC5hc3B4EDE5NTQgVHJpdW1waCBUUjIWU29sZCBGb3IgJnBvdW5kOzI2LDg4MGQCBA8PFgQfAwUBMR8EBQIxMBYCHwUFElNlYXJjaFJlc3VsdHNQYWdlcmQCBw8WAh4HVmlzaWJsZWhkZP2meBCA8YTIwitMlsmsaq/EezmO" />
+</div>
+
+
+<script src="/Modules/DropDownMenu/Script/menu.js" type="text/javascript"></script>
+<div>
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+</div>
+			<div id="main">
+	           <div id="container">
+			   			<div id="header">
+	             			   <div id="headerSide">
+                               	     <div id="loginbox">
+                               	        
+	        							
+		        					</div>
+		        					
+		        					<div class="clear"></div>
+									<div id="searchbox">
+		        						<div class="moduletools"></div><div class="section"><div onkeypress="javascript:return WebForm_FireDefaultButton(event, 'p_ctl03_btnSearch')">
+
+	
+	
+
+	<input name="p$ctl03$txtSearch" type="text" value="Search" id="p_ctl03_txtSearch" class="textinput searchit" onfocus="if (this.value == 'Search') this.value = '';" onblur="if (this.value == '') this.value = 'Search';" />
+	<input type="submit" name="p$ctl03$btnSearch" value="go" id="p_ctl03_btnSearch" class="button searchgobutton" />
+	
+
+</div>
+
+</div>
+		        					</div>
+							   </div>
+							 <!--  <a href="/"><img src="/templates/hh/img/glow/logo_ie.png" width="160" height="83" alt="H and H" id="logo" /></a> -->
+						</div>
+	        			<div id="menubar">
+	        				<div class="moduletools"></div><div class="section">
+
+<div id="menu_area" class="menustyle">
+    <ul><li><a href="/home.aspx">Home</a></li><li class="menu_10"><a rel="dropdown_10" href="/home/departments.aspx">Departments</a><div class="dropmenudiv" id="dropdown_10"><a id="firstItem" class="menu_MotorCars" href="/home/departments/motor-cars.aspx">Motor Cars</a><a class="menu_Motorcycles" href="/home/departments/motorcycles.aspx">Motorcycles</a><a class="menu_Automobilia" href="/home/departments/automobilia.aspx">Automobilia</a><a class="menu_Bicycles" href="/home/departments/bicycles.aspx">Bicycles</a><a class="menu_Registrations" href="/home/departments/registrations.aspx">Registrations</a><a class="menu_Storage" href="/about-us/office-storage.aspx" target="_self">Storage</a><a class="menu_PrivateSales" href="/home/departments/private-sales.aspx">Private Sales</a><a class="menu_TenderSales" href="/home/departments/tender-sales.aspx">Tender Sales</a></div></li><li class="menu_66"><a rel="dropdown_66" href="/home/how_to.aspx">How To</a><div class="dropmenudiv" id="dropdown_66"><a id="firstItem" class="menu_HowtoBuy" href="/home/buyingselling/how-to-buy.aspx">How to Buy</a><a class="menu_HowtoSell" href="/home/buyingselling/how-to-sell.aspx">How to Sell</a><a class="menu_HowtoMeetUs" href="/79/view.aspx" target="_self">How to Meet Us</a><a class="menu_OurCharges" href="/home/buyingselling/our-charges.aspx">Our Charges</a><a class="menu_GeneralNotes" href="/home/buyingselling/general-notes.aspx">General Notes</a><a class="menu_Terms&amp;Conditions" href="/home/buyingselling/terms--conditions.aspx">Terms & Conditions</a></div></li><li class="menu_67"><a rel="dropdown_67" href="/home/aboutus.aspx">About Us</a><div class="dropmenudiv" id="dropdown_67"><a id="firstItem" class="menu_CompanyHistory" href="/home/aboutus/company-history.aspx">Company History</a><a class="menu_WhyH&amp;H" href="/home/aboutus/why-h--h.aspx">Why H&H</a><a class="menu_MeettheTeam" href="/home/aboutus/staff-profiles.aspx">Meet the Team</a><a class="menu_JointheTeam" href="/home/aboutus/join-the-team.aspx">Join the Team</a><a class="menu_Venues" href="/home/aboutus/venues.aspx">Venues</a></div></li><li class="menu_69"><a rel="dropdown_69" href="/24/view.aspx" target="_self">Contact Us</a><div class="dropmenudiv" id="dropdown_69"><a id="firstItem" class="menu_ContactDetails" href="/home/contacts/contact-us-content.aspx">Contact Details</a><a class="menu_PartnersInExcellence" href="/home/contacts/partners.aspx">Partners In Excellence</a></div></li></ul>
+</div>
+ 
+<script type="text/javascript">
+    if (typeof jQuery == 'undefined') { 
+       document.write('<script type="text/javascript" src="/js/jquery-1.2.6.js"></'+'script>');
+    }
+</script>
+<script type="text/javascript">
+     jQuery.noConflict()
+    // Start the drop down function
+	cssdropdown.startchrome("menu_area");
+	
+	// Used to set the state for the top menu item when hovering over the drop down and leaving the drop down
+    function addMouseBehaviour(classname) {
+      var node = document.getElementsByTagName("body")[0];
+      var a = [];
+      var re = new RegExp('\\b' + classname + '\\b');
+      var els = node.getElementsByTagName("*");
+            
+      // get all DIVs with ID = "dropdown"
+      for(var i=0,j=els.length; i<j; i++)
+        if(re.test(els[i].className)){
+            a.push(els[i]);
+        }
+
+      // add the mouse behaviours to all the elements in the drop down
+      for(var y=0, z=a.length; y<z; y++) {
+        //debugger;
+        // For IE
+        if (document.all) {
+            a[y].attachEvent('onmouseover', delegate(a[y],activator), true);
+            a[y].attachEvent('onmouseout', delegate(a[y],desactivator), true);
+        } else {
+            a[y].addEventListener('mouseover', delegate(a[y],activator), true);
+            a[y].addEventListener('mouseout', delegate(a[y],desactivator), true);
+        }
+      }
+    }	
+	
+    function delegate(obj, func) {
+        return function() { return func.apply(obj, arguments); }
+    }
+  
+    // Set active state for menu item  
+    function activator(event){
+        if (timeout){
+            clearInterval(timeout);
+            timeout = null;
+        }
+        var parent = this.parentNode;
+        var myATag = parent.getElementsByTagName("a")[0];
+        myATag.className = "active";
+    }
+    
+    var timeout = null;
+    
+    // Remove active state for menu item  
+    function desactivator(event){
+        timeout = setTimeout(delegate(this,
+            function(){
+                var parent = this.parentNode;
+                var myATag = parent.getElementsByTagName("a")[0];
+                myATag.className = "";
+            }), 10);
+    }    
+
+    addMouseBehaviour("dropmenudiv");
+
+     (function($){
+     $(document).ready(function() {
+        $(".menu_MotorCars").hover(
+            function () {
+  
+                $(this).append($("<ul class='menu-2level'><li><a href='/home/departments/motor-cars.aspx'>Auction Sales</a></li><li><a href='/home/departments/private-sales.aspx'>Private Sales</a></li><li><a href='/home/departments/tender-sales.aspx'>Tender Sales</a></li></ul>"));
+            }, 
+            function () {
+                $(this).find("ul:last").remove();
+            })
+
+        $(".menu_Motorcycles").hover(
+            function () {
+                $(this).append($("<ul class='menu-2level'><li><a href='/home/departments/motorcycles.aspx'>Auction Sales</a></li><li><a href='/home/departments/private-sales.aspx'>Private Sales</a></li></ul>"));
+           }, 
+            function () {
+                $(this).find("ul:last").remove();
+            })
+
+
+        $(".menu_Automobilia").hover(
+            function () {
+                $(this).append($("<ul class='menu-2level'><li><a href='/home/departments/automobilia.aspx'>Auction Sales</a></li></ul>"));
+            }, 
+            function () {
+                $(this).find("ul:last").remove();
+            })
+            
+        $(".menu_Bicycles").hover(
+            function () {
+                $(this).append($("<ul class='menu-2level'><li><a href='/home/departments/bicycles.aspx'>Auction Sales</a></li></ul>"));
+            }, 
+            function () {
+                $(this).find("ul:last").remove();
+            })
+            
+        $(".menu_Registrations").hover(
+            function () {
+                $(this).append($("<ul class='menu-2level'><li><a href='/home/departments/registrations.aspx'>Auction Sales</a></li></ul>"));
+            }, 
+            function () {
+                $(this).find("ul:last").remove();
+            })
+            
+         $(".menu_Watches").hover(
+            function () {
+                $(this).append($("<ul class='menu-2level'><li><a href='/home/departments/watches.aspx'>Auction Sales</a></li></ul>"));
+            }, 
+            function () {
+                $(this).find("ul:last").remove();
+            })
+            
+    });})(jQuery);
+</script>
+</div>
+	        			</div>
+			<div id="maincontainer">
+			    <div id="leftside">
+			        <div class="FrameBorder">
+					    <div class="FrameInset">
+                <div class="moduletools"></div><div class="section">
+<div class="StaticMenu">
+<ul class="submenu">
+	<li><a href="../home/departments/motor-cars.aspx">Motor Cars</a>
+        <ul><li><a id="p_ctl05_hlAuntComing" href="car/forthcoming.aspx">Auction Sales</a></li>
+        
+        <li><a id="p_ctl05_HyperLink1" href="../home/departments/private-sales.aspx">Private Sales</a></li>        
+        <li><a id="p_ctl05_HyperLink2" href="../home/departments/tender-sales.aspx">Tender Sales</a></li>        
+    </ul></li>
+</ul>
+<ul class="submenu">
+	<li><a href="../home/departments/motorcycles.aspx">Motorcycles</a>
+	<ul><li><a id="p_ctl05_HyperLink3" href="motorbike/forthcoming.aspx">Auction Sales</a></li>
+        
+        <li><a id="p_ctl05_HyperLink4" href="../home/departments/private-sales.aspx">Private Sales</a></li>    
+    </ul></li>
+</ul>
+<ul class="submenu">
+	<li><a href="../home/departments/automobilia.aspx">Automobilia</a>
+	<ul><li><a id="p_ctl05_HyperLink5" href="automobilia/forthcoming.aspx">Auction Sales</a></li>
+        
+    </ul></li>
+</ul>
+<ul class="submenu">
+	<li><a href="../home/departments/bicycles.aspx">Bicycles</a>
+	<ul><li><a id="p_ctl05_HyperLink7" href="bicycle/forthcoming.aspx">Auction Sales</a></li>
+        
+    </ul></li>
+</ul>
+<ul class="submenu">
+	<li><a href="../home/departments/registrations.aspx">Registration Numbers</a>
+	<ul><li><a id="p_ctl05_HyperLink8" href="registration/forthcoming.aspx">Auction Sales</a></li>
+        
+        
+    </ul></li>
+</ul>
+<!--ul class="submenu">
+	<li><a href="../home/departments/watches.aspx" id="p_ctl05_A1">Watches</a>
+	<ul><li><a id="p_ctl05_HyperLink9" href="bicycle/forthcoming.aspx">Auction Sales</a></li>
+        
+    </ul></li>
+</ul-->
+</div>
+<style type="text/css">
+    #leftside .submenu{
+        display:none;
+    }
+    #leftside .StaticMenu .submenu{
+        display:block;
+    }
+</style></div>
+<ul class="submenu"><li><a href="/home/sales/order-catalogues.aspx">Catalogues</a></li><li><a href="/about-us/office-storage.aspx">Storage</a></li></ul>
+                
+						</div>
+					</div>
+				    <div id="maincontent_sidenav">
+					    
+						<div id="maincontent_quicknav">
+						    <h3>Quick Links</h3>
+							<ul><li><a href="/auctions/forthcoming.aspx" target="_self">Auction Calendar</a></li><li><a href="/home/buyingselling/how-to-buy.aspx" target="_self">Buying</a></li><li><a href="/home/sales/order-catalogues.aspx">Catalogues</a></li><li><a href="/home/buyingselling/entry-forms.aspx">Entry Forms</a></li><li><a href="/auctions/previous.aspx" target="_self">Previous Results</a></li><li><a href="/home/buyingselling/how-to-buy/bid-live.aspx" target="_self">Bid Live</a></li></ul>
+						</div>
+					</div>
+					<div class="moduletools"></div><div class="section">
+
+<div class="statichtml">
+
+</div></div>
+				</div>
+				<div id="centralseg">
+				    <div id="generalcenter">			    
+				      <div class="moduletools"></div><div class="section">
+<div><p>For further information on any Lot, click on its Title or Thumbnail. Where a Sold price is shown, this includes the Buyers Premium.</p></div>
+<div>
+	<h4 id="p_ctl07_ctl00_ctrlTitle">Imperial War Museum Duxford: 24/04/2014 Car</h4>
+	
+</div>
+<ul id="p_ctl07_ctl00_Listing1_ctrlPagerTop" class="ListingPager" class="SearchResultsPager">
+<li class="Selected"><span>1</span></li> <li class="PagerPage"><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?p=2">2</a></li> <li class="PagerPage"><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?p=3">3</a></li> <li class="PagerPage"><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?p=4">4</a></li> <li class="PagerPage"><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?p=5">5</a></li> <li class="PagerPage"><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?p=6">6</a></li> <li class="PagerPage"><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?p=7">7</a></li> <li class="PagerPage"><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?p=8">8</a></li> <li class="PagerPage"><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?p=9">9</a></li> <li class="PagerPage"><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?p=10">10</a></li> 
+</ul>
+<br class="Clearer"/>
+<table cellspacing="0">
+	<tr>
+		<th></th>
+		<th><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?sort=LotNumber">Lot No.</a></th>
+
+		<th><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?sort=LotTitle">Lot Title</a></th>
+		<th><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?sort=BidStatus">Status</a></th>
+	</tr><tr class="lighter">
+		<td>
+			<a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365/1960Rolls-RoyceSilverCloudII-37684.aspx">
+				<img src="/Images/Report/141C/49776sm.jpg" alt="1960 Rolls-Royce Silver Cloud II" width="85" height="61" />
+			</a>
+		</td>
+		<td>1</td>
+
+		<td><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365/1960Rolls-RoyceSilverCloudII-37684.aspx">1960 Rolls-Royce Silver Cloud II</a></td>
+		<td>Sold For &pound;2,464</td>
+	</tr><tr class="darker">
+		<td>
+			<a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365/1985LandRover9025Diesel-37664.aspx">
+				<img src="/Images/Report/141C/49756sm.jpg" alt="1985 Land Rover 90 2.5 Diesel" width="85" height="61" />
+			</a>
+		</td>
+		<td>2</td>
+
+		<td><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365/1985LandRover9025Diesel-37664.aspx">1985 Land Rover 90 2.5 Diesel</a></td>
+		<td>Sold For &pound;4,928</td>
+	</tr><tr class="lighter">
+		<td>
+			<a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365/1994DaimlerDoubleSix-37735.aspx">
+				<img src="/Images/Report/141C/49818sm.jpg" alt="1994 Daimler Double Six" width="85" height="61" />
+			</a>
+		</td>
+		<td>3</td>
+
+		<td><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365/1994DaimlerDoubleSix-37735.aspx">1994 Daimler Double Six</a></td>
+		<td>Sold For &pound;5,488</td>
+	</tr><tr class="darker">
+		<td>
+			<a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365/1954Mercedes-Benz300BSaloon-37693.aspx">
+				<img src="/Images/Report/141C/49783sm.jpg" alt="1954 Mercedes-Benz 300 B Saloon" width="85" height="61" />
+			</a>
+		</td>
+		<td>4</td>
+
+		<td><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365/1954Mercedes-Benz300BSaloon-37693.aspx">1954 Mercedes-Benz 300 B Saloon</a></td>
+		<td>Sold For &pound;7,616</td>
+	</tr><tr class="lighter">
+		<td>
+			<a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365/1961AlvisTD21Special-37685.aspx">
+				<img src="/Images/Report/141C/49777sm.jpg" alt="1961 Alvis TD21 Special" width="85" height="61" />
+			</a>
+		</td>
+		<td>5</td>
+
+		<td><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365/1961AlvisTD21Special-37685.aspx">1961 Alvis TD21 Special</a></td>
+		<td>Sold For &pound;15,400</td>
+	</tr><tr class="darker">
+		<td>
+			<a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365/1961Mercedes-Benz180-37626.aspx">
+				<img src="/Images/Report/141C/49728sm.jpg" alt="1961 Mercedes-Benz 180" width="85" height="61" />
+			</a>
+		</td>
+		<td>6</td>
+
+		<td><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365/1961Mercedes-Benz180-37626.aspx">1961 Mercedes-Benz 180</a></td>
+		<td>Not Sold</td>
+	</tr><tr class="lighter">
+		<td>
+			<a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365/1948Morgan4-4-37762.aspx">
+				<img src="/Images/Report/141C/49846sm.jpg" alt="1948 Morgan 4-4" width="85" height="61" />
+			</a>
+		</td>
+		<td>7</td>
+
+		<td><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365/1948Morgan4-4-37762.aspx">1948 Morgan 4-4</a></td>
+		<td>Withdrawn</td>
+	</tr><tr class="darker">
+		<td>
+			<a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365/1933MorganThreeWheeler-37760.aspx">
+				<img src="/Images/Report/141C/49844sm.jpg" alt="1933 Morgan Three Wheeler" width="85" height="61" />
+			</a>
+		</td>
+		<td>8</td>
+
+		<td><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365/1933MorganThreeWheeler-37760.aspx">1933 Morgan Three Wheeler</a></td>
+		<td>Withdrawn</td>
+	</tr><tr class="lighter">
+		<td>
+			<a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365/MorganThreeWheelerSpares-37763.aspx">
+				<img src="/Images/Report/141C/49847sm.jpg" alt=" Morgan Three Wheeler Spares" width="85" height="61" />
+			</a>
+		</td>
+		<td>9</td>
+
+		<td><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365/MorganThreeWheelerSpares-37763.aspx"> Morgan Three Wheeler Spares</a></td>
+		<td>Withdrawn</td>
+	</tr><tr class="darker">
+		<td>
+			<a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365/1963MGBCompetitionRoadster-37727.aspx">
+				<img src="/Images/Report/141C/49810sm.jpg" alt="1963 MG B Competition Roadster" width="85" height="61" />
+			</a>
+		</td>
+		<td>10</td>
+
+		<td><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365/1963MGBCompetitionRoadster-37727.aspx">1963 MG B Competition Roadster</a></td>
+		<td>Sold For &pound;15,960</td>
+	</tr><tr class="lighter">
+		<td>
+			<a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365/1948Nash4871AmbassadorCustomCabriolet-37653.aspx">
+				<img src="/Images/Report/141C/49749sm.jpg" alt="1948 Nash 4871 Ambassador Custom Cabriolet" width="85" height="61" />
+			</a>
+		</td>
+		<td>11</td>
+
+		<td><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365/1948Nash4871AmbassadorCustomCabriolet-37653.aspx">1948 Nash 4871 Ambassador Custom Cabriolet</a></td>
+		<td>Sold For &pound;35,280</td>
+	</tr><tr class="darker">
+		<td>
+			<a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365/1954TriumphTR2-37680.aspx">
+				<img src="/Images/Report/141C/49773sm.jpg" alt="1954 Triumph TR2" width="85" height="61" />
+			</a>
+		</td>
+		<td>12</td>
+
+		<td><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365/1954TriumphTR2-37680.aspx">1954 Triumph TR2</a></td>
+		<td>Sold For &pound;26,880</td>
+	</tr></table>
+<ul id="p_ctl07_ctl00_Listing1_ctrlPagerBottom" class="ListingPager" class="SearchResultsPager">
+<li class="Selected"><span>1</span></li> <li class="PagerPage"><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?p=2">2</a></li> <li class="PagerPage"><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?p=3">3</a></li> <li class="PagerPage"><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?p=4">4</a></li> <li class="PagerPage"><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?p=5">5</a></li> <li class="PagerPage"><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?p=6">6</a></li> <li class="PagerPage"><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?p=7">7</a></li> <li class="PagerPage"><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?p=8">8</a></li> <li class="PagerPage"><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?p=9">9</a></li> <li class="PagerPage"><a href="/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?p=10">10</a></li> 
+</ul>
+<br/>
+
+<p class="Clearer TopSpace">Please Note: Although every effort has been made to ensure the accuracy of these particulars no responsibility is taken for error, omission or mis-statement. Imperfections are not stated. Photographs of lots may not be of the actual item described. Buyers should satisfy themselves prior to bidding as to the condition of each lot and should exercise and rely on their own judgment as to whether the lot accords with its descriptions or not.</p>
+</div>
+				      </div>
+				</div>				
+				<div id="rightside">
+					<a href="/15/feed.aspx"><img class="rssicon" src="/templates/hh/img/general/rss.gif" alt="RSS feed" /></a>
+					<div class="moduletools"></div><div class="section"><h3>News</h3>
+<style type="text/css">
+    .genericitem h4 a
+    {
+    	color:Black !important;
+    }
+</style>
+
+		<div class="genericitem">
+			<h4><a id="p_ctl08_rptFeedItems_ctl00_Hyperlink1" href="http://www.classic-auctions.com/15/section.aspx/401" target="_self">The ‘First Lister’, Offered as a Private Treaty Sale</a></h4>
+			<div id="p_ctl08_rptFeedItems_ctl00_pnlContents">
+
+				
+            <br /><a id="p_ctl08_rptFeedItems_ctl00_hplLink" href="http://www.classic-auctions.com/15/section.aspx/401">Read More</a>
+			
+</div>
+			<div class="genericdetails">
+				
+				
+				
+
+			</div>
+
+		</div>
+	
+		<div class="genericitem">
+			<h4><a id="p_ctl08_rptFeedItems_ctl01_Hyperlink1" href="http://www.classic-auctions.com/15/section.aspx/392" target="_self">Rare Allard and one-off Elan head a stunning entry of post-War British classics</a></h4>
+			<div id="p_ctl08_rptFeedItems_ctl01_pnlContents">
+
+				
+            <br /><a id="p_ctl08_rptFeedItems_ctl01_hplLink" href="http://www.classic-auctions.com/15/section.aspx/392">Read More</a>
+			
+</div>
+			<div class="genericdetails">
+				
+				
+				
+
+			</div>
+
+		</div>
+	
+		<div class="genericitem">
+			<h4><a id="p_ctl08_rptFeedItems_ctl02_Hyperlink1" href="http://www.classic-auctions.com/15/section.aspx/391" target="_self">1991 Aston Martin Virage with one registered keeper and just 992 miles from new</a></h4>
+			<div id="p_ctl08_rptFeedItems_ctl02_pnlContents">
+
+				
+            <br /><a id="p_ctl08_rptFeedItems_ctl02_hplLink" href="http://www.classic-auctions.com/15/section.aspx/391">Read More</a>
+			
+</div>
+			<div class="genericdetails">
+				
+				
+				
+
+			</div>
+
+		</div>
+	
+		<div class="genericitem">
+			<h4><a id="p_ctl08_rptFeedItems_ctl03_Hyperlink1" href="http://www.classic-auctions.com/15/section.aspx/393" target="_self">H&H at the Footman James Manchester Classic Car Show</a></h4>
+			<div id="p_ctl08_rptFeedItems_ctl03_pnlContents">
+
+				
+            <br /><a id="p_ctl08_rptFeedItems_ctl03_hplLink" href="http://www.classic-auctions.com/15/section.aspx/393">Read More</a>
+			
+</div>
+			<div class="genericdetails">
+				
+				
+				
+
+			</div>
+
+		</div>
+	</div>
+					<span class="st_sharethis" displayText="ShareThis"></span>
+
+
+
+
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'c1668084-4982-415a-a004-df497c5aa82c'});</script>
+
+
+				</div>
+	        			<div class="clear">&nbsp;</div>
+	        	</div>
+	        			<div id="footer-line"></div>
+						<div id="footer">
+	        			     <div class="infofooter" ><div class="moduletools"></div><div class="section">
+
+<div class="statichtml">
+<h4><a target="_blank" href="http://www.facebook.com/pages/HH-Auctions/145791628773666"><img alt="H&amp;H Facebook Page" width="27" height="26" src="/UserFiles/facebook.gif" /></a> <a target="_blank" href="http://www.twitter.com/handhauctions"><img alt="@handauctions" width="26" height="26" src="/UserFiles/twitter1.gif" /></a></h4>
+<h4>Tel: +44 (0) 1925 210035</h4>
+</div></div><ul><li><a href="/home/site-map.aspx">Site Map</a></li><li><a href="/home/cookies.aspx">Cookie Policy</a></li></ul></div>
+	        			<div class="clear"></div>
+                    </div>
+	        			</div>
+	                </div>
+				</div>
+    		
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=_OqN_ypdzpXxsEW1cKQVm0h6pJd09V8Kz2v8xiUFI6b_lJvkPJRaIqAN0N655bxOJGVJawSIPqZCvDPXsxkUduv7NqY1&amp;t=635490508120581250" type="text/javascript"></script>
+</form>
+        <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-17642814-1");pageTracker._initData();pageTracker._trackPageview();</script>
+	</body>
+</html>
+
+
+<!--  -->

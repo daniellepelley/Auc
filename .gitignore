@@ -1,0 +1,17 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Auctions.Import.Barons/bin/Debug
+/Auctions.Import.Barons/obj/Debug
+/Auctions.Import.Barons.Test/bin/Debug
+/Auctions.Import.Barons.Test/obj/Debug
+/Auctions.Import.HAndH/bin/Debug
+/Auctions.Import.HAndH/obj/Debug
+/Auctions.Import.HAndH.Test/bin/Debug
+/Auctions.Import.HAndH.Test/obj/Debug
+/Auctions.Import.Infrastructure/bin/Debug
+/Auctions.Import.Infrastructure/obj/Debug
+/AuctionSpike/bin/Debug
+/AuctionSpike/obj/Debug
+/packages
