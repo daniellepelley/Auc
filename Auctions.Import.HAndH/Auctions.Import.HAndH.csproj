@@ -63,6 +63,10 @@
       <Project>{82eb7f9c-5cf0-4b1e-9dd4-91766d19da86}</Project>
       <Name>Auctions.Import.Infrastructure</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Auctions.Model\Auctions.Model.csproj">
+      <Project>{15B14F44-E827-469B-A86A-876843BDB747}</Project>
+      <Name>Auctions.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

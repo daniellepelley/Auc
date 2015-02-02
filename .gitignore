@@ -15,3 +15,9 @@
 /AuctionSpike/bin/Debug
 /AuctionSpike/obj/Debug
 /packages
+/Auctions.Export/bin/Debug
+/Auctions.Export/obj/Debug
+/Auctions.Export.Tests/obj/Debug
+/Auctions.Model/bin/Debug
+/Auctions.Model/obj/Debug
+*.suo

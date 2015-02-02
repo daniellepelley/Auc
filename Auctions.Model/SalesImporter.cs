@@ -1,6 +1,7 @@
 using System.Linq;
+using Auctions.Import.Infrastructure;
 
-namespace Auctions.Import.Infrastructure
+namespace Auctions.Model
 {
     public class SalesImporter<T> : ISalesImporter
     {

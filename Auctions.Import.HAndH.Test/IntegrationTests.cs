@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Auctions.Import.Infrastructure;
+using Auctions.Model;
 using NUnit.Framework;
 
 namespace Auctions.Import.HAndH.Test

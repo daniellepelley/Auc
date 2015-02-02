@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using Auctions.Import.Infrastructure;
+using Auctions.Model;
 using Moq;
 using NUnit.Framework;
 

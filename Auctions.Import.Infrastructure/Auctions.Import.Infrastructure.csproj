@@ -48,15 +48,11 @@
     <Compile Include="IDocumentBuilder.cs" />
     <Compile Include="EnumerableExtensions.cs" />
     <Compile Include="IHtmlLoader.cs" />
-    <Compile Include="ISaleMapper.cs" />
-    <Compile Include="ISalesImporter.cs" />
     <Compile Include="IWebScraper.cs" />
     <Compile Include="Parsers\PriceParser.cs" />
     <Compile Include="Parsers\YearParser.cs" />
-    <Compile Include="SalesImporter.cs" />
     <Compile Include="WebScraper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sale.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

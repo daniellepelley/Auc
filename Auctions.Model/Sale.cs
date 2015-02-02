@@ -1,4 +1,4 @@
-namespace Auctions.Import.Infrastructure
+namespace Auctions.Model
 {
     public class Sale
     {

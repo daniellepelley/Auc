@@ -1,5 +1,5 @@
 using System.Linq;
-using Auctions.Import.Infrastructure;
+using Auctions.Model;
 
 namespace Auctions.Import.HAndH
 {

@@ -67,6 +67,10 @@
       <Project>{82EB7F9C-5CF0-4B1E-9DD4-91766D19DA86}</Project>
       <Name>Auctions.Import.Infrastructure</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Auctions.Model\Auctions.Model.csproj">
+      <Project>{15B14F44-E827-469B-A86A-876843BDB747}</Project>
+      <Name>Auctions.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Html\AuctionListingHtml.txt">
