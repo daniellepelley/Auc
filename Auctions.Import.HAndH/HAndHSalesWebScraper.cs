@@ -9,33 +9,18 @@ namespace Auctions.Import.HAndH
     public class HAndHSalesWebScraper : WebScraper<HAndHSale>
     {
         public HAndHSalesWebScraper(IHtmlLoader htmlLoader, IDocumentBuilder documentBuilder)
-            :base(htmlLoader, documentBuilder)
+            :base(htmlLoader, documentBuilder, new DataExtracter<HAndHSale>(
+                "//table//tr//td", 4, cells => new HAndHSale
+                {
+                    Description = HttpUtility.HtmlDecode(cells[2].InnerText),
+                    Price = HttpUtility.HtmlDecode(cells[3].InnerText)
+                }
+                
+                ))
         { }
 
         public HAndHSalesWebScraper()
             :this(new HtmlLoader(), new DocumentBuilder())
         { }
-
-        protected override HAndHSale[] GetData(HtmlDocument htmlDocument)
-        {
-            var sales = new List<HAndHSale>();
-            var cells = htmlDocument.DocumentNode.SelectNodes("//table//tr//td");
-
-            if (cells == null)
-            {
-                return sales.ToArray();
-            }
-
-            sales.AddRange(cells
-                .InSetsOf(4)
-                .Where(tds => tds.Count == 4)
-                .Select(tds => new HAndHSale
-                {
-                    Description = HttpUtility.HtmlDecode(tds[2].InnerText),
-                    Price = HttpUtility.HtmlDecode(tds[3].InnerText)
-                }));
-
-            return sales.ToArray();
-        }
     }
 }

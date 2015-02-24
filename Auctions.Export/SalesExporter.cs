@@ -18,19 +18,22 @@ namespace Auctions.Export
             _makes = _auctionEntities.Makes.ToArray();
             _models = _auctionEntities.Models.ToArray();
 
+            var count = 0;
+
             foreach (var sale in sales)
             {
+                count ++;
                 var make = GetMake(sale);
                 var model = GetModel(sale, make);
                 var dbSale = new Sale
                 {
-                    Price = sale.Price
+                    Price = sale.Price,
+                    Model = model
                 };
 
-                model.Sales.Add(dbSale);
+                _auctionEntities.Sales.Add(dbSale);
                 _auctionEntities.SaveChanges();
             }
-
         }
 
         private Make GetMake(Auctions.Model.Sale sale)
@@ -56,9 +59,10 @@ namespace Auctions.Export
             {
                 model = new Model
                 {
-                    Name = sale.Model
+                    Name = sale.Model,
+                    Make = make
                 };
-                make.Models.Add(model);
+                _auctionEntities.Models.Add(model);
             }
             return model;
         }

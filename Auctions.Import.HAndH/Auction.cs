@@ -5,7 +5,7 @@ namespace Auctions.Import.HAndH
 {
     public class Auction
     {
-        public List<Sale> Sales { get; set; }
+        public List<Sale> Sales { get; private set; }
 
         public Auction()
         {

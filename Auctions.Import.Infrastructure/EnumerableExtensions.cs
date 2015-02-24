@@ -5,7 +5,7 @@ namespace Auctions.Import.Infrastructure
 {
     public static class EnumerableExtensions
     {
-        public static IEnumerable<List<T>> InSetsOf<T>(this IEnumerable<T> source, int max)
+        public static IEnumerable<T[]> InSetsOf<T>(this IEnumerable<T> source, int max)
         {
             var toReturn = new List<T>(max);
             foreach (var item in source)
@@ -15,12 +15,12 @@ namespace Auctions.Import.Infrastructure
                 {
                     continue;
                 }
-                yield return toReturn;
+                yield return toReturn.ToArray();
                 toReturn = new List<T>(max);
             }
             if (toReturn.Any())
             {
-                yield return toReturn;
+                yield return toReturn.ToArray();
             }
         }
     }

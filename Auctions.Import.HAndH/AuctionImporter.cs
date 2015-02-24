@@ -1,3 +1,5 @@
+using System.CodeDom;
+using System.Collections.Generic;
 using System.Linq;
 using Auctions.Model;
 
@@ -12,22 +14,27 @@ namespace Auctions.Import.HAndH
             _salesImporter = salesImporter;
         }
 
-        public Auction Import(string baseUrl)
+        private bool IsLastPage(Sale[] sales, int page)
         {
-            var auction = new Auction();
+            return !sales.Any() ||
+                   sales.Length < 12 ||
+                   page > 1000;
+        }
 
+        public IEnumerable<Sale> GetPages(string baseUrl)
+        {
             var page = 1;
-
             do
             {
                 var url = string.Format(baseUrl, page);
-
                 var sales = _salesImporter.Import(url);
 
-                auction.Sales.AddRange(sales);
+                foreach (var sale in sales)
+                {
+                    yield return sale;
+                }
 
-                if (!sales.Any() ||
-                   sales.Length < 12)
+                if (IsLastPage(sales, page))
                 {
                     break;
                 }
@@ -35,7 +42,12 @@ namespace Auctions.Import.HAndH
                 page++;
             }
             while (true);
+        }
 
+        public Auction Import(string baseUrl)
+        {
+            var auction = new Auction();
+            auction.Sales.AddRange(GetPages(baseUrl));
             return auction;
         }
     }
