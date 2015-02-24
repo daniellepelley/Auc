@@ -18,29 +18,23 @@ namespace Auctions.Import.HAndH
 
         public Sale Map(HAndHSale source)
         {
-            var model = source.Description;
+            var description = source.Description;
             var price = source.Price;
 
             var sale = new Sale
             {
-                Year = _hAndHYearParser.Parse(model),
-                Make = _makeParser.Parse(model)
+                Year = _hAndHYearParser.Parse(description),
+                Make = _makeParser.Parse(description)
             };
 
-            if (sale.Year.HasValue)
-            {
-                model = model
-                    .Replace(sale.Year.ToString(), string.Empty).Trim();
-            }
+            SetModel(sale, description);
+            SetPrice(price, sale);
 
-            if (!string.IsNullOrEmpty(sale.Make))
-            {
-                model = model
-                    .Replace(sale.Make, string.Empty).Trim();
-            }
+            return sale;
+        }
 
-            sale.Model = model;
-
+        private void SetPrice(string price, Sale sale)
+        {
             if (!string.IsNullOrEmpty(price) &&
                 price != "Not Sold")
             {
@@ -55,7 +49,23 @@ namespace Auctions.Import.HAndH
             {
                 sale.Price = null;
             }
-            return sale;
+        }
+
+        private void SetModel(Sale sale, string description)
+        {
+            if (sale.Year.HasValue)
+            {
+                description = description
+                    .Replace(sale.Year.ToString(), string.Empty).Trim();
+            }
+
+            if (!string.IsNullOrEmpty(sale.Make))
+            {
+                description = description
+                    .Replace(sale.Make, string.Empty).Trim();
+            }
+
+            sale.Model = description;
         }
     }
 }

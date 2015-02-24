@@ -61,7 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="FakeDatabaseTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -72,6 +72,10 @@
     <ProjectReference Include="..\Auctions.Export\Auctions.Export.csproj">
       <Project>{1f5945dd-3222-4474-96d5-8115f9c957c7}</Project>
       <Name>Auctions.Export</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Auctions.Model\Auctions.Model.csproj">
+      <Project>{15B14F44-E827-469B-A86A-876843BDB747}</Project>
+      <Name>Auctions.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
