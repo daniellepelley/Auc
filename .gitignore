@@ -21,3 +21,4 @@
 /Auctions.Model/bin/Debug
 /Auctions.Model/obj/Debug
 *.suo
+/Auctions.Export.Tests/bin/Debug

@@ -26,7 +26,7 @@ namespace AuctionSpike
 
             auctionEntities.Database.ExecuteSqlCommand("TRUNCATE TABLE SALES");
 
-            var exporter = new SalesExporter(auctionEntities);
+            var exporter = new SalesExporter(auctionEntities, new Updater<Auctions.Export.Sale>(auctionEntities));
 
             exporter.Export(sales);
 

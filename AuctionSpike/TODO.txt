@@ -1,0 +1,8 @@
+﻿Needs to run automatically
+Needs to only import new sales
+Needs to be configurable
+Needs logging
+Needs a user interface
+	- to edit cars
+	- to view logs
+	- to view update schedule	

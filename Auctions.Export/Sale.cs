@@ -17,7 +17,6 @@ namespace Auctions.Export
         public Nullable<int> Price { get; set; }
         public Nullable<System.DateTime> Date { get; set; }
         public short ModelId { get; set; }
-    
         public virtual Model Model { get; set; }
     }
 }
