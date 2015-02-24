@@ -1,9 +1,12 @@
-﻿using System.Net;
+﻿using System;
+using System.Net;
 
 namespace Auctions.Import.Infrastructure
 {
     public class HtmlLoader : IHtmlLoader
     {
+        private bool _disposed;
+
         private readonly WebClient _webClient;
 
         public HtmlLoader()
@@ -16,10 +19,22 @@ namespace Auctions.Import.Infrastructure
             return _webClient.DownloadString(url);
         }
 
-        //TODO: Implement IDisposible
+        protected virtual void Dispose(bool disposing)
+        {
+            if (_disposed)
+            {
+                return;
+            }
+            if (disposing)
+            {
+                _webClient.Dispose();
+            }
+            _disposed = true;
+        }
+
         public void Dispose()
         {
-            _webClient.Dispose();
+            Dispose(true);
         }
     }
 }

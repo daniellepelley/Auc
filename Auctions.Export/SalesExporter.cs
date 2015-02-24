@@ -4,7 +4,7 @@ namespace Auctions.Export
 {
     public class SalesExporter : ISalesExporter
     {
-        private AuctionEntities _auctionEntities;
+        private readonly AuctionEntities _auctionEntities;
         private Make[] _makes;
         private Model[] _models;
 
