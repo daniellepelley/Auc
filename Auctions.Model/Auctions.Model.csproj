@@ -42,7 +42,7 @@
     <Compile Include="ISaleMapper.cs" />
     <Compile Include="ISalesImporter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sale.cs" />
+    <Compile Include="AuctionSale.cs" />
     <Compile Include="SalesImporter.cs" />
   </ItemGroup>
   <ItemGroup>

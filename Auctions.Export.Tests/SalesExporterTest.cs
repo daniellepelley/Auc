@@ -16,7 +16,7 @@ namespace Auctions.Export.Tests
 
             sut.Export(new[]
             {
-                new Auctions.Model.Sale
+                new Auctions.Model.AuctionSale
                 {
                     Make = "Austin",
                     Model = "7",
@@ -42,7 +42,7 @@ namespace Auctions.Export.Tests
 
             sut.Export(new[]
             {
-                new Auctions.Model.Sale
+                new Auctions.Model.AuctionSale
                 {
                     Make = "Austin",
                     Model = "7",
@@ -50,7 +50,7 @@ namespace Auctions.Export.Tests
                     Sold = true,
                     Year = 1937
                 },
-                new Auctions.Model.Sale
+                new Auctions.Model.AuctionSale
                 {
                     Make = "Austin",
                     Model = "7",

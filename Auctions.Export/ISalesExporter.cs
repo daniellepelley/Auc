@@ -2,6 +2,6 @@
 {
     public interface ISalesExporter
     {
-        void Export(Auctions.Model.Sale[] sales);
+        void Export(Auctions.Model.AuctionSale[] auctionSales);
     }
 }

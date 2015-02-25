@@ -1,6 +1,6 @@
 namespace Auctions.Model
 {
-    public class Sale
+    public class AuctionSale
     {
         public int? Price { get; set; }
         public string Make { get; set; }

@@ -14,9 +14,9 @@ namespace Auctions.Import.Barons
             _priceParser = new PriceParser();
         }
 
-        public Sale Map(BaronsSale source)
+        public AuctionSale Map(BaronsSale source)
         {
-            var sale = new Sale
+            var sale = new AuctionSale
             {
                 Year = _yearParser.Parse(source.Year),
                 Make = source.Make,

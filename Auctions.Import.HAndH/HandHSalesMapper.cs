@@ -16,12 +16,12 @@ namespace Auctions.Import.HAndH
             _makeParser = new MakeParser();
         }
 
-        public Sale Map(HAndHSale source)
+        public AuctionSale Map(HAndHSale source)
         {
             var description = source.Description;
             var price = source.Price;
 
-            var sale = new Sale
+            var sale = new AuctionSale
             {
                 Year = _hAndHYearParser.Parse(description),
                 Make = _makeParser.Parse(description)
@@ -33,39 +33,39 @@ namespace Auctions.Import.HAndH
             return sale;
         }
 
-        private void SetPrice(string price, Sale sale)
+        private void SetPrice(string price, AuctionSale auctionSale)
         {
             if (!string.IsNullOrEmpty(price) &&
                 price != "Not Sold")
             {
-                sale.Sold = true;
+                auctionSale.Sold = true;
 
                 if (price != "Sold")
                 {
-                    sale.Price = _priceParser.Parse(price.Substring(9, price.Length - 9));
+                    auctionSale.Price = _priceParser.Parse(price.Substring(9, price.Length - 9));
                 }
             }
             else
             {
-                sale.Price = null;
+                auctionSale.Price = null;
             }
         }
 
-        private void SetModel(Sale sale, string description)
+        private void SetModel(AuctionSale auctionSale, string description)
         {
-            if (sale.Year.HasValue)
+            if (auctionSale.Year.HasValue)
             {
                 description = description
-                    .Replace(sale.Year.ToString(), string.Empty).Trim();
+                    .Replace(auctionSale.Year.ToString(), string.Empty).Trim();
             }
 
-            if (!string.IsNullOrEmpty(sale.Make))
+            if (!string.IsNullOrEmpty(auctionSale.Make))
             {
                 description = description
-                    .Replace(sale.Make, string.Empty).Trim();
+                    .Replace(auctionSale.Make, string.Empty).Trim();
             }
 
-            sale.Model = description;
+            auctionSale.Model = description;
         }
     }
 }

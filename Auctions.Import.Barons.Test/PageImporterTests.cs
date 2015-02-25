@@ -113,7 +113,7 @@ namespace Auctions.Import.Barons.Test
 
     public class SalesImporterScraperTests
     {
-        private static Sale[] GetSales(string htmlFile = "/Html/BaronsAuctionHistoryHtml.txt")
+        private static AuctionSale[] GetSales(string htmlFile = "/Html/BaronsAuctionHistoryHtml.txt")
         {
             var mockHtmlLoader = new Mock<IHtmlLoader>();
 

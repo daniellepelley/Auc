@@ -9,7 +9,7 @@ namespace Auctions.Import.HAndH.Test
 {
     public class HAndHSalesImporterTests
     {
-        private static Sale[] GetSales(string htmlFile = "/Html/PageHtml.txt")
+        private static AuctionSale[] GetSales(string htmlFile = "/Html/PageHtml.txt")
         {
             var mockHtmlLoader = new Mock<IHtmlLoader>();
 
@@ -23,12 +23,12 @@ namespace Auctions.Import.HAndH.Test
             return sales;
         }
 
-        private static Sale[] GetSalesFromEndPage()
+        private static AuctionSale[] GetSalesFromEndPage()
         {
             return GetSales("/Html/PageHtml2.txt");
         }
 
-        private static Sale[] GetSalesFromEmptyPage()
+        private static AuctionSale[] GetSalesFromEmptyPage()
         {
             return GetSales("/Html/PageHtmlEmpty.txt");
         }

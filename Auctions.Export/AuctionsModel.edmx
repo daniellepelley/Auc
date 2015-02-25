@@ -20,7 +20,7 @@
           <Property Name="Name" Type="varchar" MaxLength="50" />
           <Property Name="MakeId" Type="smallint" Nullable="false" />
         </EntityType>
-        <EntityType Name="Sales">
+        <EntityType Name="AuctionSales">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -41,14 +41,14 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Sales_Model">
+        <Association Name="FK_AuctionSales_Model">
           <End Role="Models" Type="Self.Models" Multiplicity="1" />
-          <End Role="Sales" Type="Self.Sales" Multiplicity="*" />
+          <End Role="AuctionSales" Type="Self.AuctionSales" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Models">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="Sales">
+            <Dependent Role="AuctionSales">
               <PropertyRef Name="ModelId" />
             </Dependent>
           </ReferentialConstraint>
@@ -56,14 +56,14 @@
         <EntityContainer Name="AuctionsModelStoreContainer">
           <EntitySet Name="Makes" EntityType="Self.Makes" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Models" EntityType="Self.Models" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Sales" EntityType="Self.Sales" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AuctionSales" EntityType="Self.AuctionSales" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Models_Makes" Association="Self.FK_Models_Makes">
             <End Role="Makes" EntitySet="Makes" />
             <End Role="Models" EntitySet="Models" />
           </AssociationSet>
-          <AssociationSet Name="FK_Sales_Model" Association="Self.FK_Sales_Model">
+          <AssociationSet Name="FK_AuctionSales_Model" Association="Self.FK_AuctionSales_Model">
             <End Role="Models" EntitySet="Models" />
-            <End Role="Sales" EntitySet="Sales" />
+            <End Role="AuctionSales" EntitySet="AuctionSales" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -73,14 +73,14 @@
         <EntityContainer Name="AuctionEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Makes" EntityType="AuctionsModel.Make" />
           <EntitySet Name="Models" EntityType="AuctionsModel.Model" />
-          <EntitySet Name="Sales" EntityType="AuctionsModel.Sale" />
+          <EntitySet Name="AuctionSales" EntityType="AuctionsModel.AuctionSale" />
           <AssociationSet Name="FK_Models_Makes" Association="AuctionsModel.FK_Models_Makes">
             <End Role="Make" EntitySet="Makes" />
             <End Role="Model" EntitySet="Models" />
           </AssociationSet>
-          <AssociationSet Name="FK_Sales_Model" Association="AuctionsModel.FK_Sales_Model">
+          <AssociationSet Name="FK_AuctionSales_Model" Association="AuctionsModel.FK_AuctionSales_Model">
             <End Role="Model" EntitySet="Models" />
-            <End Role="Sale" EntitySet="Sales" />
+            <End Role="AuctionSale" EntitySet="AuctionSales" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="Make">
@@ -99,9 +99,9 @@
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="MakeId" Type="Int16" Nullable="false" />
           <NavigationProperty Name="Make" Relationship="AuctionsModel.FK_Models_Makes" FromRole="Model" ToRole="Make" />
-          <NavigationProperty Name="Sales" Relationship="AuctionsModel.FK_Sales_Model" FromRole="Model" ToRole="Sale" />
+          <NavigationProperty Name="AuctionSales" Relationship="AuctionsModel.FK_AuctionSales_Model" FromRole="Model" ToRole="AuctionSale" />
         </EntityType>
-        <EntityType Name="Sale">
+        <EntityType Name="AuctionSale">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -109,7 +109,7 @@
           <Property Name="Price" Type="Int32" />
           <Property Name="Date" Type="DateTime" Precision="0" />
           <Property Name="ModelId" Type="Int16" Nullable="false" />
-          <NavigationProperty Name="Model" Relationship="AuctionsModel.FK_Sales_Model" FromRole="Sale" ToRole="Model" />
+          <NavigationProperty Name="Model" Relationship="AuctionsModel.FK_AuctionSales_Model" FromRole="AuctionSale" ToRole="Model" />
         </EntityType>
         <Association Name="FK_Models_Makes">
           <End Type="AuctionsModel.Make" Role="Make" Multiplicity="1" />
@@ -123,14 +123,14 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Sales_Model">
+        <Association Name="FK_AuctionSales_Model">
           <End Type="AuctionsModel.Model" Role="Model" Multiplicity="1" />
-          <End Type="AuctionsModel.Sale" Role="Sale" Multiplicity="*" />
+          <End Type="AuctionsModel.AuctionSale" Role="AuctionSale" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Model">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="Sale">
+            <Dependent Role="AuctionSale">
               <PropertyRef Name="ModelId" />
             </Dependent>
           </ReferentialConstraint>
@@ -158,9 +158,9 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Sales">
-            <EntityTypeMapping TypeName="AuctionsModel.Sale">
-              <MappingFragment StoreEntitySet="Sales">
+          <EntitySetMapping Name="AuctionSales">
+            <EntityTypeMapping TypeName="AuctionsModel.AuctionSale">
+              <MappingFragment StoreEntitySet="AuctionSales">
                 <ScalarProperty Name="ModelId" ColumnName="ModelId" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="Price" ColumnName="Price" />

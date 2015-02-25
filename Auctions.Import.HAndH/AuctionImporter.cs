@@ -14,14 +14,14 @@ namespace Auctions.Import.HAndH
             _salesImporter = salesImporter;
         }
 
-        private bool IsLastPage(Sale[] sales, int page)
+        private bool IsLastPage(AuctionSale[] auctionSales, int page)
         {
-            return !sales.Any() ||
-                   sales.Length < 12 ||
+            return !auctionSales.Any() ||
+                   auctionSales.Length < 12 ||
                    page > 1000;
         }
 
-        public IEnumerable<Sale> GetPages(string baseUrl)
+        public IEnumerable<AuctionSale> GetPages(string baseUrl)
         {
             var page = 1;
             do

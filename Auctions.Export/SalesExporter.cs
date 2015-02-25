@@ -1,8 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Transactions;
-using EntityFramework.BulkInsert.Extensions;
+using Auctions.Model;
 
 namespace Auctions.Export
 {
@@ -20,37 +18,47 @@ namespace Auctions.Export
             _auctionEntities = auctionEntities;
         }
 
-        public void Export(Auctions.Model.Sale[] sales)
+        public void Export(AuctionSale[] auctionSales)
         {
             _modelGetter = new Getter<Model>(_auctionEntities, _auctionEntities.Models);
             _makeGetter = new Getter<Make>(_auctionEntities, _auctionEntities.Makes);
 
             _existingSales = _auctionEntities.Sales.ToList();
 
-            foreach (var sale in sales)
+            var newSales = new List<Sale>();
+
+            foreach (var auctionSale in auctionSales)
             {
-                var make = GetMake(sale.Make);
-
-                var model = GetModel(sale.Model, make);
-
-                var dbSale = _existingSales
-                    .FirstOrDefault(x =>
-                        x.Model == model &&
-                        x.Price == sale.Price);
-
-                if (dbSale != null)
-                {
-                    continue;
-                }
-
-                dbSale = new Sale
-                {
-                    Price = sale.Price,
-                    Model = model
-                };
-                _updater.Update(new[] {dbSale});
-                _existingSales.Add(dbSale);
+                ProcessSale(auctionSale, newSales);
             }
+
+            _updater.Update(newSales);
+        }
+
+        private void ProcessSale(AuctionSale auctionSale, List<Sale> newSales)
+        {
+            var make = GetMake(auctionSale.Make);
+
+            var model = GetModel(auctionSale.Model, make);
+
+            var dbSale = _existingSales
+                .FirstOrDefault(x =>
+                    x.Model == model &&
+                    x.Price == auctionSale.Price);
+
+            if (dbSale != null)
+            {
+                return;
+            }
+
+            var sale = new Sale
+            {
+                Price = auctionSale.Price,
+                Model = model
+            };
+
+            newSales.Add(sale);
+            _existingSales.Add(sale);
         }
 
         public Model GetModel(string modelName, Make make)

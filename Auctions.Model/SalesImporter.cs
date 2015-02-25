@@ -14,7 +14,7 @@ namespace Auctions.Model
             _webScraper = webScraper;
         }
 
-        public Sale[] Import(string url)
+        public AuctionSale[] Import(string url)
         {
             return _webScraper
                 .Import(url)

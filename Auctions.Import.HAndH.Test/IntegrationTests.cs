@@ -23,7 +23,7 @@ namespace Auctions.Import.HAndH.Test
         [Category("Integration")]
         public void AuctionsImport()
         {
-            var sales = new List<Sale>();
+            var sales = new List<AuctionSale>();
             
             var baseUrl = "http://www.classic-auctions.com/auctions/previous.aspx?year={0}";
 
