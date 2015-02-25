@@ -43,7 +43,7 @@
     <Compile Include="ISalesImporter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AuctionSale.cs" />
-    <Compile Include="SalesImporter.cs" />
+    <Compile Include="AuctionSalesImporter.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Auctions.Import.Infrastructure\Auctions.Import.Infrastructure.csproj">

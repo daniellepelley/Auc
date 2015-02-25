@@ -9,30 +9,6 @@ namespace Auctions.Import.HAndH.Test
 {
     public class HAndHSalesImporterTests
     {
-        private static AuctionSale[] GetSales(string htmlFile = "/Html/PageHtml.txt")
-        {
-            var mockHtmlLoader = new Mock<IHtmlLoader>();
-
-            mockHtmlLoader.Setup(x => x.Load(It.IsAny<string>()))
-                .Returns(File.ReadAllText(Directory.GetCurrentDirectory() + htmlFile));
-
-            var webScraper = new HAndHSalesWebScraper(mockHtmlLoader.Object, new DocumentBuilder());
-
-            var sut = new SalesImporter<HAndHSale>(webScraper, new HandHSalesMapper());
-            var sales = sut.Import("http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx");
-            return sales;
-        }
-
-        private static AuctionSale[] GetSalesFromEndPage()
-        {
-            return GetSales("/Html/PageHtml2.txt");
-        }
-
-        private static AuctionSale[] GetSalesFromEmptyPage()
-        {
-            return GetSales("/Html/PageHtmlEmpty.txt");
-        }
-
         [Test]
         [Category("Unit")]
         public void Import()
@@ -127,6 +103,30 @@ namespace Auctions.Import.HAndH.Test
         {
             var sales = GetSales();
             Assert.AreEqual("90 2.5 Diesel", sales[1].Model);
+        }
+
+        private static AuctionSale[] GetSales(string htmlFile = "/Html/PageHtml.txt")
+        {
+            var mockHtmlLoader = new Mock<IHtmlLoader>();
+
+            mockHtmlLoader.Setup(x => x.Load(It.IsAny<string>()))
+                .Returns(File.ReadAllText(Directory.GetCurrentDirectory() + htmlFile));
+
+            var webScraper = new HAndHSalesWebScraper(mockHtmlLoader.Object, new DocumentBuilder());
+
+            var sut = new AuctionSalesImporter<HAndHSale>(webScraper, new HandHSalesMapper());
+            var sales = sut.Import("http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx");
+            return sales;
+        }
+
+        private static AuctionSale[] GetSalesFromEndPage()
+        {
+            return GetSales("/Html/PageHtml2.txt");
+        }
+
+        private static AuctionSale[] GetSalesFromEmptyPage()
+        {
+            return GetSales("/Html/PageHtmlEmpty.txt");
         }
     }
 }

@@ -1,14 +1,12 @@
 using System;
-using System.Linq;
 using Auctions.Import.Infrastructure;
-using HtmlAgilityPack;
 
 namespace Auctions.Import.HAndH
 {
     public class AuctionListingsWebScraper : WebScraper<AuctionListing>
     {
         public AuctionListingsWebScraper(IHtmlLoader htmlLoader, IDocumentBuilder documentBuilder)
-            : base(htmlLoader, documentBuilder, new DataExtracter<AuctionListing>(
+            : base(htmlLoader, documentBuilder, new HtmlDocumentDataExtracter<AuctionListing>(
                 "//table//tr//td",
                 4,
                 tds => new AuctionListing

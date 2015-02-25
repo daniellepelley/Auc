@@ -8,28 +8,6 @@ namespace Auctions.Import.HAndH.Test
 {
     public class HAndHSalesWebScraperTests
     {
-        private static HAndHSale[] GetSales(string htmlFile = "/Html/PageHtml.txt")
-        {
-            var mockHtmlLoader = new Mock<IHtmlLoader>();
-
-            mockHtmlLoader.Setup(x => x.Load(It.IsAny<string>()))
-                .Returns(File.ReadAllText(Directory.GetCurrentDirectory() + htmlFile));
-
-            var sut = new HAndHSalesWebScraper(mockHtmlLoader.Object, new DocumentBuilder());
-            var sales = sut.Import("http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx");
-            return sales;
-        }
-
-        private static HAndHSale[] GetSalesFromEndPage()
-        {
-            return GetSales("/Html/PageHtml2.txt");
-        }
-
-        private static HAndHSale[] GetSalesFromEmptyPage()
-        {
-            return GetSales("/Html/PageHtmlEmpty.txt");
-        }
-
         [Test]
         [Category("Unit")]
         public void Import()
@@ -84,6 +62,28 @@ namespace Auctions.Import.HAndH.Test
         {
             var sales = GetSales();
             Assert.AreEqual("1948 Morgan 4-4", sales[6].Description);
+        }
+
+        private static HAndHSale[] GetSales(string htmlFile = "/Html/PageHtml.txt")
+        {
+            var mockHtmlLoader = new Mock<IHtmlLoader>();
+
+            mockHtmlLoader.Setup(x => x.Load(It.IsAny<string>()))
+                .Returns(File.ReadAllText(Directory.GetCurrentDirectory() + htmlFile));
+
+            var sut = new HAndHSalesWebScraper(mockHtmlLoader.Object, new DocumentBuilder());
+            var sales = sut.Import("http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx");
+            return sales;
+        }
+
+        private static HAndHSale[] GetSalesFromEndPage()
+        {
+            return GetSales("/Html/PageHtml2.txt");
+        }
+
+        private static HAndHSale[] GetSalesFromEmptyPage()
+        {
+            return GetSales("/Html/PageHtmlEmpty.txt");
         }
     }
 }

@@ -1,7 +1,9 @@
-﻿namespace Auctions.Export
+﻿using Auctions.Model;
+
+namespace Auctions.Export
 {
     public interface ISalesExporter
     {
-        void Export(Auctions.Model.AuctionSale[] auctionSales);
+        void Export(AuctionSale[] auctionSales);
     }
 }

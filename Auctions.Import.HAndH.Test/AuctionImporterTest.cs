@@ -8,30 +8,6 @@ namespace Auctions.Import.HAndH.Test
 {
     public class AuctionImporterTest
     {
-        private Mock<IHtmlLoader> _mockHtmlLoader;
-
-        private IAuctionImporter CreateSut()
-        {
-            _mockHtmlLoader = new Mock<IHtmlLoader>();
-
-            _mockHtmlLoader.Setup(x => x.Load("http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?p=1"))
-                .Returns(File.ReadAllText(Directory.GetCurrentDirectory() + "/Html/PageHtml.txt"));
-
-            _mockHtmlLoader.Setup(x => x.Load("http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?p=2"))
-                .Returns(File.ReadAllText(Directory.GetCurrentDirectory() + "/Html/PageHtml2.txt"));
-
-            _mockHtmlLoader.Setup(x => x.Load("http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?p=3"))
-                .Returns(File.ReadAllText(Directory.GetCurrentDirectory() + "/Html/PageHtmlEmpty.txt"));
-
-            var webScraper = new HAndHSalesWebScraper(_mockHtmlLoader.Object, new DocumentBuilder());
-
-            var salesImporter = new SalesImporter<HAndHSale>(webScraper, new HandHSalesMapper());
-
-            var auctionImporter = new AuctionImporter(salesImporter);
-
-            return auctionImporter;
-        }
-
         [Test]
         [Category("Unit")]
         public void ImportAuction()
@@ -65,6 +41,30 @@ namespace Auctions.Import.HAndH.Test
                 x =>
                     x.Load("http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?p=3"),
                     Times.Never);
+        }
+
+        private Mock<IHtmlLoader> _mockHtmlLoader;
+
+        private IAuctionImporter CreateSut()
+        {
+            _mockHtmlLoader = new Mock<IHtmlLoader>();
+
+            _mockHtmlLoader.Setup(x => x.Load("http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?p=1"))
+                .Returns(File.ReadAllText(Directory.GetCurrentDirectory() + "/Html/PageHtml.txt"));
+
+            _mockHtmlLoader.Setup(x => x.Load("http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?p=2"))
+                .Returns(File.ReadAllText(Directory.GetCurrentDirectory() + "/Html/PageHtml2.txt"));
+
+            _mockHtmlLoader.Setup(x => x.Load("http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?p=3"))
+                .Returns(File.ReadAllText(Directory.GetCurrentDirectory() + "/Html/PageHtmlEmpty.txt"));
+
+            var webScraper = new HAndHSalesWebScraper(_mockHtmlLoader.Object, new DocumentBuilder());
+
+            var salesImporter = new AuctionSalesImporter<HAndHSale>(webScraper, new HandHSalesMapper());
+
+            var auctionImporter = new AuctionImporter(salesImporter);
+
+            return auctionImporter;
         }
     }
 }

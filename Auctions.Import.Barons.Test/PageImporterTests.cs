@@ -122,7 +122,7 @@ namespace Auctions.Import.Barons.Test
 
             var webScraper = new BaronsSalesWebScraper(mockHtmlLoader.Object, new DocumentBuilder());
 
-            var sut = new SalesImporter<BaronsSale>(webScraper, new BaronsSalesMapper());
+            var sut = new AuctionSalesImporter<BaronsSale>(webScraper, new BaronsSalesMapper());
 
             var sales = sut.Import("http://www.barons-auctions.com/fullresults.php");
             return sales;

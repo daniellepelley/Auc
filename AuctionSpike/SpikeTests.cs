@@ -11,7 +11,7 @@ namespace AuctionSpike
         [Ignore]
         public void FullTest()
         {
-            var importer = new SalesImporter<BaronsSale>(new BaronsSalesWebScraper(),
+            var importer = new AuctionSalesImporter<BaronsSale>(new BaronsSalesWebScraper(),
                 new BaronsSalesMapper());
 
             //var sales = new AuctionSale[0];
@@ -25,7 +25,7 @@ namespace AuctionSpike
 
             auctionEntities.Database.ExecuteSqlCommand("TRUNCATE TABLE SALES");
 
-            var exporter = new SalesExporter(auctionEntities, new Updater<Auctions.Export.Sale>(auctionEntities));
+            var exporter = new SalesExporter(auctionEntities, new Updater<Sale>(auctionEntities));
 
             exporter.Export(sales);
 

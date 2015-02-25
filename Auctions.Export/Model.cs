@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Collections.Generic;
+
 namespace Auctions.Export
 {
-    using System.Collections.Generic;
-    
     public partial class Model
     {
         public Model()

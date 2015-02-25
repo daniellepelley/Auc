@@ -1,4 +1,6 @@
 using System.Linq;
+using Auctions.Model;
+using Effort;
 using NUnit.Framework;
 
 namespace Auctions.Export.Tests
@@ -8,7 +10,7 @@ namespace Auctions.Export.Tests
         [Test]
         public void ExportingASingleSale()
         {
-            var entities = new AuctionEntities(Effort.DbConnectionFactory.CreateTransient());
+            var entities = new AuctionEntities(DbConnectionFactory.CreateTransient());
 
             var updater = new Updater<Sale>(entities);
 
@@ -16,7 +18,7 @@ namespace Auctions.Export.Tests
 
             sut.Export(new[]
             {
-                new Auctions.Model.AuctionSale
+                new AuctionSale
                 {
                     Make = "Austin",
                     Model = "7",
@@ -34,7 +36,7 @@ namespace Auctions.Export.Tests
         [Test]
         public void When2IdenticalSalesAreUpdatedOnlyOneRecordIsCreated()
         {
-            var entities = new AuctionEntities(Effort.DbConnectionFactory.CreateTransient());
+            var entities = new AuctionEntities(DbConnectionFactory.CreateTransient());
 
             var updater = new Updater<Sale>(entities);
 
@@ -42,7 +44,7 @@ namespace Auctions.Export.Tests
 
             sut.Export(new[]
             {
-                new Auctions.Model.AuctionSale
+                new AuctionSale
                 {
                     Make = "Austin",
                     Model = "7",
@@ -50,7 +52,7 @@ namespace Auctions.Export.Tests
                     Sold = true,
                     Year = 1937
                 },
-                new Auctions.Model.AuctionSale
+                new AuctionSale
                 {
                     Make = "Austin",
                     Model = "7",

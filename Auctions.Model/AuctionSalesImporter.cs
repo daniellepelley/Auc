@@ -3,12 +3,12 @@ using Auctions.Import.Infrastructure;
 
 namespace Auctions.Model
 {
-    public class SalesImporter<T> : ISalesImporter
+    public class AuctionSalesImporter<T> : ISalesImporter
     {
         private readonly IWebScraper<T> _webScraper;
         private readonly ISaleMapper<T> _saleMapper;
 
-        public SalesImporter(IWebScraper<T> webScraper, ISaleMapper<T> saleMapper)
+        public AuctionSalesImporter(IWebScraper<T> webScraper, ISaleMapper<T> saleMapper)
         {
             _saleMapper = saleMapper;
             _webScraper = webScraper;

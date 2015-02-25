@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using Auctions.Import.Infrastructure;
-using HtmlAgilityPack;
 
 namespace Auctions.Import.Barons
 {
@@ -12,7 +8,7 @@ namespace Auctions.Import.Barons
         public BaronsSalesWebScraper(IHtmlLoader htmlLoader, IDocumentBuilder documentBuilder)
             : base(htmlLoader,
             documentBuilder,
-            new DataExtracter<BaronsSale>(
+            new HtmlDocumentDataExtracter<BaronsSale>(
                 "//table//tr//td",
                 5,
                 row => new BaronsSale

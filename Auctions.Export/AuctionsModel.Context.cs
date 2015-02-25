@@ -8,12 +8,10 @@
 //------------------------------------------------------------------------------
 
 using System.Data.Common;
+using System.Data.Entity;
 
 namespace Auctions.Export
 {
-    using System.Data.Entity;
-    using System.Data.Entity.Infrastructure;
-    
     public partial class AuctionEntities : DbContext
     {
         public AuctionEntities()
