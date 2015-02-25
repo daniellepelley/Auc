@@ -12,10 +12,10 @@ namespace Auctions.Import.HAndH.Test
             var mockHtmlLoader = new Mock<IHtmlLoader>();
 
             mockHtmlLoader.Setup(x => x.Load(It.IsAny<string>()))
-                .Returns(File.ReadAllText(Directory.GetCurrentDirectory() + "/Html/AuctionListingHtml.txt"));
+                .ReturnsAsync(File.ReadAllText(Directory.GetCurrentDirectory() + "/Html/AuctionListingHtml.txt"));
 
             var sut = new AuctionListingsWebScraper(mockHtmlLoader.Object, new DocumentBuilder());
-            return sut.Import("http://www.classic-auctions.com/auctions/previous.aspx?year=2013");
+            return sut.Import("http://www.classic-auctions.com/auctions/previous.aspx?year=2013").Result;
         }
 
         [Test]

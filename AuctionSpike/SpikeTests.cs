@@ -11,12 +11,10 @@ namespace AuctionSpike
         [Ignore]
         public void FullTest()
         {
-            var importer = new AuctionSalesImporter<BaronsSale>(new BaronsSalesWebScraper(),
+            var importer = new AuctionSalesScraper<BaronsSale>(new BaronsSalesWebScraper(),
                 new BaronsSalesMapper());
 
-            //var sales = new AuctionSale[0];
-            var sales = importer.Import("http://www.barons-auctions.com/fullresults.php");
-
+            var sales = importer.Import("http://www.barons-auctions.com/fullresults.php").Result;
 
             var auctionEntities = new AuctionEntities();
 

@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace Auctions.Import.Barons.Test
 {
@@ -13,7 +12,7 @@ namespace Auctions.Import.Barons.Test
             var sut = new BaronsSalesWebScraper();
             var sales = sut.Import("http://www.barons-auctions.com/fullresults.php");
 
-            Assert.IsTrue(sales.Count() > 1000);
+            Assert.IsTrue(sales.Result.Length > 1000);
         }
     }
 }

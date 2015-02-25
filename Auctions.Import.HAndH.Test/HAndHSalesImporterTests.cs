@@ -110,12 +110,12 @@ namespace Auctions.Import.HAndH.Test
             var mockHtmlLoader = new Mock<IHtmlLoader>();
 
             mockHtmlLoader.Setup(x => x.Load(It.IsAny<string>()))
-                .Returns(File.ReadAllText(Directory.GetCurrentDirectory() + htmlFile));
+                .ReturnsAsync(File.ReadAllText(Directory.GetCurrentDirectory() + htmlFile));
 
             var webScraper = new HAndHSalesWebScraper(mockHtmlLoader.Object, new DocumentBuilder());
 
-            var sut = new AuctionSalesImporter<HAndHSale>(webScraper, new HandHSalesMapper());
-            var sales = sut.Import("http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx");
+            var sut = new AuctionSalesScraper<HAndHSale>(webScraper, new HandHSalesMapper());
+            var sales = sut.Import("http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx").Result;
             return sales;
         }
 

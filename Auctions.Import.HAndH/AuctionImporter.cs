@@ -1,16 +1,17 @@
 using System.Collections.Generic;
 using System.Linq;
+using Auctions.Import.Infrastructure;
 using Auctions.Model;
 
 namespace Auctions.Import.HAndH
 {
     public class AuctionImporter : IAuctionImporter
     {
-        private readonly ISalesImporter _salesImporter;
+        private readonly IWebScraper<AuctionSale>  _salesScraper;
 
-        public AuctionImporter(ISalesImporter salesImporter)
+        public AuctionImporter(IWebScraper<AuctionSale> salesScraper)
         {
-            _salesImporter = salesImporter;
+            _salesScraper = salesScraper;
         }
 
         private bool IsLastPage(AuctionSale[] auctionSales, int page)
@@ -26,7 +27,7 @@ namespace Auctions.Import.HAndH
             do
             {
                 var url = string.Format(baseUrl, page);
-                var sales = _salesImporter.Import(url);
+                var sales = _salesScraper.Import(url).Result;
 
                 foreach (var sale in sales)
                 {

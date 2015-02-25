@@ -1,4 +1,5 @@
 ﻿using System.Net;
+using System.Threading.Tasks;
 
 namespace Auctions.Import.Infrastructure
 {
@@ -13,9 +14,9 @@ namespace Auctions.Import.Infrastructure
             _webClient = new WebClient();
         }
 
-        public string Load(string url)
+        public async Task<string> Load(string url)
         {
-            return _webClient.DownloadString(url);
+            return await _webClient.DownloadStringTaskAsync(url);
         }
 
         protected virtual void Dispose(bool disposing)

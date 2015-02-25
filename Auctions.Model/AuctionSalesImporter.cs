@@ -1,25 +1,32 @@
-using System.Linq;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Auctions.Import.Infrastructure;
 
 namespace Auctions.Model
 {
-    public class AuctionSalesImporter<T> : ISalesImporter
+    public class AuctionSalesImporter : ISalesImporter
     {
-        private readonly IWebScraper<T> _webScraper;
-        private readonly ISaleMapper<T> _saleMapper;
+        private readonly IWebScraper<AuctionSale> _webScraper;
+        private readonly IUrlProvider _urlProvider;
 
-        public AuctionSalesImporter(IWebScraper<T> webScraper, ISaleMapper<T> saleMapper)
+        public AuctionSalesImporter(IWebScraper<AuctionSale> webScraper, IUrlProvider urlProvider)
         {
-            _saleMapper = saleMapper;
+            _urlProvider = urlProvider;
             _webScraper = webScraper;
         }
 
-        public AuctionSale[] Import(string url)
+        public async Task<AuctionSale[]> Import()
         {
-            return _webScraper
-                .Import(url)
-                .Select(_saleMapper.Map)
-                .ToArray();
+            var list = new List<AuctionSale>();
+
+            var urls = await _urlProvider.GetUrls();
+
+            foreach (var url in urls)
+            {
+                list.AddRange(await _webScraper.Import(url));
+            }
+
+            return list.ToArray();
         }
     }
 }

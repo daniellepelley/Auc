@@ -39,11 +39,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuctionSalesImporter.cs" />
     <Compile Include="ISaleMapper.cs" />
     <Compile Include="ISalesImporter.cs" />
+    <Compile Include="IUrlProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AuctionSale.cs" />
-    <Compile Include="AuctionSalesImporter.cs" />
+    <Compile Include="AuctionSalesScraper.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Auctions.Import.Infrastructure\Auctions.Import.Infrastructure.csproj">

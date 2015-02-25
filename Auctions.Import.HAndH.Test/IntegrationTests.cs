@@ -13,7 +13,7 @@ namespace Auctions.Import.HAndH.Test
         public void PageImporterImport()
         {
             var sut = new HAndHSalesWebScraper();
-            var sales = sut.Import("http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx");
+            var sales = sut.Import("http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx").Result;
 
             Assert.AreEqual(12, sales.Count());
         }
@@ -27,7 +27,7 @@ namespace Auctions.Import.HAndH.Test
             
             var baseUrl = "http://www.classic-auctions.com/auctions/previous.aspx?year={0}";
 
-            var salesImporter = new AuctionSalesImporter<HAndHSale>(new HAndHSalesWebScraper(), new HandHSalesMapper());
+            var salesImporter = new AuctionSalesScraper<HAndHSale>(new HAndHSalesWebScraper(), new HandHSalesMapper());
 
             var auctionImporter = new AuctionImporter(salesImporter);
             var auctionListingImporter = new AuctionListingsWebScraper();
@@ -36,7 +36,7 @@ namespace Auctions.Import.HAndH.Test
             {
                 var auctionListingsUrl = string.Format(baseUrl, i);
 
-                var auctionListings = auctionListingImporter.Import(auctionListingsUrl);
+                var auctionListings = auctionListingImporter.Import(auctionListingsUrl).Result;
 
                 foreach (var auctionListing in auctionListings.Where(x => x.Type == "Car").ToArray())
                 {

@@ -14,11 +14,11 @@ namespace Auctions.Import.Barons.Test
             var mockHtmlLoader = new Mock<IHtmlLoader>();
 
             mockHtmlLoader.Setup(x => x.Load(It.IsAny<string>()))
-                .Returns(File.ReadAllText(Directory.GetCurrentDirectory() + htmlFile));
+                .ReturnsAsync(File.ReadAllText(Directory.GetCurrentDirectory() + htmlFile));
 
             var sut = new BaronsSalesWebScraper(mockHtmlLoader.Object, new DocumentBuilder());
             var sales = sut.Import("http://www.barons-auctions.com/fullresults.php");
-            return sales;
+            return sales.Result;
         }
 
         [Test]
@@ -118,14 +118,14 @@ namespace Auctions.Import.Barons.Test
             var mockHtmlLoader = new Mock<IHtmlLoader>();
 
             mockHtmlLoader.Setup(x => x.Load(It.IsAny<string>()))
-                .Returns(File.ReadAllText(Directory.GetCurrentDirectory() + htmlFile));
+                .ReturnsAsync(File.ReadAllText(Directory.GetCurrentDirectory() + htmlFile));
 
             var webScraper = new BaronsSalesWebScraper(mockHtmlLoader.Object, new DocumentBuilder());
 
-            var sut = new AuctionSalesImporter<BaronsSale>(webScraper, new BaronsSalesMapper());
+            var sut = new AuctionSalesScraper<BaronsSale>(webScraper, new BaronsSalesMapper());
 
             var sales = sut.Import("http://www.barons-auctions.com/fullresults.php");
-            return sales;
+            return sales.Result;
         }
 
         [Test]

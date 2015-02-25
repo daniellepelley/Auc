@@ -2,8 +2,8 @@ using System.Threading.Tasks;
 
 namespace Auctions.Model
 {
-    public interface ISalesImporter
+    public interface IUrlProvider
     {
-        Task<AuctionSale[]> Import();
+        Task<string[]> GetUrls();
     }
 }

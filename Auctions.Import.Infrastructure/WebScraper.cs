@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 
 namespace Auctions.Import.Infrastructure
 {
@@ -15,9 +16,9 @@ namespace Auctions.Import.Infrastructure
             _documentBuilder = documentBuilder;
         }
 
-        public T[] Import(string url)
+        public async Task<T[]> Import(string url)
         {
-            var html = _htmlLoader.Load(url);
+            var html = await _htmlLoader.Load(url);
             var document = _documentBuilder.Build(html);
             return _htmlDocumentDataExtracter.GetData(document);
         }
