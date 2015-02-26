@@ -3,10 +3,10 @@ using Auctions.Import.Infrastructure;
 
 namespace Auctions.Import.HAndH
 {
-    public class HAndHSalesWebScraper : WebScraper<HAndHSale>
+    public class HAndHSalesWebScraper : HtmlWebScraper<HAndHSale>
     {
-        public HAndHSalesWebScraper(IHtmlLoader htmlLoader, IDocumentBuilder documentBuilder)
-            :base(htmlLoader, documentBuilder, new HtmlDocumentDataExtracter<HAndHSale>(
+        public HAndHSalesWebScraper(IHttpLoader httpLoader, IDocumentBuilder documentBuilder)
+            :base(httpLoader, documentBuilder, new HtmlDocumentDataExtracter<HAndHSale>(
                 "//table//tr//td", 4, cells => new HAndHSale
                 {
                     Description = HttpUtility.HtmlDecode(cells[2].InnerText),
@@ -17,7 +17,7 @@ namespace Auctions.Import.HAndH
         { }
 
         public HAndHSalesWebScraper()
-            :this(new HtmlLoader(), new DocumentBuilder())
+            :this(new HttpLoader(), new DocumentBuilder())
         { }
     }
 }

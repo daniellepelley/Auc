@@ -3,10 +3,10 @@ using Auctions.Import.Infrastructure;
 
 namespace Auctions.Import.Barons
 {
-    public class BaronsSalesWebScraper : WebScraper<BaronsSale>
+    public class BaronsSalesWebScraper : HtmlWebScraper<BaronsSale>
     {
-        public BaronsSalesWebScraper(IHtmlLoader htmlLoader, IDocumentBuilder documentBuilder)
-            : base(htmlLoader,
+        public BaronsSalesWebScraper(IHttpLoader httpLoader, IDocumentBuilder documentBuilder)
+            : base(httpLoader,
             documentBuilder,
             new HtmlDocumentDataExtracter<BaronsSale>(
                 "//table//tr//td",
@@ -23,7 +23,7 @@ namespace Auctions.Import.Barons
         { }
 
         public BaronsSalesWebScraper()
-            :this(new HtmlLoader(), new DocumentBuilder())
+            :this(new HttpLoader(), new DocumentBuilder())
         { }
 
         private static string Parse(string str)

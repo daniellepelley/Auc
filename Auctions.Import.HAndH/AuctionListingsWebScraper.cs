@@ -3,10 +3,10 @@ using Auctions.Import.Infrastructure;
 
 namespace Auctions.Import.HAndH
 {
-    public class AuctionListingsWebScraper : WebScraper<AuctionListing>
+    public class AuctionListingsWebScraper : HtmlWebScraper<AuctionListing>
     {
-        public AuctionListingsWebScraper(IHtmlLoader htmlLoader, IDocumentBuilder documentBuilder)
-            : base(htmlLoader, documentBuilder, new HtmlDocumentDataExtracter<AuctionListing>(
+        public AuctionListingsWebScraper(IHttpLoader httpLoader, IDocumentBuilder documentBuilder)
+            : base(httpLoader, documentBuilder, new HtmlDocumentDataExtracter<AuctionListing>(
                 "//table//tr//td",
                 4,
                 tds => new AuctionListing
@@ -21,7 +21,7 @@ namespace Auctions.Import.HAndH
         }
 
         public AuctionListingsWebScraper()
-            : this(new HtmlLoader(), new DocumentBuilder())
+            : this(new HttpLoader(), new DocumentBuilder())
         {
         }
     }

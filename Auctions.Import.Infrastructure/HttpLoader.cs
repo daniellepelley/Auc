@@ -3,13 +3,13 @@ using System.Threading.Tasks;
 
 namespace Auctions.Import.Infrastructure
 {
-    public class HtmlLoader : IHtmlLoader
+    public class HttpLoader : IHttpLoader
     {
         private bool _disposed;
 
         private readonly WebClient _webClient;
 
-        public HtmlLoader()
+        public HttpLoader()
         {
             _webClient = new WebClient();
         }

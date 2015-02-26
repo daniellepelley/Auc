@@ -11,7 +11,7 @@ namespace Auctions.Import.Barons.Test
     {
         private static BaronsSale[] GetSales(string htmlFile = "/Html/BaronsAuctionHistoryHtml.txt")
         {
-            var mockHtmlLoader = new Mock<IHtmlLoader>();
+            var mockHtmlLoader = new Mock<IHttpLoader>();
 
             mockHtmlLoader.Setup(x => x.Load(It.IsAny<string>()))
                 .ReturnsAsync(File.ReadAllText(Directory.GetCurrentDirectory() + htmlFile));
@@ -115,7 +115,7 @@ namespace Auctions.Import.Barons.Test
     {
         private static AuctionSale[] GetSales(string htmlFile = "/Html/BaronsAuctionHistoryHtml.txt")
         {
-            var mockHtmlLoader = new Mock<IHtmlLoader>();
+            var mockHtmlLoader = new Mock<IHttpLoader>();
 
             mockHtmlLoader.Setup(x => x.Load(It.IsAny<string>()))
                 .ReturnsAsync(File.ReadAllText(Directory.GetCurrentDirectory() + htmlFile));

@@ -9,7 +9,7 @@ namespace Auctions.Import.HAndH.Test
     {
         private static AuctionListing[] GetAuctionListings()
         {
-            var mockHtmlLoader = new Mock<IHtmlLoader>();
+            var mockHtmlLoader = new Mock<IHttpLoader>();
 
             mockHtmlLoader.Setup(x => x.Load(It.IsAny<string>()))
                 .ReturnsAsync(File.ReadAllText(Directory.GetCurrentDirectory() + "/Html/AuctionListingHtml.txt"));

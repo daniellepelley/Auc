@@ -1,6 +1,6 @@
 using System.Linq;
+using Auctions.Export.Tests.Builders;
 using Auctions.Model;
-using Effort;
 using NUnit.Framework;
 
 namespace Auctions.Export.Tests
@@ -10,7 +10,7 @@ namespace Auctions.Export.Tests
         [Test]
         public void ExportingASingleSale()
         {
-            var entities = new AuctionEntities(DbConnectionFactory.CreateTransient());
+            var entities = new FakeAuctionEntitiesBuilder().Build();
 
             var updater = new Updater<Sale>(entities);
 
@@ -28,15 +28,15 @@ namespace Auctions.Export.Tests
                 }
             });
 
-            Assert.AreEqual(120, entities.Sales.FirstOrDefault().Price);
-            Assert.AreEqual("7", entities.Models.FirstOrDefault().Name);
-            Assert.AreEqual("Austin", entities.Makes.FirstOrDefault().Name);
+            Assert.AreEqual(120, entities.Sales.First().Price);
+            Assert.AreEqual("7", entities.Models.First().Name);
+            Assert.AreEqual("Austin", entities.Makes.First().Name);
         }
 
         [Test]
         public void When2IdenticalSalesAreUpdatedOnlyOneRecordIsCreated()
         {
-            var entities = new AuctionEntities(DbConnectionFactory.CreateTransient());
+            var entities = new FakeAuctionEntitiesBuilder().Build();
 
             var updater = new Updater<Sale>(entities);
 

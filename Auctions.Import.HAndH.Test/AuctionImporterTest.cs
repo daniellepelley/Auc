@@ -43,11 +43,11 @@ namespace Auctions.Import.HAndH.Test
                     Times.Never);
         }
 
-        private Mock<IHtmlLoader> _mockHtmlLoader;
+        private Mock<IHttpLoader> _mockHtmlLoader;
 
         private IAuctionImporter CreateSut()
         {
-            _mockHtmlLoader = new Mock<IHtmlLoader>();
+            _mockHtmlLoader = new Mock<IHttpLoader>();
 
             _mockHtmlLoader.Setup(x => x.Load("http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?p=1"))
                 .ReturnsAsync(File.ReadAllText(Directory.GetCurrentDirectory() + "/Html/PageHtml.txt"));

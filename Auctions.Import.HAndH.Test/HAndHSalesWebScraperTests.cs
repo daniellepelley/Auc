@@ -66,7 +66,7 @@ namespace Auctions.Import.HAndH.Test
 
         private static HAndHSale[] GetSales(string htmlFile = "/Html/PageHtml.txt")
         {
-            var mockHtmlLoader = new Mock<IHtmlLoader>();
+            var mockHtmlLoader = new Mock<IHttpLoader>();
 
             mockHtmlLoader.Setup(x => x.Load(It.IsAny<string>()))
                 .ReturnsAsync(File.ReadAllText(Directory.GetCurrentDirectory() + htmlFile));
