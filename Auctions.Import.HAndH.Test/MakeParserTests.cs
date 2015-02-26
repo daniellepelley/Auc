@@ -1,3 +1,4 @@
+using Auctions.Import.Infrastructure.Parsers;
 using NUnit.Framework;
 
 namespace Auctions.Import.HAndH.Test

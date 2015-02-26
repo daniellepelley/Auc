@@ -13,3 +13,4 @@ bin/
 *.crunchsolution.cache
 *.ncrunchsolution.user
 *.DotSettings.user
+*.ncrunchproject

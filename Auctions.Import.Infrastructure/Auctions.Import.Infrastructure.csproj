@@ -56,8 +56,11 @@
     <Compile Include="IHttpLoader.cs" />
     <Compile Include="IJsonDataExtractor.cs" />
     <Compile Include="IWebScraper.cs" />
+    <Compile Include="JsonDataExtractor.cs" />
     <Compile Include="JsonValueExtractor.cs" />
     <Compile Include="JsonWebScraper.cs" />
+    <Compile Include="JTokenExtractor.cs" />
+    <Compile Include="Parsers\MakeParser.cs" />
     <Compile Include="Parsers\PriceParser.cs" />
     <Compile Include="Parsers\YearParser.cs" />
     <Compile Include="HtmlDocumentDataExtracter.cs" />

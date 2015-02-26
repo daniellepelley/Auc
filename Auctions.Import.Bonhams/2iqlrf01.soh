@@ -6,12 +6,12 @@ using Newtonsoft.Json.Linq;
 
 namespace Auctions.Import.Bonhams
 {
-    public class BonhamsJsonDataExtractor : IJsonDataExtractor<BonhamsSale>
+    public class BonhamsSaleJsonDataExtractor : IJsonDataExtractor<BonhamsSale>
     {
         private readonly JsonValueExtractor _currencyExtractor;
         private readonly JsonValueExtractor _priceExtractor;
 
-        public BonhamsJsonDataExtractor()
+        public BonhamsSaleJsonDataExtractor()
         {
             _currencyExtractor = new JsonValueExtractor(HttpUtility.HtmlDecode, "hammer_prices", "prices", 0, "currency");
             _priceExtractor = new JsonValueExtractor("hammer_prices", "prices", 0, "value");
@@ -30,5 +30,33 @@ namespace Auctions.Import.Bonhams
                     })
                 .ToArray();
         }
+    }
+
+    public class BonhamsAuctionJsonDataExtractor : IJsonDataExtractor<BonhamsAuction>
+    {
+        private readonly JsonValueExtractor _currencyExtractor;
+        private readonly JsonValueExtractor _priceExtractor;
+
+        public BonhamsAuctionJsonDataExtractor()
+        {
+            _currencyExtractor = new JsonValueExtractor(HttpUtility.HtmlDecode, "hammer_prices", "prices", 0, "currency");
+            _priceExtractor = new JsonValueExtractor("hammer_prices", "prices", 0, "value");
+        }
+
+        public BonhamsAuction[] Extract(string data)
+        {
+            var jObject = JObject.Parse(data);
+            return jObject["lots"]
+                .Select(lot =>
+                    new BonhamsAuction
+                    {
+
+                    })
+                .ToArray();
+        }
+    }
+
+    public class BonhamsAuction
+    {
     }
 }

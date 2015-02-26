@@ -47,7 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BonhamsJsonDataExtractorTest.cs" />
+    <Compile Include="BonhamsAuctionJsonDataExtractorTest.cs" />
+    <Compile Include="BonhamsSaleJsonDataExtractorTest.cs" />
+    <Compile Include="BonhamsSalesImporterTests.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="BonhamsSalesWebScraperTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,6 +75,10 @@
     <ProjectReference Include="..\Auctions.Import.Infrastructure\Auctions.Import.Infrastructure.csproj">
       <Project>{82eb7f9c-5cf0-4b1e-9dd4-91766d19da86}</Project>
       <Name>Auctions.Import.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Auctions.Model\Auctions.Model.csproj">
+      <Project>{15b14f44-e827-469b-a86a-876843bdb747}</Project>
+      <Name>Auctions.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

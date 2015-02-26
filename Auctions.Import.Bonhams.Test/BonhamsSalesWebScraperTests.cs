@@ -10,13 +10,34 @@ namespace Auctions.Import.Bonhams.Test
     {
         [Test]
         [Category("Unit")]
-        public void Import()
+        public void ImportPopulatesDescription()
         {
             var sales = GetSales();
-            Assert.IsTrue(sales.Any());
             Assert.AreEqual("Assorted books and literature relating to the Bentley marque, ((Qty))", sales.First().Description);
+        }
+
+        [Test]
+        [Category("Unit")]
+        public void ImportPopulatesPrice()
+        {
+            var sales = GetSales();
             Assert.AreEqual("625", sales.First().Price);
+        }
+
+        [Test]
+        [Category("Unit")]
+        public void ImportPopulatesCurrency()
+        {
+            var sales = GetSales();
             Assert.AreEqual("£", sales.First().Currency);
+        }
+
+        [Test]
+        [Category("Unit")]
+        public void ImportPopulatesLotStatus()
+        {
+            var sales = GetSales();
+            Assert.AreEqual("SOLD", sales.First().LotStatus);
         }
 
         private static BonhamsSale[] GetSales(string jsonFile = "/Json/AuctionSalesList.json")
@@ -26,7 +47,7 @@ namespace Auctions.Import.Bonhams.Test
             mockHtmlLoader.Setup(x => x.Load(It.IsAny<string>()))
                 .ReturnsAsync(File.ReadAllText(Directory.GetCurrentDirectory() + jsonFile));
 
-            var sut = new BonhamsSalesWebScraper(mockHtmlLoader.Object, new BonhamsJsonDataExtractor());
+            var sut = new BonhamsSalesWebScraper(mockHtmlLoader.Object, new BonhamsSaleJsonDataExtractor());
             var sales = sut.Import("http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx").Result;
             return sales;
         }

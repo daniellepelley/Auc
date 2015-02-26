@@ -46,15 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BonhamsJsonDataExtractor.cs" />
+    <Compile Include="BonhamsAuction.cs" />
+    <Compile Include="BonhamsAuctionJsonDataExtractor.cs" />
+    <Compile Include="BonhamsSaleJsonDataExtractor.cs" />
     <Compile Include="BonhamsSalesWebScraper.cs" />
     <Compile Include="BonhamsSale.cs" />
+    <Compile Include="BonhamsSalesMapper.cs" />
+    <Compile Include="BonhamsYearParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Auctions.Import.Infrastructure\Auctions.Import.Infrastructure.csproj">
       <Project>{82EB7F9C-5CF0-4B1E-9DD4-91766D19DA86}</Project>
       <Name>Auctions.Import.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Auctions.Model\Auctions.Model.csproj">
+      <Project>{15b14f44-e827-469b-a86a-876843bdb747}</Project>
+      <Name>Auctions.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

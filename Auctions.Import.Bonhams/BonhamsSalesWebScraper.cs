@@ -9,7 +9,7 @@ namespace Auctions.Import.Bonhams
         { }
 
         public BonhamsSalesWebScraper()
-            : base(new HttpLoader(), new BonhamsJsonDataExtractor())
+            : base(new HttpLoader(), new BonhamsSaleJsonDataExtractor())
         { }
     }
 }

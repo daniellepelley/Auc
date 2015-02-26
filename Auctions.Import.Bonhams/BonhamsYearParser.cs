@@ -1,13 +1,13 @@
 using System;
 using Auctions.Import.Infrastructure.Parsers;
 
-namespace Auctions.Import.HAndH
+namespace Auctions.Import.Bonhams
 {
-    public class HAndHYearParser
+    public class BonhamsYearParser
     {
         private readonly YearParser _yearParser;
 
-        public HAndHYearParser()
+        public BonhamsYearParser()
         {
             _yearParser = new YearParser();
         }

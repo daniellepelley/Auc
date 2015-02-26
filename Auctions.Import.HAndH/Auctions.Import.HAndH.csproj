@@ -51,7 +51,6 @@
     <Compile Include="AuctionListingsWebScraper.cs" />
     <Compile Include="HandHSalesMapper.cs" />
     <Compile Include="IAuctionImporter.cs" />
-    <Compile Include="MakeParser.cs" />
     <Compile Include="HAndHSalesWebScraper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="HAndHSale.cs" />
