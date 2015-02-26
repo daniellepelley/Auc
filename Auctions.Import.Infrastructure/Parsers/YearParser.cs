@@ -8,6 +8,11 @@ namespace Auctions.Import.Infrastructure.Parsers
     {
         public int? Parse(string year)
         {
+            if (string.IsNullOrWhiteSpace(year))
+            {
+                return null;
+            }
+
             if (year.ToCharArray().All(Char.IsNumber))
             {
                 return Convert.ToInt32(year);

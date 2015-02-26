@@ -21,7 +21,7 @@ namespace Auctions.Import.HAndH
                    page > 1000;
         }
 
-        public IEnumerable<AuctionSale> GetPages(string baseUrl)
+        private IEnumerable<AuctionSale> GetPages(string baseUrl)
         {
             var page = 1;
             do
@@ -44,9 +44,9 @@ namespace Auctions.Import.HAndH
             while (true);
         }
 
-        public Auction Import(string baseUrl)
+        public HAndHAuction Import(string baseUrl)
         {
-            var auction = new Auction();
+            var auction = new HAndHAuction();
             auction.Sales.AddRange(GetPages(baseUrl));
             return auction;
         }

@@ -1,3 +1,4 @@
+using Auctions.Import.Infrastructure.Parsers;
 using NUnit.Framework;
 
 namespace Auctions.Import.HAndH.Test
@@ -11,7 +12,7 @@ namespace Auctions.Import.HAndH.Test
         [TestCase(" No Year", null)]
         public void ParseYear(string input, int? expected)
         {
-            var sut = new HAndHYearParser();
+            var sut = new YearParser();
             var actual = sut.Parse(input);
             Assert.AreEqual(expected, actual);
         }

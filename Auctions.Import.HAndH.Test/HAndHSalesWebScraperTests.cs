@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using Auctions.Import.Infrastructure;
 using Moq;
@@ -76,12 +77,12 @@ namespace Auctions.Import.HAndH.Test
             return sales;
         }
 
-        private static HAndHSale[] GetSalesFromEndPage()
+        private static IEnumerable<HAndHSale> GetSalesFromEndPage()
         {
             return GetSales("/Html/PageHtml2.txt");
         }
 
-        private static HAndHSale[] GetSalesFromEmptyPage()
+        private static IEnumerable<HAndHSale> GetSalesFromEmptyPage()
         {
             return GetSales("/Html/PageHtmlEmpty.txt");
         }

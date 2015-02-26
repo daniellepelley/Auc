@@ -3,25 +3,16 @@ using Auctions.Model;
 
 namespace Auctions.Import.Barons
 {
-    public class BaronsSalesMapper : ISaleMapper<BaronsSale>
+    public class BaronsSalesMapper : AuctionSaleMapper<BaronsSale>
     {
-        private readonly YearParser _yearParser;
-        private readonly PriceParser _priceParser;
-
-        public BaronsSalesMapper()
-        {
-            _yearParser = new YearParser();
-            _priceParser = new PriceParser();
-        }
-
-        public AuctionSale Map(BaronsSale source)
+        public override AuctionSale Map(BaronsSale source)
         {
             var sale = new AuctionSale
             {
-                Year = _yearParser.Parse(source.Year),
+                Year = YearParser.Parse(source.Year),
                 Make = source.Make,
                 Model = source.Model,
-                Price = _priceParser.Parse(source.Price)
+                Price = PriceParser.Parse(source.Price)
             };
 
             return sale;

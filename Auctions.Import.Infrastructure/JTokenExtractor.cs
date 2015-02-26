@@ -1,5 +1,3 @@
-using Newtonsoft.Json.Linq;
-
 namespace Auctions.Import.Infrastructure
 {
     public class JTokenExtractor

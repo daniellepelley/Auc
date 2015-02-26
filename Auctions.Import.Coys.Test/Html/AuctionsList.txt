@@ -1,0 +1,549 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<base href="http://www.coys.co.uk/" />
+<title>Coys of Kensington</title>
+<meta name="Keywords" content ="Coys, Coys of Kensington, classic cars, auctions, classic car auctions, investments"/>
+<meta name="Description" content="Experts in the Sale and Acquisition of the World's Most Important Motor Cars"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<link rel="stylesheet" href="http://www.coys.co.uk/sitestyle.css"  type="text/css" media="all" />
+<link href="documents/extstyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+sfHover = function() {
+	var sfEls = document.getElementById("main").getElementsByTagName("LI");
+	for (var i=0; i<sfEls.length; i++) {
+		sfEls[i].onmouseover=function() {
+			this.className+=" sfhover ";
+		}
+		sfEls[i].onmouseout=function() {
+			var re=/sfhover/;
+			var r=this.classNa</sfelsace(re," ");
+			this.className=r;
+		}
+	}
+}
+activemenuhor = function() {
+		var re =/ /g;
+		var i=CookieGet("item");
+		if(i) i=i.replace(re,"_");
+		var m=CookieGet("menu");
+		var t=/,/;
+		if(t.test(m)) {
+			ma=m.split(",");
+			mr=ma[2];
+			if(ma[3]!=null) i=ma[3];
+		}
+		else mr=m;
+		if(document.getElementById(i)) {
+			document.getElementById(i).className=mr+"active";
+		}
+}
+if (window.addEventListener) { //DOM method for binding an event
+	window.addEventListener("load", sfHover, false);
+	window.addEventListener("load", activemenuhor, false);
+}
+else if (window.attachEvent) { //IE exclusive method for binding an event
+	window.attachEvent("onload", sfHover);
+	window.attachEvent("onload", activemenuhor);
+}
+else if (document.getElementById) {//support older modern browsers
+	window.onload=sfHover;
+	window.onload=activemenuhor;
+}
+//--><!]]></script>
+
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+menu_status = new Array(); 
+var stat=0;
+function gup()
+{
+  var regexS = ".+/{1}(.+)\.{1}(php).*";
+  var regex = new RegExp( regexS );
+  var results = regex.exec( window.location.href );
+  if( results == null )
+    return "";
+  else
+    return results[1];
+}
+function HideAll(){
+	// hide all menu elements 
+	for (key in menu_status) {
+		if(document.getElementById(key)) {
+			var hide_id = document.getElementById(key); 
+			hide_id.className = "hide"; 
+			menu_status[key] = "hide";
+		} 
+	}
+}
+function showHide(theidPrefix, theidNum, menu) {
+	
+	// hide all menu elements 
+	for (key in menu_status) {
+		if(key!=theidPrefix+theidNum) {
+			if(document.getElementById(key)) {
+				var hide_id = document.getElementById(key); 
+				hide_id.className = "hide"; 
+				menu_status[key] = "hide"; 
+			}
+		}
+	}
+// show/hide clicked menu element 
+	if (document.getElementById) { 
+		var switch_id = document.getElementById(theidPrefix+theidNum); 
+		if(switch_id!=null) {
+			if(menu_status[theidPrefix+theidNum] != "show") { 
+				switch_id.className = menu+"show"; 
+				menu_status[theidPrefix+theidNum] = "show";
+				stat=1;
+			} 
+			else { 
+			switch_id.className = "hide"; 
+			menu_status[theidPrefix+theidNum] = "hide"; 
+			}
+		}
+	}
+}
+function setCookie(cookieName,cookieValue,cookieExpiration) {
+	if (cookieExpiration!=null) {
+        // Cookie has a duration / date object is expected
+		document.cookie=cookieName + "=" + escape(cookieValue) + ";path=/;expires=" + cookieExpiration.toGMTString()
+    } else {
+        // Cookie has no duration / it will remain only for the browser session
+		document.cookie=cookieName + "=" + escape(cookieValue) + ";path=/"
+    }
+}
+// Get cookie value
+function getCookie(cookieName) { 
+	cookieString=document.cookie
+    cookieName+="="
+		// If at least one cookie exists...
+    if (cookieString.length>0) {
+		// Search for the cookie name
+		i=cookieString.indexOf(cookieName)
+		// If the cookie name exists, return its value
+        if (i!=-1) {
+            i += cookieName.length
+            j = cookieString.indexOf(";",i)
+            if (j==-1) {j = cookieString.length}
+            return unescape(cookieString.substring(i,j))
+        }
+    }
+    // Return a null value if the cookie doesnt  exist
+	return null
+}
+function setcook(what) {
+	expirationDate = new Date();
+	expirationDate.setSeconds(expirationDate.getSeconds()+50);
+	setCookie("menu",what,expirationDate);
+}
+function isArray(obj) {
+   if (obj.constructor.toString().indexOf("Array") == -1)
+      return false;
+   else
+      return true;
+}
+initv2=function(){
+	var gupx;
+	var seoshow;
+	cookieValue = getCookie("menu");
+	if(cookieValue!=null) {
+		ss=cookieValue.split(",");
+		showHide(ss[0],ss[1],ss[2]);
+	}
+	if(gupx=gup()) {
+		if(typeof menuary!="undefined") {
+			if(menuary[gupx]) {
+				seoshow=menuary[gupx].split(",");
+				if(!stat) showHide(seoshow[0],seoshow[1],seoshow[2]);
+			}
+		}
+	}
+}
+activemenu = function() {
+		var re =/ /g;
+		var i=CookieGet("item");
+		if(i) i=i.replace(re,"_");
+		var m=CookieGet("menu");
+		var t=/,/;
+		if(t.test(m)) {
+			ma=m.split(",");
+			mr=ma[2];
+			if(ma[3]!=null) i=ma[3];
+		}
+		else mr=m;
+		if(document.getElementById(i)) {
+			document.getElementById(i).className=mr+"active";
+		}
+}
+if (window.addEventListener) { //DOM method for binding an event
+	window.addEventListener("load", initv2, false);
+	window.addEventListener("load", activemenu, false);
+}
+else if (window.attachEvent) { //IE exclusive method for binding an event
+	window.attachEvent("onload", initv2);
+	window.attachEvent("onload", activemenu);
+}
+else if (document.getElementById) { //support older modern browsers
+	window.onload=initv2;
+	window.onload=activemenu;
+}
+//--><!]]></script>
+<script type="text/javascript">
+	function popfp(width,height,item){
+		var a = 'flexipopup.php?site=coys&amp;itemtitle='+item;
+		var b= 'height='+height+',width='+width+',status=no,toolbar=no,menubar=no,directories=no,scrollbars=no,resizable=yes,location=no';
+		window.open(a,'popfp',b);
+		return false;
+}
+</script>
+<script type ="text/javascript"><!--//--><![CDATA[//><!--
+//window.onresize=function() {reswin();};
+	var firstload=1;
+	var contentheight=0;
+	var containerheight=0;
+	function reswin() {
+		if (firstload)
+		{
+			firstload=0;
+		}
+		else
+		{
+			var newheight=0;
+		document.getElementById("past-auctionsmaincontent").style.height="auto";
+		newheight=document.getElementById("past-auctionsmaincontent").offsetHeight;
+		if (newheight > 450)
+			{
+				if (newheight != contentheight)
+				{			
+					if (newheight > contentheight)
+					{
+						containerheight+=(newheight-contentheight);
+					}
+					else
+					{
+						containerheight-=(contentheight-newheight);
+					}
+				document.getElementById("past-auctionscontainerdiv").style.height=(containerheight+"px");
+					contentheight=newheight;
+				}
+			}
+			 else
+			{
+				pageset();
+			}
+		}
+	}
+	function pageset() {
+	var a =document.getElementById("past-auctionsmaincontent").offsetHeight;
+	if(a<450) a=450;
+	containerheight=a+176;
+	document.getElementById("past-auctionscontainerdiv").style.height=(containerheight+"px");
+	document.getElementById("past-auctionsmaincontent").style.height=(a+"px");
+	contentheight=document.getElementById("past-auctionsmaincontent").offsetHeight;
+}
+// Write session or persistent cookies
+function CookieSet(cookieName,cookieValue,cookieExpiration) {
+	if (cookieExpiration!=null) {
+        // Cookie has a duration / date object is expected
+		document.cookie=cookieName + "=" + escape(cookieValue) + ";path=/;expires=" + cookieExpiration.toGMTString()
+    } else {
+        // Cookie has no duration / it will remain only for the browser session
+		document.cookie=cookieName + "=" + escape(cookieValue) + ";path=/"
+    }
+}
+// Get cookie value
+function CookieGet(cookieName) { 
+	cookieString=document.cookie
+    cookieName+="="
+		// If at least one cookie exists...
+    if (cookieString.length>0) {
+		// Search for the cookie name
+		i=cookieString.indexOf(cookieName)
+		// If the cookie name exists, return its value
+        if (i!=-1) {
+            i += cookieName.length
+            j = cookieString.indexOf(";",i)
+            if (j==-1) {j = cookieString.length}
+            return unescape(cookieString.substring(i,j))
+        }
+    }
+    // Return a null value if the cookie doesn't exist
+	return null
+}
+// Delete a cookie
+function CookieDel(cookieName) {
+	// Get a date object for the 1st january 1970
+	cookieExpiration = new Date(1970,0,1)
+	// Set cookie value to an empty string and its expiration date to the 1st january 1970
+	document.cookie=cookieName + "=;path=/;expires=" + cookieExpiration.toGMTString()
+}
+//--><!]]></script>
+<script type="text/javascript" class="cc-onconsent-analytics">
+// <![CDATA[
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8638396-24']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+//    ]]>
+</script>
+</head>
+<body class="body" id="past-auctionsbody" onload="pageset();">
+<!--FLEXIWEBCMS-->
+<div class="outerdiv" align="center">
+<div class="containerdiv" id="past-auctionscontainerdiv">
+<div class="maincontent" id="past-auctionsmaincontent">
+<br /><h1>Coys Auction Results</h1>
+<table id="auction-results">
+<tr><th>Title</th><th>Date</th><th><th></th></tr>
+<tr>
+<td>The Brundza Collection, Maastricht</td>
+<td>Sat 10th January 2015 &#97;&#116; 2:00pm</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=51" title="">View Results &raquo;</a></td>
+</tr>
+<tr>
+<td>Autosport, NEC</td>
+<td>Sat 10th January 2015 &#97;&#116; 1:00pm</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=50" title="">View Results &raquo;</a></td>
+</tr>
+<tr>
+<td>True Greats</td>
+<td>Mon 8th December 2014 &#97;&#116; 5:43pm</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=49" title="">View Results &raquo;</a></td>
+</tr>
+<tr>
+<td>The Spirit of Motoring</td>
+<td>Sat 11th October 2014 &#97;&#116; 2:00pm</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=48" title="">View Results &raquo;</a></td>
+</tr>
+<tr>
+<td>Nurburgring</td>
+<td>Sat 9th August 2014 &#97;&#116; 12:00am</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=47" title="">View Results &raquo;</a></td>
+</tr>
+<tr>
+<td>Blenheim Palace</td>
+<td>Fri 11th July 2014 &#97;&#116; 3:00pm</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=46" title="">View Results &raquo;</a></td>
+</tr>
+<tr>
+<td>Athena, Greece</td>
+<td>Sat 14th June 2014 &#97;&#116; 7:00pm</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=45" title="">View Results &raquo;</a></td>
+</tr>
+<tr>
+<td>Legende et Passion, Monaco</td>
+<td>Fri 9th May 2014 &#97;&#116; 2:30pm</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=44" title="">View Results &raquo;</a></td>
+</tr>
+<tr>
+<td>Coys at Ascot</td>
+<td>Sat 26th April 2014 &#97;&#116; 2:30pm</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=43" title="">View Results &raquo;</a></td>
+</tr>
+<tr>
+<td>Techno Classica</td>
+<td>Sat 29th March 2014 &#97;&#116; 2:00pm</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=42" title="">View Results &raquo;</a></td>
+</tr>
+<tr>
+<td>Spring Classics</td>
+<td>Tue 11th March 2014 &#97;&#116; 7:00pm</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=41" title="">View Results &raquo;</a></td>
+</tr>
+<tr>
+<td>Grandes Marques, Maastricht</td>
+<td>Sat 18th January 2014 &#97;&#116; 2:00pm</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=40" title="">View Results &raquo;</a></td>
+</tr>
+<tr>
+<td>Autosport</td>
+<td>Sat 11th January 2014 &#97;&#116; 12:30pm</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=39" title="">View Results &raquo;</a></td>
+</tr>
+<tr>
+<td>True Greats</td>
+<td>Thu 5th December 2013 &#97;&#116; 5:03pm</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=38" title="">View Results &raquo;</a></td>
+</tr>
+<tr>
+<td>The Spirit of Motoring, Ascot</td>
+<td>Sat 26th October 2013 &#97;&#116; 3:00pm</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=37" title="">View Results &raquo;</a></td>
+</tr>
+<tr>
+<td>The Karl Ritter Museum Collection</td>
+<td>Sun 13th October 2013 &#97;&#116; 10:00am</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=36" title="">View Results &raquo;</a></td>
+</tr>
+<tr>
+<td>Athena, Greece</td>
+<td>Sat 15th June 2013 &#97;&#116; 4:00pm</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=33" title="">View Results &raquo;</a></td>
+</tr>
+<tr>
+<td>Techno Classica</td>
+<td>Sat 13th April 2013 &#97;&#116; 2:00pm</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=30" title="">View Results &raquo;</a></td>
+</tr>
+<tr>
+<td>Spring Classics</td>
+<td>Tue 12th February 2013 &#97;&#116; 7:00pm</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=29" title="">View Results &raquo;</a></td>
+</tr>
+<tr>
+<td>Autosport 2013</td>
+<td>Sat 12th January 2013 &#97;&#116; 11:00am</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=28" title="">View Results &raquo;</a></td>
+</tr>
+<tr>
+<td>True Greats</td>
+<td>Tue 4th December 2012 &#97;&#116; 7:00pm</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=27" title="">View Results &raquo;</a></td>
+</tr>
+<tr>
+<td>The Spirit of Motoring - Ascot</td>
+<td>Sat 13th October 2012 &#97;&#116; 3:00pm</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=26" title="">View Results &raquo;</a></td>
+</tr>
+<tr>
+<td>Blenheim Palace</td>
+<td>Sat 14th July 2012 &#97;&#116; 1:00pm</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=24" title="">View Results &raquo;</a></td>
+</tr>
+<tr>
+<td>Monaco &quot;Legende et Passion&quot;</td>
+<td>Sat 12th May 2012 &#97;&#116; 11:00am</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=23" title="">View Results &raquo;</a></td>
+</tr>
+<tr>
+<td>Techno Classica</td>
+<td>Sat 24th March 2012 &#97;&#116; 3:00pm</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=21" title="">View Results &raquo;</a></td>
+</tr>
+<tr>
+<td>Spring Classics</td>
+<td>Tue 6th March 2012 &#97;&#116; 5:00pm</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=20" title="">View Results &raquo;</a></td>
+</tr>
+<tr>
+<td>True Greats</td>
+<td>Wed 7th December 2011 &#97;&#116; 4:00pm</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=18" title="">View Results &raquo;</a></td>
+</tr>
+<tr>
+<td>The Excellence of Porsche</td>
+<td>Sat 3rd September 2011 &#97;&#116; 5:00pm</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=15" title="">View Results &raquo;</a></td>
+</tr>
+<tr>
+<td>Blenheim Palace</td>
+<td>Sat 16th July 2011 &#97;&#116; 2:00pm</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=13" title="">View Results &raquo;</a></td>
+</tr>
+<tr>
+<td>The Spirit of Motoring - Ascot</td>
+<td>Sat 14th May 2011 &#97;&#116; 3:00pm</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=12" title="">View Results &raquo;</a></td>
+</tr>
+<tr>
+<td>Techno Classica</td>
+<td>Sat 2nd April 2011 &#97;&#116; 3:00pm</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=10" title="">View Results &raquo;</a></td>
+</tr>
+<tr>
+<td>Spring Classics</td>
+<td>Tue 8th March 2011 &#97;&#116; 10:00am</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=9" title="">View Results &raquo;</a></td>
+</tr>
+<tr>
+<td>Autosport</td>
+<td>Sat 15th January 2011 &#97;&#116; 10:30am</td>
+<td class="more-right"><a href="/past-auctions.php?auctionID=8" title="">View Results &raquo;</a></td>
+</tr>
+</table>
+</div>
+<div class="main">
+	<ul id="main">
+			
+	<li class="menu-main" id="menu-main-Home">
+	<a class="menu-main-link" id="menu-main-Home-link" onclick="CookieSet('item','menu-main-Home-link');CookieSet('menu','main');" title="Home" href="index.php">Home</a>
+	</li>
+			
+	<li class="menu-main" id="menu-main-Showrooms">
+	<a class="menu-main-link" id="menu-main-Showrooms-link" onclick="CookieSet('item','menu-main-Showrooms-link');CookieSet('menu','main');" title="Showrooms" href="showrooms.php">Showrooms</a>
+	</li>
+			
+	<li class="menu-main" id="menu-main-Auctions">
+	<a class="menu-main-link" id="menu-main-Auctions-link" onclick="CookieSet('item','menu-main-Auctions-link');CookieSet('menu','main');" title="Auctions" href="how-auctions-work.php">Auctions</a>
+	</li>
+			
+	<li class="menu-main" id="menu-main-Buying">
+	<a class="menu-main-link" id="menu-main-Buying-link" onclick="CookieSet('item','menu-main-Buying-link');CookieSet('menu','main');" title="Buying" href="buy-a-lot.php">Buying</a>
+	</li>
+			
+	<li class="menu-main" id="menu-main-______________________Selling">
+	<a class="menu-main-link" id="menu-main-______________________Selling-link" onclick="CookieSet('item','menu-main-______________________Selling-link');CookieSet('menu','main');" title="               Selling" href="sell-a-lot.php">                      Selling</a>
+	</li>
+			
+	<li class="menu-main" id="menu-main-Coys_News">
+	<a class="menu-main-link" id="menu-main-Coys_News-link" onclick="CookieSet('item','menu-main-Coys_News-link');CookieSet('menu','main');" title="COYS News" href="coys-news.php">Coys News</a>
+	</li>
+			
+	<li class="menu-main" id="menu-main-Contact">
+	<a class="menu-main-link" id="menu-main-Contact-link" onclick="CookieSet('item','menu-main-Contact-link');CookieSet('menu','main');" title="Contact" href="contactus.php">Contact</a>
+	</li>
+	</ul>
+</div>
+<div align="left" class="auction">
+	<a id="Motor_Car_Dept." title="Motor Car Dept." href="coys-cars.php" onclick="CookieSet('item','Motor Car Dept.');CookieSet('menu','auction');">Motor Car Dept.</a>
+
+	<a id="Collectors_Dept." title="Collectors Dept." href="coys-collectors.php" onclick="CookieSet('item','Collectors Dept.');CookieSet('menu','auction');">Collectors Dept.</a>
+
+	<a id="Rock_Dept." title="Rock Dept." href="coys-rock.php" onclick="CookieSet('item','Rock Dept.');CookieSet('menu','auction');">Rock Dept.</a>
+
+	<a id="Posters_Dept." title="Posters Dept." href="coys-posters.php" onclick="CookieSet('item','Posters Dept.');CookieSet('menu','auction');">Posters Dept.</a>
+
+	<a id="Motorcycles_Dept." title="Motorcycles Dept." href="coys-bikes.php" onclick="CookieSet('item','Motorcycles Dept.');CookieSet('menu','auction');">Motorcycles Dept.</a>
+</div>
+<div align="left" class="auction-work">
+	<a id="Auction_Calendar" title="Auction Calendar" href="how-auctions-work.php" onclick="CookieSet('item','Auction_Calendar');CookieSet('menu','auction-work');HideAll();">Auction Calendar</a>
+
+	<a id="Auction_Catalogues" title="Auction Catalogues" href="catalogues.php" onclick="CookieSet('item','Auction_Catalogues');CookieSet('menu','auction-work');HideAll();">Auction Catalogues</a>
+
+<div><a id="Auction_Results" onclick="CookieSet('item','Auction_Results');CookieSet('menu','auction-work');setcook('Resultssub,3,auction-work');" href="past-auctions.php">Auction Results</a></div>
+		<div id="Resultssub3" class="hide">
+		<div class="auction-worksubmenu" >
+		<a id="Auction_ResultsResults" title="0" href="past-auctions.php" onclick="setcook('Resultssub,3,auction-work,Auction_ResultsResults');">Results</a></div>
+		<div class="auction-worksubmenu" >
+		<a id="Auction_ResultsResults_pre_2011" title="0" href="past-auctions-old.php" onclick="setcook('Resultssub,3,auction-work,Auction_ResultsResults_pre_2011');">Results pre 2011</a></div> 
+	</div>
+	<a id="Buying" title="Buying" href="buy-a-lot.php" onclick="CookieSet('item','Buying');CookieSet('menu','auction-work');HideAll();">Buying</a>
+
+	<a id="Selling" title="Selling" href="sell-a-lot.php" onclick="CookieSet('item','Selling');CookieSet('menu','auction-work');HideAll();">Selling</a>
+
+</div>
+<div class="logo" ><a href="index.php"><img alt="new_header.jpg" src="images/new_header.jpg" width="223" height="69" align="" style=""></a></div>
+<div class="banner-text" >Specialists in Fine Historic Automobiles, Valuers and Auctioneers</div>
+<div class="club-login" ><span class="text-16"><a href="signup.php"> Connoisseur Club Login » </a> </span>
+<div>Not a member? Join now to receive free news and updates
+  <br />
+</div></div>
+<div class="footer" ><table width="100%" border="0" cellpadding="0" cellspacing="0"> <tbody>
+  <tr>
+    <td style="width:50%; text-align: left;"> COYS 2013 ¦ <a title="Web Design by Bluesky-e" target="_blank" href="http://www.bluesky-e.co.uk">Web Design by Bluesky-e</a> </td>
+    <td style="text-align: right; width:50%"><a href="index.php">Home</a> | <a href="showrooms.php">Showrooms</a> | <a href="auction.php">Auctions</a> | <a href="buy-a-lot.php">Buying</a>| <a href="sell-a-lot.php">Selling</a> | <a href="auction.php">News</a>| <a href="contactus.php">Contact Us</a></td>
+  </tr> </tbody>
+</table></div>
+<div class="auction-work-topbg" ><img src="images/grey_top_bg_1.gif" width="166" height="5" /></div>
+<div class="auction-top-bg" ><img src="images/showroomr_top.gif" height="12" width="166" /></div>	
+</div>
+</div>
+</body>
+</html>

@@ -3,11 +3,11 @@ using Auctions.Model;
 
 namespace Auctions.Import.HAndH
 {
-    public class Auction
+    public class HAndHAuction
     {
         public List<AuctionSale> Sales { get; private set; }
 
-        public Auction()
+        public HAndHAuction()
         {
             Sales = new List<AuctionSale>();
         }

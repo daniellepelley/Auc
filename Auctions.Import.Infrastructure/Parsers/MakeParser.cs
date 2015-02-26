@@ -23,7 +23,8 @@ namespace Auctions.Import.Infrastructure.Parsers
                 "Lotus",
                 "Morris",
                 "Austin",
-                "Gravetti"
+                "Gravetti",
+                "Cadillac"
             })
         {}
         

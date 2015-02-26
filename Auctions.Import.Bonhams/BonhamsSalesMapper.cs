@@ -4,31 +4,16 @@ using Auctions.Model;
 
 namespace Auctions.Import.Bonhams
 {
-    public class BonhamsSalesMapper : ISaleMapper<BonhamsSale>
+    public class BonhamsSalesMapper : AuctionSaleMapper<BonhamsSale>
     {
-        private readonly BonhamsYearParser _bonhamsYearParser;
-        private readonly MakeParser _makeParser;
-        private readonly PriceParser _priceParser;
-
-        public BonhamsSalesMapper()
-            :this(new BonhamsYearParser())
-        { }
-
-        public BonhamsSalesMapper(BonhamsYearParser bonhamsYearParser)
-        {
-            _bonhamsYearParser = bonhamsYearParser;
-            _makeParser = new MakeParser();
-            _priceParser = new PriceParser();
-        }
-
-        public AuctionSale Map(BonhamsSale source)
+        public override AuctionSale Map(BonhamsSale source)
         {
             var sale = new AuctionSale
             {
-                Make = _makeParser.Parse(source.Description),
-                Year = _bonhamsYearParser.Parse(source.Description),
+                Make = MakeParser.Parse(source.Description),
+                Year = YearParser.Parse(source.Description),
                 Sold = source.LotStatus == "SOLD",
-                Price = _priceParser.Parse(source.Price)
+                Price = PriceParser.Parse(source.Price)
             };
 
             SetModel(sale, source.Description);

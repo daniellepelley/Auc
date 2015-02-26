@@ -3,28 +3,17 @@ using Auctions.Model;
 
 namespace Auctions.Import.HAndH
 {
-    public class HandHSalesMapper : ISaleMapper<HAndHSale>
+    public class HandHSalesMapper : AuctionSaleMapper<HAndHSale>
     {
-        private readonly PriceParser _priceParser;
-        private readonly HAndHYearParser _hAndHYearParser;
-        private readonly MakeParser _makeParser;
-
-        public HandHSalesMapper()
-        {
-            _priceParser = new PriceParser();
-            _hAndHYearParser = new HAndHYearParser();
-            _makeParser = new MakeParser();
-        }
-
-        public AuctionSale Map(HAndHSale source)
+        public override AuctionSale Map(HAndHSale source)
         {
             var description = source.Description;
             var price = source.Price;
 
             var sale = new AuctionSale
             {
-                Year = _hAndHYearParser.Parse(description),
-                Make = _makeParser.Parse(description)
+                Year = YearParser.Parse(description),
+                Make = MakeParser.Parse(description)
             };
 
             SetModel(sale, description);
@@ -42,7 +31,7 @@ namespace Auctions.Import.HAndH
 
                 if (price != "Sold")
                 {
-                    auctionSale.Price = _priceParser.Parse(price.Substring(9, price.Length - 9));
+                    auctionSale.Price = PriceParser.Parse(price.Substring(9, price.Length - 9));
                 }
             }
             else

@@ -11,6 +11,7 @@ namespace Auctions.Import.Infrastructure.Parsers
             var decodedPrice = HttpUtility.HtmlDecode(price);
             var poundRemovedPrice = decodedPrice
                 .Replace("£", string.Empty)
+                .Replace("€", string.Empty)
                 .Replace(",", string.Empty)
                 .Replace(".00", string.Empty);
 

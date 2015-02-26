@@ -7,17 +7,6 @@ namespace Auctions.Import.HAndH.Test
 {
     public class AuctionListingImporterTests
     {
-        private static AuctionListing[] GetAuctionListings()
-        {
-            var mockHtmlLoader = new Mock<IHttpLoader>();
-
-            mockHtmlLoader.Setup(x => x.Load(It.IsAny<string>()))
-                .ReturnsAsync(File.ReadAllText(Directory.GetCurrentDirectory() + "/Html/AuctionListingHtml.txt"));
-
-            var sut = new AuctionListingsWebScraper(mockHtmlLoader.Object, new DocumentBuilder());
-            return sut.Import("http://www.classic-auctions.com/auctions/previous.aspx?year=2013").Result;
-        }
-
         [Test]
         [Category("Unit")]
         public void Import()
@@ -60,6 +49,17 @@ namespace Auctions.Import.HAndH.Test
         {
             var auctions = GetAuctionListings();
             Assert.AreEqual(expected, auctions[index].Url);
+        }
+
+        private static AuctionListing[] GetAuctionListings()
+        {
+            var mockHtmlLoader = new Mock<IHttpLoader>();
+
+            mockHtmlLoader.Setup(x => x.Load(It.IsAny<string>()))
+                .ReturnsAsync(File.ReadAllText(Directory.GetCurrentDirectory() + "/Html/AuctionListingHtml.txt"));
+
+            var sut = new AuctionListingsWebScraper(mockHtmlLoader.Object, new DocumentBuilder());
+            return sut.Import("http://www.classic-auctions.com/auctions/previous.aspx?year=2013").Result;
         }
     }
 }

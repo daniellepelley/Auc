@@ -1,6 +1,4 @@
-using System.Linq;
 using Auctions.Import.Infrastructure;
-using Newtonsoft.Json.Linq;
 
 namespace Auctions.Import.Bonhams
 {

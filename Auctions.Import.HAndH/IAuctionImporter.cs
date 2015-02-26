@@ -2,6 +2,6 @@
 {
     public interface IAuctionImporter
     {
-        Auction Import(string baseUrl);
+        HAndHAuction Import(string baseUrl);
     }
 }

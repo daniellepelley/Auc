@@ -52,7 +52,6 @@
     <Compile Include="BonhamsSalesWebScraper.cs" />
     <Compile Include="BonhamsSale.cs" />
     <Compile Include="BonhamsSalesMapper.cs" />
-    <Compile Include="BonhamsYearParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
