@@ -12,7 +12,8 @@ namespace Auctions.Import.Silverstone
             var sale = new AuctionSale
             {
                 Year = YearParser.Parse(description),
-                Make = MakeParser.Parse(description)
+                Make = MakeParser.Parse(description),
+                Currency = "GBP"
             };
 
             SetModel(sale, description);

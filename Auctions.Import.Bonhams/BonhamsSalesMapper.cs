@@ -13,7 +13,8 @@ namespace Auctions.Import.Bonhams
                 Make = MakeParser.Parse(source.Description),
                 Year = YearParser.Parse(source.Description),
                 Sold = source.LotStatus == "SOLD",
-                Price = PriceParser.Parse(source.Price)
+                Price = PriceParser.Parse(source.Price),
+                Currency = "GBP"
             };
 
             SetModel(sale, source.Description);

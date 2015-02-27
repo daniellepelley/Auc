@@ -12,7 +12,8 @@ namespace Auctions.Import.Barons
                 Year = YearParser.Parse(source.Year),
                 Make = source.Make,
                 Model = source.Model,
-                Price = PriceParser.Parse(source.Price)
+                Price = PriceParser.Parse(source.Price),
+                Currency = "GBP"
             };
 
             return sale;

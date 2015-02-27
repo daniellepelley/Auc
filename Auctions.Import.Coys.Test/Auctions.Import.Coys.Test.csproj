@@ -48,7 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CoysSalesWebScraperTests.cs" />
-    <Compile Include="HAndHSalesImporterTests.cs" />
+    <Compile Include="CoysSalesImporterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

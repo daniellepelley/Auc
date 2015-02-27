@@ -13,7 +13,8 @@ namespace Auctions.Import.Coys
             var sale = new AuctionSale
             {
                 Year = YearParser.Parse(description),
-                Make = MakeParser.Parse(description)
+                Make = MakeParser.Parse(description),
+                Currency = "EUR"
             };
 
             SetModel(sale, description);

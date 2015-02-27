@@ -35,6 +35,14 @@ namespace Auctions.Import.HAndH.Test
 
         [Test]
         [Category("Unit")]
+        public void CurrencyIsFormattedCorrectly1()
+        {
+            var sales = GetSales();
+            Assert.AreEqual("GBP", sales[0].Currency);
+        }
+
+        [Test]
+        [Category("Unit")]
         public void SalePriceIsFormattedCorrectly1()
         {
             var sales = GetSales();
