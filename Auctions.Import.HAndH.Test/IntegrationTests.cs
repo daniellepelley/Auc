@@ -30,7 +30,7 @@ namespace Auctions.Import.HAndH.Test
             var salesImporter = new AuctionSalesScraper<HAndHSale>(new HAndHSalesWebScraper(), new HandHSalesMapper());
 
             var auctionImporter = new AuctionImporter(salesImporter);
-            var auctionListingImporter = new AuctionListingsWebScraper();
+            var auctionListingImporter = new HAndHAuctionListingsWebScraper();
 
             for (int i = 2010; i < 2015; i++)
             {

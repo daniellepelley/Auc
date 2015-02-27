@@ -6,7 +6,7 @@ using NUnit.Framework;
 
 namespace Auctions.Import.HAndH.Test
 {
-    public class AuctionImporterTest
+    public class HAndHAuctionImporterTest
     {
         private Mock<IHttpLoader> _mockHtmlLoader;
 

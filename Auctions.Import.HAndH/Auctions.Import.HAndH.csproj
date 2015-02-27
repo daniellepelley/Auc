@@ -47,8 +47,8 @@
   <ItemGroup>
     <Compile Include="HAndHAuction.cs" />
     <Compile Include="AuctionImporter.cs" />
-    <Compile Include="AuctionListing.cs" />
-    <Compile Include="AuctionListingsWebScraper.cs" />
+    <Compile Include="HAndHAuctionListing.cs" />
+    <Compile Include="HAndHAuctionListingsWebScraper.cs" />
     <Compile Include="HandHSalesMapper.cs" />
     <Compile Include="IAuctionImporter.cs" />
     <Compile Include="HAndHSalesWebScraper.cs" />

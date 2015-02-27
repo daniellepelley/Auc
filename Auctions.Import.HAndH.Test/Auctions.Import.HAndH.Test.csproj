@@ -47,7 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AuctionImporterTest.cs" />
+    <Compile Include="HAndHAuctionImporterTest.cs" />
     <Compile Include="AuctionListingImporterTests.cs" />
     <Compile Include="HAndHSalesImporterTests.cs" />
     <Compile Include="IntegrationTests.cs" />

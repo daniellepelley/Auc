@@ -39,6 +39,12 @@ namespace Auctions.Import.Silverstone
         }
 
     }
+
+    public class SilverstoneAuction
+    {
+        public string Name { get; set; }
+        public DateTime? Date { get; set; }
+    }
 }
 
 //https://www.silverstoneauctions.com/past-auctions

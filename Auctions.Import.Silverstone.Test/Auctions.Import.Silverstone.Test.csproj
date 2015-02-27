@@ -50,7 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HAndHSalesImporterTests.cs" />
+    <Compile Include="SilverstoneSalesImporterTests.cs" />
+    <Compile Include="SilverstoneAuctionsImporterTests.cs" />
     <Compile Include="SilverstoneSalesWebScraperTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
