@@ -50,6 +50,22 @@ namespace Auctions.Import.Coys.Test
             Assert.AreEqual(new DateTime(2014, 5, 9), sales[7].Date);
         }
 
+        [Test]
+        [Category("Unit")]
+        public void IdIsFormattedCorrectly1()
+        {
+            var sales = GetAuctions();
+            Assert.AreEqual("51", sales[0].Id);
+        }
+
+        [Test]
+        [Category("Unit")]
+        public void IdIsFormattedCorrectly2()
+        {
+            var sales = GetAuctions();
+            Assert.AreEqual("47", sales[4].Id);
+        }
+
         private static CoysAuction[] GetAuctions(string htmlFile = "/Html/AuctionsList.txt")
         {
             var mockHtmlLoader = new Mock<IHttpLoader>();

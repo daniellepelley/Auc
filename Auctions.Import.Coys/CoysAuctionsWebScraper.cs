@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Web;
 using Auctions.Import.Coys.Model;
 using Auctions.Import.Infrastructure;
@@ -19,17 +20,20 @@ namespace Auctions.Import.Coys
 
         public CoysAuctionsWebScraper()
             : this(new HttpLoader(), new DocumentBuilder())
-        {
-        }
+        { }
 
         private static CoysAuction CreateAuction(HtmlNode[] nodes)
         {
             var dateParser = new DateParser();
+
+            var href = nodes[2].SelectSingleNode("a").ChildAttributes("href").First().Value;
+            var id = href.Replace("/past-auctions.php?auctionID=", string.Empty);
+
             return new CoysAuction
             {
                 Name = nodes[0].InnerText,
                 Date = dateParser.Parse(nodes[1].InnerText, "d MMMM yyyy"),
-                //Id = tds[2].InnerText
+                Id = id
             };
         }
     }
