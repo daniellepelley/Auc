@@ -1,0 +1,722 @@
+﻿
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+	<head>
+		<meta http-equiv="content-language" content="en" />	
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" href="/includes/styles/style.css?v=27" type="text/css" />
+		<link rel="stylesheet" href="/includes/styles/jquery-ui.css" type="text/css" />
+		<link rel="stylesheet" href="/includes/styles/style-jeff.css?v=7" type="text/css" />
+	        <!--[if IE 6]>
+		       <link href="/includes/styles/ie6.css" rel="stylesheet" type="text/css" />
+	        <![endif]-->
+               <script type="text/javascript" src="/includes/scripts/jquery-1.4.4.min.js"></script>
+               <script type="text/javascript" src="/includes/scripts/cufon-yui.js"></script>
+               <script type="text/javascript" src="/includes/scripts/PetitaBold_500-PetitaBold_500.font.js"></script>
+               <script type="text/javascript" src="/includes/scripts/controls.js"></script>
+	       <script type="text/javascript" src="/includes/scripts/jquery.mousewheel-3.0.4.pack.js"></script>
+	       <script type="text/javascript" src="/includes/scripts/jquery.fancybox-1.3.4.pack.js"></script>
+	       <script type="text/javascript" src="/includes/scripts/jquery-ui.min.js"></script>
+                       	<link rel="stylesheet" type="text/css" href="/includes/styles/jquery.fancybox-1.3.4.css" media="screen" />
+		<title>Past Auctions - Silverstone Auctions</title>
+               <meta name="description" content=""> 
+               <meta name="keywords" content="">
+		<script type="text/javascript">
+			Cufon.replace('h1');
+                        Cufon.replace('.submenu-head div'); 
+                        Cufon.replace('h2');    // Cufon.replace('h2.gradient div'); 
+                        Cufon.replace('div.auction-info div'); 
+                        Cufon.replace('.cufon'); 
+		</script>
+	</head>
+	<body class="site view_page">
+
+<div id='background-wrapper'>
+	<div id='wrapper'>
+		<div id='header'>	
+                       <a name="top"></a>		
+<div id="header-telephone" class="cufon">
+<div>Contact us<br>01926 691 141</div>
+</div>
+<!-- AddThis Button BEGIN -->
+<div class="header-sharing">
+  <a class="facebook" title="Facebook" href="https://www.facebook.com/SilverstoneAuctions">
+     <span class="facebook-icon"></span>
+  </a>
+  <a class="twitter" title="Tweet" href="https://twitter.com/#!/silverstoneauc">
+     <span class="twitter-icon"></span>
+  </a>
+  <div class="clear"></div>
+</div>
+<!-- AddThis Button END -->
+<div id="members-login">
+
+<div class='block first'>	<div class="login">
+		<a href="https://www.silverstoneauctions.com/login">Members Login &raquo;</a>
+	</div>
+</div>
+</div>			
+			<div id="logo"><a href="/"><img src='/files/assets/logo.png' id='logo' alt='Silverstone Auctions' /></a></div>		
+
+<div id="nav-strip">
+			<div id='nav-1'>
+                                 
+<div class='block first'><div id="topmenu" class="yuimenubar yuimenubarnav"><div class="bd"><ul class="yuimenu-root"><li  id="index" class='horizontal left'><a  href="https://www.silverstoneauctions.com/">Home</a></li><li  class="separator">|</li><li  id="auctions" class='horizontal'><a  href="https://www.silverstoneauctions.com/auctions">Forthcoming Auctions</a><div id="sm_auctions" class="yuimenu"><div class="bd"><ul class="yuimenu-sub"><li id="auctions" class="vertical"><a href="https://www.silverstoneauctions.com/auctions">Forthcoming Auctions</a></li><li id="entry-forms" class="vertical"><a href="https://www.silverstoneauctions.com/entry-forms">Registration Forms</a></li><li id="terms-and-conditions" class="vertical"><a href="https://www.silverstoneauctions.com/terms-and-conditions">Terms and Conditions</a></li><li id="view_auction" class="vertical"><a href="https://www.silverstoneauctions.com/view_auction">View Auction</a></li></ul></div></div></li><li  class="separator">|</li><li  id="https://silverstoneauctions.proxibid.com/asp/FeaturedSeller.asp?ahid=10195" class='horizontal'><a  href="https://silverstoneauctions.proxibid.com/asp/FeaturedSeller.asp?ahid=10195">Live Bidding</a></li><li  class="separator">|</li><li  id="estates" class='horizontal'><a  href="https://www.silverstoneauctions.com/estates">Estates & Collections</a></li><li  class="separator">|</li><li  id="selling" class='horizontal'><a  href="https://www.silverstoneauctions.com/selling">Selling Guide</a></li><li  class="separator">|</li><li  id="buying" class='horizontal'><a  href="https://www.silverstoneauctions.com/buying">Buying Guide</a></li><li  class="separator">|</li><li  id="news" class='horizontal'><a  href="https://www.silverstoneauctions.com/news">News</a></li><li  class="separator">|</li><li  id="past-auctions" class='horizontal current-page'><a  href="https://www.silverstoneauctions.com/past-auctions">Past Auctions</a></li><li  class="separator">|</li><li  id="about-us" class='horizontal'><a  href="https://www.silverstoneauctions.com/about-us">About Us</a><div id="sm_about-us" class="yuimenu"><div class="bd"><ul class="yuimenu-sub"><li id="about-us" class="vertical"><a href="https://www.silverstoneauctions.com/about-us">About Us</a></li><li id="the-team" class="vertical"><a href="https://www.silverstoneauctions.com/the-team">The Team</a></li></ul></div></div></li><li  class="separator">|</li><li  id="contact" class='horizontal right'><a  href="https://www.silverstoneauctions.com/contact">Contact Us</a></li></ul></div></div><div class='clear'></div></div>
+			</div>				
+<div id="search-box">
+<form method="post" action="/search">
+<div class="rounded-inputa">
+<input name="search_string" class="search" type="text" value="Item Search" id="search-string">
+</div>
+<input name="search_submit" class="go" type="submit" value="">
+</form>
+</div>
+</div>	
+			
+		</div>
+		
+		<div class='clear'></div>
+		
+		<div id='content'>
+
+
+<div class='block first'>		<div id="breadcrumb">You are here:
+					<a href='/past-auctions'>Past Auctions</a>
+	</div></div>
+<div class='content-wrapper'>
+<table class='content' width='100%' cellpadding='0' cellspacing='0'>
+<tr>
+<td valign='top' class='no-print left' align='center' rowspan='2'><div class='left'>
+<div class='block first'><div class="submenu-head">
+	<div>Auctions</div>
+</div>
+<div class='submenu'>
+	<div class="inner">
+		<a href='https://www.silverstoneauctions.com/auctions'>Forthcoming Auctions</a><div class="indent">-&nbsp;<a href="https://www.silverstoneauctions.com/the-restoration-show-sale-2015" >The Restoration Show Sale 2015</a></div><div class="indent">-&nbsp;<a href="https://www.silverstoneauctions.com/the-may-sale-2015" >The May Sale 2015</a></div><div class="indent">-&nbsp;<a href="https://www.silverstoneauctions.com/the-silverstone-classic-sale-2015" >The Silverstone Classic Sale 2015</a></div><div class="indent">-&nbsp;<a href="https://www.silverstoneauctions.com/the-salon-priv-sale-2015" >The Salon Privé Sale 2015</a></div><div class="indent">-&nbsp;<a href="https://www.silverstoneauctions.com/the-porsche-sale-2015" >The Porsche Sale 2015</a></div><div class="indent">-&nbsp;<a href="https://www.silverstoneauctions.com/nec-classic-motor-show-sale-2015" >NEC Classic Motor Show Sale 2015</a></div><hr /><a href="https://www.silverstoneauctions.com/entry-forms">Registration Forms</a><hr /><a href="https://www.silverstoneauctions.com/terms-and-conditions">Terms and Conditions</a>
+
+		<div>
+		                 <hr />
+                 <span class="orange">&raquo;</span>&nbsp;                <a id="past-auctions-link" class="active" href="/past-auctions">Past Auctions</a><br>
+		                   		
+		 			</div>
+</div>
+
+
+</div><div class='block last'><div class="value-my-car-block" style="width: 100%;">
+	<a href="/value-my-classic">
+		<img src="/files/assets/value-my-classic-block.jpg" class="value-my-car-block" style="width: 100%;" />
+	</a>
+</div></div></div></td>
+</tr>     <td valign='top' class='full'>
+     <div class='centre-container'>
+	              <div class='block first'><div id="upcoming-auctions">
+
+	<h1>Past Auctions</h1>
+		  		<div class="auction">
+			<div class="inner">
+				<div class="details">
+					<div class="date"><div>Race Retro Classic Car Sale 2015 - 22<sup>nd</sup>/22<sup>nd</sup> February 2015</div></div>
+					<div class="description">
+						<div>Viewing: 20<sup>th</sup> February 2015<span class="break">&nbsp;</span>All Day</div>
+						<div class="indent"> </div>
+						<div>Auction:  22<sup>nd</sup> February 2015 12:00 onwards</div>
+						<div>Auction (day 2):  22<sup>nd</sup> February 2015 12:00 onwards</div>						<div>Sale type: Classic Cars / Race Cars / Motorcycles / Automobilia</div>
+					</div>
+					<a href="https://www.silverstoneauctions.com/race-retro--classic-car-sale-2015" class="view-auction"><div>View Auction</div></a>
+				</div>
+				<div class="image">
+											<a href="https://www.silverstoneauctions.com/race-retro--classic-car-sale-2015"><img src="/image-thumb?w=244&h=157&p=/files/Auction Images/4616228552 copy.jpg"></a>
+									</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	  		<div class="auction">
+			<div class="inner">
+				<div class="details">
+					<div class="date"><div>NEC Classic Motor Show Sale 2014 - 16<sup>th</sup> November 2014</div></div>
+					<div class="description">
+						<div>Viewing: 14<sup>th</sup> November 2014<span class="break">&nbsp;</span>All Day</div>
+						<div class="indent">15<sup>th</sup> November 2014<span class="break">&nbsp;</span>Morning Only </div>
+						<div>Auction:  16<sup>th</sup> November 2014 12:00 onwards</div>
+												<div>Sale type: Classic Cars / Race Cars / Motorcycles / Automobilia / Lifestyle</div>
+					</div>
+					<a href="https://www.silverstoneauctions.com/nec-classic-motor-show-sale-2014" class="view-auction"><div>View Auction</div></a>
+				</div>
+				<div class="image">
+											<a href="https://www.silverstoneauctions.com/nec-classic-motor-show-sale-2014"><img src="/image-thumb?w=244&h=157&p=/files/Auction Images/SHIELD-LANCASTER_small2014.jpg"></a>
+									</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	  		<div class="auction">
+			<div class="inner">
+				<div class="details">
+					<div class="date"><div>The Autumn Sale 2014 - 20<sup>th</sup> September 2014</div></div>
+					<div class="description">
+						<div>Viewing: 20<sup>th</sup> September 2014<span class="break">&nbsp;</span>Morning Only</div>
+						<div class="indent"> </div>
+						<div>Auction:  20<sup>th</sup> September 2014 14:00 onwards</div>
+												<div>Sale type: Classic Cars / Race Cars / Motorcycles / Automobilia / Lifestyle</div>
+					</div>
+					<a href="https://www.silverstoneauctions.com/the-autumn-sale-2014" class="view-auction"><div>View Auction</div></a>
+				</div>
+				<div class="image">
+											<a href="https://www.silverstoneauctions.com/the-autumn-sale-2014"><img src="/image-thumb?w=244&h=157&p=/files/Auction Images/5730994156_122c2cf2e5_o.jpg"></a>
+									</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	  		<div class="auction">
+			<div class="inner">
+				<div class="details">
+					<div class="date"><div>The Salon Privé Sale 2014 - 4<sup>th</sup> September 2014</div></div>
+					<div class="description">
+						<div>Viewing: 3<sup>rd</sup> September 2014<span class="break">&nbsp;</span>All Day</div>
+						<div class="indent"> </div>
+						<div>Auction:  4<sup>th</sup> September 2014 18:00 onwards</div>
+												<div>Sale type: Classic Cars / Modern Sports Cars / Motorcycles</div>
+					</div>
+					<a href="https://www.silverstoneauctions.com/salon-prive-sale-2014" class="view-auction"><div>View Auction</div></a>
+				</div>
+				<div class="image">
+											<a href="https://www.silverstoneauctions.com/salon-prive-sale-2014"><img src="/image-thumb?w=244&h=157&p=/files/Auction Images/495 24-06-13.jpg"></a>
+									</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	  		<div class="auction">
+			<div class="inner">
+				<div class="details">
+					<div class="date"><div>The Silverstone Classic Sale 2014 - 27<sup>th</sup>/27<sup>th</sup> July 2014</div></div>
+					<div class="description">
+						<div>Viewing: 25<sup>th</sup> July 2014<span class="break">&nbsp;</span>All Day</div>
+						<div class="indent">26<sup>th</sup> July 2014<span class="break">&nbsp;</span>Morning Only </div>
+						<div>Auction:  27<sup>th</sup> July 2014 11:30 onwards</div>
+						<div>Auction (day 2):  27<sup>th</sup> July 2014 11:30 - 19:00</div>						<div>Sale type: Classic Cars / Modern Sports Cars / Motorcycles / Automobilia / Lifestyle </div>
+					</div>
+					<a href="https://www.silverstoneauctions.com/the-silverstone-classic-sale-2014" class="view-auction"><div>View Auction</div></a>
+				</div>
+				<div class="image">
+											<a href="https://www.silverstoneauctions.com/the-silverstone-classic-sale-2014"><img src="/image-thumb?w=244&h=157&p=/files/Auction Images/SC14-STickets-700x300px-5.png"></a>
+									</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	  		<div class="auction">
+			<div class="inner">
+				<div class="details">
+					<div class="date"><div>The May Sale 2014 - 24<sup>th</sup> May 2014</div></div>
+					<div class="description">
+						<div>Viewing: 23<sup>rd</sup> May 2014<span class="break">&nbsp;</span>12:00 - 17:00</div>
+						<div class="indent">24<sup>th</sup> May 2014<span class="break">&nbsp;</span>Morning Only </div>
+						<div>Auction:  24<sup>th</sup> May 2014 12:00 onwards</div>
+												<div>Sale type: Classic Cars / Race Cars / Motorcycles / Automobilia / Lifestyle</div>
+					</div>
+					<a href="https://www.silverstoneauctions.com/the-may-sale-2014" class="view-auction"><div>View Auction</div></a>
+				</div>
+				<div class="image">
+											<a href="https://www.silverstoneauctions.com/the-may-sale-2014"><img src="/image-thumb?w=244&h=157&p=/files/Auction Images/DSC_2902-1 copy.jpg"></a>
+									</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	  		<div class="auction">
+			<div class="inner">
+				<div class="details">
+					<div class="date"><div>The Restoration Show Sale 2014 - 12<sup>th</sup> April 2014</div></div>
+					<div class="description">
+						<div>Viewing: 12<sup>th</sup> April 2014<span class="break">&nbsp;</span>Morning Only</div>
+						<div class="indent"> </div>
+						<div>Auction:  12<sup>th</sup> April 2014 13:00 onwards</div>
+												<div>Sale type: Classic Cars / Barn Finds</div>
+					</div>
+					<a href="https://www.silverstoneauctions.com/the-nec-restoration-show-sale" class="view-auction"><div>View Auction</div></a>
+				</div>
+				<div class="image">
+											<a href="https://www.silverstoneauctions.com/the-nec-restoration-show-sale"><img src="/image-thumb?w=244&h=157&p=/files/Auction Images/barn.jpg"></a>
+									</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	  		<div class="auction">
+			<div class="inner">
+				<div class="details">
+					<div class="date"><div>Race Retro & Classic Car Sale 2014 - 23<sup>rd</sup>/23<sup>rd</sup> February 2014</div></div>
+					<div class="description">
+						<div>Viewing: 21<sup>st</sup> February 2014<span class="break">&nbsp;</span>All Day</div>
+						<div class="indent">22<sup>nd</sup> February 2014<span class="break">&nbsp;</span>Morning Only </div>
+						<div>Auction:  23<sup>rd</sup> February 2014 12:00 onwards</div>
+						<div>Auction (day 2):  23<sup>rd</sup> February 2014 12:00 onwards</div>						<div>Sale type: Classic Cars / Race Cars / Motorcycles / Automobilia</div>
+					</div>
+					<a href="https://www.silverstoneauctions.com/race-retro--classic-car-sale-2014" class="view-auction"><div>View Auction</div></a>
+				</div>
+				<div class="image">
+											<a href="https://www.silverstoneauctions.com/race-retro--classic-car-sale-2014"><img src="/image-thumb?w=244&h=157&p=/files/Auction Images/homeimg.jpg"></a>
+									</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	  		<div class="auction">
+			<div class="inner">
+				<div class="details">
+					<div class="date"><div>NEC Classic Motor Show Sale 2013 - 16<sup>th</sup>/15<sup>th</sup> November 2013</div></div>
+					<div class="description">
+						<div>Viewing: 15<sup>th</sup> November 2013<span class="break">&nbsp;</span>09:00 - 17:00</div>
+						<div class="indent">16<sup>th</sup> November 2013<span class="break">&nbsp;</span>09:00 - 14:30 </div>
+						<div>Auction:  16<sup>th</sup> November 2013 12:30 - 17:00</div>
+						<div>Auction (day 2):  15<sup>th</sup> November 2013 12:30 - 17:00</div>						<div>Sale type: Classic Cars / Race Cars / Motorcycles / Automobilia</div>
+					</div>
+					<a href="https://www.silverstoneauctions.com/nec-classic-motor-show-sale-2013" class="view-auction"><div>View Auction</div></a>
+				</div>
+				<div class="image">
+											<a href="https://www.silverstoneauctions.com/nec-classic-motor-show-sale-2013"><img src="/image-thumb?w=244&h=157&p=/files/Auction Images/SHIELD-LANCASTER_small.jpg"></a>
+									</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	  		<div class="auction">
+			<div class="inner">
+				<div class="details">
+					<div class="date"><div>CarFest South Pride & Joy Auction 2013 - 25<sup>th</sup> August 2013</div></div>
+					<div class="description">
+						<div>Viewing: 23<sup>rd</sup> August 2013<span class="break">&nbsp;</span>Afternoon Only</div>
+						<div class="indent">24<sup>th</sup> August 2013<span class="break">&nbsp;</span>All Day </div>
+						<div>Auction:  25<sup>th</sup> August 2013 11:30 - 14:00</div>
+												<div>Sale type: Classic Cars / Modern Sports Cars / Motorcycles / Automobila</div>
+					</div>
+					<a href="https://www.silverstoneauctions.com/carfest-south-pride-joy-auction-2013" class="view-auction"><div>View Auction</div></a>
+				</div>
+				<div class="image">
+											<a href="https://www.silverstoneauctions.com/carfest-south-pride-joy-auction-2013"><img src="/image-thumb?w=244&h=157&p=/files/Auction Images/DSC_6602-29 copy.jpg"></a>
+									</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	  		<div class="auction">
+			<div class="inner">
+				<div class="details">
+					<div class="date"><div>CarFest North Pride & Joy Auction 2013 - 4<sup>th</sup> August 2013</div></div>
+					<div class="description">
+						<div>Viewing: 2<sup>nd</sup> August 2013<span class="break">&nbsp;</span>All Day</div>
+						<div class="indent">3<sup>rd</sup> August 2013<span class="break">&nbsp;</span>All Day </div>
+						<div>Auction:  4<sup>th</sup> August 2013 11:30 - 14:00</div>
+												<div>Sale type: Classic Cars / Modern Sports Cars / Motorcycles / Automobila</div>
+					</div>
+					<a href="https://www.silverstoneauctions.com/carfest-north-pride-joy-auction-2013" class="view-auction"><div>View Auction</div></a>
+				</div>
+				<div class="image">
+											<a href="https://www.silverstoneauctions.com/carfest-north-pride-joy-auction-2013"><img src="/image-thumb?w=244&h=157&p=/files/Auction Images/Auction Image.jpg"></a>
+									</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	  		<div class="auction">
+			<div class="inner">
+				<div class="details">
+					<div class="date"><div>CarFest North Motorhome Auction - 3<sup>rd</sup> August 2013</div></div>
+					<div class="description">
+						<div>Viewing: 2<sup>nd</sup> August 2013<span class="break">&nbsp;</span>All Day</div>
+						<div class="indent">3<sup>rd</sup> August 2013<span class="break">&nbsp;</span>Morning Only </div>
+						<div>Auction:  3<sup>rd</sup> August 2013 12:00 - 13:00</div>
+												<div>Sale type: Motorhomes</div>
+					</div>
+					<a href="https://www.silverstoneauctions.com/carfest-north-motorhome-auction" class="view-auction"><div>View Auction</div></a>
+				</div>
+				<div class="image">
+											<a href="https://www.silverstoneauctions.com/carfest-north-motorhome-auction"><img src="/image-thumb?w=244&h=157&p=/files/Auction Images/shutterstock_85412485.jpg"></a>
+									</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	  		<div class="auction">
+			<div class="inner">
+				<div class="details">
+					<div class="date"><div>2013 The Silverstone Classic Sale - 27<sup>th</sup> July 2013</div></div>
+					<div class="description">
+						<div>Viewing: 26<sup>th</sup> July 2013<span class="break">&nbsp;</span>09:00 - 18:30</div>
+						<div class="indent">27<sup>th</sup> July 2013<span class="break">&nbsp;</span>09:00 - 11:30 </div>
+						<div>Auction:  27<sup>th</sup> July 2013 10:30 - 17:30</div>
+												<div>Sale type: Classic Cars / Modern Sports Cars / Motorcycles / Automobilia</div>
+					</div>
+					<a href="https://www.silverstoneauctions.com/the-silverstone-classic-sale-2013" class="view-auction"><div>View Auction</div></a>
+				</div>
+				<div class="image">
+											<a href="https://www.silverstoneauctions.com/the-silverstone-classic-sale-2013"><img src="/image-thumb?w=244&h=157&p=/files/Auction Images/SC-branding-image-400x260.jpg"></a>
+									</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	  		<div class="auction">
+			<div class="inner">
+				<div class="details">
+					<div class="date"><div>International Trophy Motorhome Sale - 19<sup>th</sup> May 2013</div></div>
+					<div class="description">
+						<div>Viewing: 17<sup>th</sup> May 2013<span class="break">&nbsp;</span>All Day</div>
+						<div class="indent">18<sup>th</sup> May 2013<span class="break">&nbsp;</span>All Day </div>
+						<div>Auction:  19<sup>th</sup> May 2013 12:00 - 14:00</div>
+												<div>Sale type: Motorhomes</div>
+					</div>
+					<a href="https://www.silverstoneauctions.com/international-trophy-motorhome-sale" class="view-auction"><div>View Auction</div></a>
+				</div>
+				<div class="image">
+											<a href="https://www.silverstoneauctions.com/international-trophy-motorhome-sale"><img src="/image-thumb?w=244&h=157&p=/files/Auction Images/shutterstock_85412485.jpg"></a>
+									</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	  		<div class="auction">
+			<div class="inner">
+				<div class="details">
+					<div class="date"><div>International Trophy Sale 2013 - 17<sup>th</sup> May 2013</div></div>
+					<div class="description">
+						<div>Viewing: 16<sup>th</sup> May 2013<span class="break">&nbsp;</span>Afternoon Only</div>
+						<div class="indent">17<sup>th</sup> May 2013<span class="break">&nbsp;</span>Morning Only </div>
+						<div>Auction:  17<sup>th</sup> May 2013 11:00 -  5:30</div>
+												<div>Sale type: Classic Cars / Race Cars / Motorcycles / Automobilia</div>
+					</div>
+					<a href="https://www.silverstoneauctions.com/international-trophy-sale" class="view-auction"><div>View Auction</div></a>
+				</div>
+				<div class="image">
+											<a href="https://www.silverstoneauctions.com/international-trophy-sale"><img src="/image-thumb?w=244&h=157&p=/files/Auction Images/DSC_2902-1 copy.jpg"></a>
+									</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	  		<div class="auction">
+			<div class="inner">
+				<div class="details">
+					<div class="date"><div>Race Retro & Classic Car Sale 2013 - 23<sup>rd</sup> February 2013</div></div>
+					<div class="description">
+						<div>Viewing: 22<sup>nd</sup> February 2013<span class="break">&nbsp;</span>All Day</div>
+						<div class="indent">23<sup>rd</sup> February 2013<span class="break">&nbsp;</span>Morning Only </div>
+						<div>Auction:  23<sup>rd</sup> February 2013 12:00 -  5:30</div>
+												<div>Sale type: Classic Cars / Race Cars / Motorcycles / Automobilia</div>
+					</div>
+					<a href="https://www.silverstoneauctions.com/race-retro-classic-car-sale-" class="view-auction"><div>View Auction</div></a>
+				</div>
+				<div class="image">
+											<a href="https://www.silverstoneauctions.com/race-retro-classic-car-sale-"><img src="/image-thumb?w=244&h=157&p=/files/Auction Images/RR 2013 Auction Image.jpg"></a>
+									</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	  		<div class="auction">
+			<div class="inner">
+				<div class="details">
+					<div class="date"><div>NEC Classic Motor Show Sale 2012 - 17<sup>th</sup> November 2012</div></div>
+					<div class="description">
+						<div>Viewing: 16<sup>th</sup> November 2012<span class="break">&nbsp;</span>10:00 - 19:00</div>
+						<div class="indent">17<sup>th</sup> November 2012<span class="break">&nbsp;</span>09:00 - 12:00 </div>
+						<div>Auction:  17<sup>th</sup> November 2012 12:00 onwards</div>
+												<div>Sale type: Classic Cars / Race Cars / Motorcycles / Automobilia</div>
+					</div>
+					<a href="https://www.silverstoneauctions.com/the-nec-classic-motor-show-sale" class="view-auction"><div>View Auction</div></a>
+				</div>
+				<div class="image">
+											<a href="https://www.silverstoneauctions.com/the-nec-classic-motor-show-sale"><img src="/image-thumb?w=244&h=157&p=/files/Auction Images/temp logo.jpg"></a>
+									</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	  		<div class="auction">
+			<div class="inner">
+				<div class="details">
+					<div class="date"><div>CarFest North 'Pride & Joy' Auction 2012 - 9<sup>th</sup> September 2012</div></div>
+					<div class="description">
+						<div>Viewing: 8<sup>th</sup> September 2012<span class="break">&nbsp;</span>09:00 - 17:30</div>
+						<div class="indent">9<sup>th</sup> September 2012<span class="break">&nbsp;</span>09:00 - 14:00 </div>
+						<div>Auction:  9<sup>th</sup> September 2012 13:00 onwards</div>
+												<div>Sale type: Classic Cars / Modern Sports Cars / Motorcycles</div>
+					</div>
+					<a href="https://www.silverstoneauctions.com/carfest-north-pride-and-joy-auction" class="view-auction"><div>View Auction</div></a>
+				</div>
+				<div class="image">
+											<a href="https://www.silverstoneauctions.com/carfest-north-pride-and-joy-auction"><img src="/image-thumb?w=244&h=157&p=/files/Auction Images/north pride and joy   Image.jpg"></a>
+									</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	  		<div class="auction">
+			<div class="inner">
+				<div class="details">
+					<div class="date"><div>CarFest South 'Pride & Joy' Auction 2012 - 25<sup>th</sup>/26<sup>th</sup> August 2012</div></div>
+					<div class="description">
+						<div>Viewing: 25<sup>th</sup> August 2012<span class="break">&nbsp;</span>09:30 - 14:00</div>
+						<div class="indent"> </div>
+						<div>Auction:  25<sup>th</sup> August 2012 14:00 onwards</div>
+						<div>Auction (day 2):  26<sup>th</sup> August 2012 14:00 onwards</div>						<div>Sale type: Classic Cars / Modern Sports Cars / Motorcycles</div>
+					</div>
+					<a href="https://www.silverstoneauctions.com/carfest-pride-and-joy-auction" class="view-auction"><div>View Auction</div></a>
+				</div>
+				<div class="image">
+											<a href="https://www.silverstoneauctions.com/carfest-pride-and-joy-auction"><img src="/image-thumb?w=244&h=157&p=/files/Auction Images/The Pride And Joy sale image.jpg"></a>
+									</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	  		<div class="auction">
+			<div class="inner">
+				<div class="details">
+					<div class="date"><div>2012 The Silverstone Classic Sale - 21<sup>st</sup> July 2012</div></div>
+					<div class="description">
+						<div>Viewing: 20<sup>th</sup> July 2012<span class="break">&nbsp;</span>09:30 - 19:30</div>
+						<div class="indent">21<sup>st</sup> July 2012<span class="break">&nbsp;</span>09:00 - 12:00 </div>
+						<div>Auction:  21<sup>st</sup> July 2012 12:00 onwards</div>
+												<div>Sale type: Classic Cars / Modern Sports Cars / Motorcycles / Automobilia</div>
+					</div>
+					<a href="https://www.silverstoneauctions.com/the-silverstone-classic-sale" class="view-auction"><div>View Auction</div></a>
+				</div>
+				<div class="image">
+											<a href="https://www.silverstoneauctions.com/the-silverstone-classic-sale"><img src="/image-thumb?w=244&h=157&p=/files/Auction Images/header copy.jpg"></a>
+									</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	  		<div class="auction">
+			<div class="inner">
+				<div class="details">
+					<div class="date"><div>The Spring Sale 2012 - 16<sup>th</sup> May 2012</div></div>
+					<div class="description">
+						<div>Viewing: 15<sup>th</sup> May 2012<span class="break">&nbsp;</span>09:30 - 17:30</div>
+						<div class="indent">16<sup>th</sup> May 2012<span class="break">&nbsp;</span>09:30 - 12:00 </div>
+						<div>Auction:  16<sup>th</sup> May 2012 12:00 onwards</div>
+												<div>Sale type: Classic Cars / Modern Sports Cars / Motorcycles / Automobilia</div>
+					</div>
+					<a href="https://www.silverstoneauctions.com/spring-sale" class="view-auction"><div>View Auction</div></a>
+				</div>
+				<div class="image">
+											<a href="https://www.silverstoneauctions.com/spring-sale"><img src="/image-thumb?w=244&h=157&p=/files/Auction Images/Spring sale.jpg"></a>
+									</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	  		<div class="auction">
+			<div class="inner">
+				<div class="details">
+					<div class="date"><div>Race Retro Classic Car Sale 2012 - 25<sup>th</sup> February 2012</div></div>
+					<div class="description">
+						<div>Viewing: 24<sup>th</sup> February 2012<span class="break">&nbsp;</span>09:30 - 17:30</div>
+						<div class="indent">25<sup>th</sup> February 2012<span class="break">&nbsp;</span>09:30 - 12:00 </div>
+						<div>Auction:  25<sup>th</sup> February 2012 12:00 onwards</div>
+												<div>Sale type: Classic Cars / Race Cars / Motorcycles / Automobilia</div>
+					</div>
+					<a href="https://www.silverstoneauctions.com/race-retro-sale" class="view-auction"><div>View Auction</div></a>
+				</div>
+				<div class="image">
+											<a href="https://www.silverstoneauctions.com/race-retro-sale"><img src="/image-thumb?w=244&h=157&p=/files/2012-race-retro-sale/Logo/race_retro_logo_1.jpg"></a>
+									</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	  		<div class="auction">
+			<div class="inner">
+				<div class="details">
+					<div class="date"><div>The Walter Hayes Sale 2011 - 4<sup>th</sup> November 2011</div></div>
+					<div class="description">
+						<div>Viewing: 3<sup>rd</sup> November 2011<span class="break">&nbsp;</span>12:00 - 18:00</div>
+						<div class="indent">4<sup>th</sup> November 2011<span class="break">&nbsp;</span>10:00 - 18:00 </div>
+						<div>Auction:  4<sup>th</sup> November 2011 14:00 onwards</div>
+												<div>Sale type: Classic Cars / Modern Sports Cars / Motorcycles</div>
+					</div>
+					<a href="https://www.silverstoneauctions.com/the-walter-hayes-sale-2011" class="view-auction"><div>View Auction</div></a>
+				</div>
+				<div class="image">
+											<a href="https://www.silverstoneauctions.com/the-walter-hayes-sale-2011"><img src="/image-thumb?w=244&h=157&p=/files/Auction Images/whsale_icon_1.jpg"></a>
+									</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	  		<div class="auction">
+			<div class="inner">
+				<div class="details">
+					<div class="date"><div>2011 Silverstone Classic Sale - 23<sup>rd</sup> July 2011</div></div>
+					<div class="description">
+						<div>Viewing: 22<sup>nd</sup> July 2011<span class="break">&nbsp;</span>09:00 - 17:00</div>
+						<div class="indent">23<sup>rd</sup> July 2011<span class="break">&nbsp;</span>09:00 - 17:00 </div>
+						<div>Auction:  23<sup>rd</sup> July 2011 17:00 onwards</div>
+												<div>Sale type: Classic Cars / Modern Sports Cars / Motorcycles / Automobilia</div>
+					</div>
+					<a href="https://www.silverstoneauctions.com/silverstone-classic-sale-2011" class="view-auction"><div>View Auction</div></a>
+				</div>
+				<div class="image">
+											<a href="https://www.silverstoneauctions.com/silverstone-classic-sale-2011"><img src="/image-thumb?w=244&h=157&p=/files/Auction Images/silclassicsale_image.jpg"></a>
+									</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	  		<div class="auction">
+			<div class="inner">
+				<div class="details">
+					<div class="date"><div>MotoGP Motorcycle Sale 2011 - 11<sup>th</sup> June 2011</div></div>
+					<div class="description">
+						<div>Viewing: 10<sup>th</sup> June 2011<span class="break">&nbsp;</span>10:00 - 18:00</div>
+						<div class="indent">11<sup>th</sup> June 2011<span class="break">&nbsp;</span>09:00 - 18:00 </div>
+						<div>Auction:  11<sup>th</sup> June 2011 17:30 onwards</div>
+												<div>Sale type: Motorcycles / Automobilia</div>
+					</div>
+					<a href="https://www.silverstoneauctions.com/motogp-motorcycle-sale-2011" class="view-auction"><div>View Auction</div></a>
+				</div>
+				<div class="image">
+											<a href="https://www.silverstoneauctions.com/motogp-motorcycle-sale-2011"><img src="/image-thumb?w=244&h=157&p=/files/Auction Images/motogpsale_image.jpg"></a>
+									</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	  	
+</div>
+
+
+
+	<script>
+			slides = new Array();
+			slides['count'] = new Array();
+			slides['current'] = new Array();
+			fadeTime = 3000;
+			
+			function setupSlides() {
+				$('.lot-gallery').each(function(index, value) { 
+					var aid;
+					aid = $(value).attr('id').split('-');
+					aid = aid[2];
+					slides['count'][aid] = $(value).children().size();
+					slides['current'][aid] = 0;
+					setInterval( function () { doNextSlide(aid) }, fadeTime);
+				});
+			}
+			
+			function doNextSlide(index) {
+				$('img#lot-gallery-thumb-'+index+'-'+slides['current'][index]).fadeOut(1000);
+				var next;
+				next = (slides['current'][index]+1)%slides['count'][index];
+				$('img#lot-gallery-thumb-'+index+'-'+next).fadeIn(1000);
+				slides['current'][index] = next;
+			}
+			
+			$(document).ready( function () {
+				setupSlides();
+			});
+
+	</script>
+
+
+</div>
+      
+     </div>
+     </td>
+
+  </tr>
+</table>
+</div>
+<div class='content-bottom'></div>
+</div> 
+		
+		<div class='clear'></div> 
+
+</div> 
+</div> 
+</div>
+		
+		<div id='footer'> 
+
+<div id="footer-inner">
+                        <div id='footer-nav-strip'> 
+			</div>
+
+			<div id='footer-links'> 
+		
+	
+				<div class='footer-links-list footer-links-list-col-1'> 
+					<ul> 
+                                                <li class="head">Auction Links:</li>
+                                                <li>» <a href="https://www.silverstoneauctions.com/auctions">Forthcoming Auctions</a></li>
+                                                <li>» <a href="https://www.silverstoneauctions.com/buying">Buying Guide</a></li>
+                                                <li>» <a href="https://www.silverstoneauctions.com/selling">Selling Guide</a></li>
+					</ul> 
+				</div> 
+
+				<div class='footer-links-list footer-links-list-col-2'> 
+					<ul> 
+                                                <li class="head">Auction Tools:</li>
+                                                <li>» <a href="https://www.silverstoneauctions.com/catalogue">Catalogues</a></li>
+                                                <li>» <a href="https://www.silverstoneauctions.com/entry-forms">Registration Forms</a></li>
+					</ul> 
+				</div> 
+
+				<div class='footer-links-list footer-links-list-col-3'> 
+					<ul> 
+                                                <li class="head">Useful Links:</li>
+                                                <li>» <a href="https://www.silverstoneauctions.com/contact">Location & Contact</a></li>
+                                                <li>» <a href="https://www.silverstoneauctions.com/privacy-policy">Privacy Policy</a></li>
+                                                <li>» <a href="https://www.silverstoneauctions.com/terms-and-conditions">Terms & Conditions</a></li>
+                                                <li>» <a href="https://www.silverstoneauctions.com/careers">Careers</a></li>
+                                                <li>
+<!--<a href="http://facebook.com"><img src="/files/assets/follow-facebook.png" width="17" height="17"></a>
+<a href="http://twitter.com"><img src="/files/assets/follow-twitter.png" width="17" height="17"></a>-->
+                                                </li>
+					</ul> 
+				</div> 
+<div class='footer-links-list footer-links-list-col-4'> 
+					<ul> 
+                                                <li class="head">Partners:</li>
+                                                <li>» <a href="http://www.peterjamesinsurance.co.uk/" target="_blank">Stewart Miller & Peter James Insurance</a></li>
+					</ul> 
+				</div> 
+</div>
+
+<div class="footer-logo">
+<a href="http://www.silverstone.co.uk" target="_blank"><img alt="Silverstone Auctions" src="/files/assets/silverstone-logo.png"></a> 
+</div>
+
+<div class="footer-newsletter">
+<div class='block first'><div id="newsletter-subscribe">
+	<a name="newsletter-signup"></a>
+	<h2>E-Newsletter Sign Up</h2>
+
+<form action='#newsletter-signup' method=post style="margin:0px;" name='newsletters-box'>
+ <p>Enter your email address to receive the <strong>Silverstone Auctions</strong>
+	 e-newsletter for all the latest news and upcoming events.</p>
+
+<div class="relative">
+       	<input id="sqname" class="text" name='nfirst_name' value='Full Name'
+				onclick="if (document.getElementById('sqname').value == 'Full Name') document.getElementById('sqname').value = '';">
+		<input style="margin-left: 3px" id="snemail" class="text" name='nemail' value='Email Address'
+			onclick="if (document.getElementById('snemail').value == 'Email Address') document.getElementById('snemail').value = '';">
+		<input class="submit" type="submit" value="Subscribe >" name="newssubmit" value='1' id="newsletter-signup-button" />
+		<input type="hidden" name="JoinNewsletter" value="1">
+		</div>
+</form>
+
+</div></div>
+</div>
+				
+					
+			
+			</div> 
+ 
+ </div>
+		
+		
+</div>
+
+       
+<script type="text/javascript"> Cufon.now(); </script>
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21934849-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+	</body> 
+</html> 

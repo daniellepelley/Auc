@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6FF1C31A-54AC-466E-8D9B-E393290E4123}</ProjectGuid>
+    <ProjectGuid>{22419E23-A0E4-4936-8A60-7305BF531CAD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Auctions.Import.HAndH.Test</RootNamespace>
-    <AssemblyName>Auctions.Import.HAndH.Test</AssemblyName>
+    <RootNamespace>Auctions.Import.Silverstone.Test</RootNamespace>
+    <AssemblyName>Auctions.Import.Silverstone.Test</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="Moq">
       <HintPath>..\packages\Moq.4.2.1409.1722\lib\net40\Moq.dll</HintPath>
     </Reference>
@@ -47,43 +50,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AuctionImporterTest.cs" />
-    <Compile Include="AuctionListingImporterTests.cs" />
     <Compile Include="HAndHSalesImporterTests.cs" />
-    <Compile Include="IntegrationTests.cs" />
-    <Compile Include="HAndHSalesWebScraperTests.cs" />
+    <Compile Include="SilverstoneSalesWebScraperTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Html\AuctionsList.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Html\SalesList.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Auctions.Import.HAndH\Auctions.Import.HAndH.csproj">
-      <Project>{ae53af22-8e26-42d0-9f1d-bf8ee461345e}</Project>
-      <Name>Auctions.Import.HAndH</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Auctions.Import.Infrastructure\Auctions.Import.Infrastructure.csproj">
       <Project>{82EB7F9C-5CF0-4B1E-9DD4-91766D19DA86}</Project>
       <Name>Auctions.Import.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Auctions.Import.Silverstone\Auctions.Import.Silverstone.csproj">
+      <Project>{A453ED82-0130-4B9A-AF41-8687025ECA2E}</Project>
+      <Name>Auctions.Import.Silverstone</Name>
     </ProjectReference>
     <ProjectReference Include="..\Auctions.Model\Auctions.Model.csproj">
       <Project>{15B14F44-E827-469B-A86A-876843BDB747}</Project>
       <Name>Auctions.Model</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Html\AuctionListingHtml.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Html\PageHtml2.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Html\PageHtml.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Html\PageHtmlEmpty.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

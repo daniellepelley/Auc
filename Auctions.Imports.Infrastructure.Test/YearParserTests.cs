@@ -1,7 +1,7 @@
 using Auctions.Import.Infrastructure.Parsers;
 using NUnit.Framework;
 
-namespace Auctions.Import.HAndH.Test
+namespace Auctions.Imports.Infrastructure.Test
 {
     public class YearParserTests
     {
@@ -10,6 +10,7 @@ namespace Auctions.Import.HAndH.Test
         [TestCase("", null)]
         [TestCase("Text", null)]
         [TestCase(" No Year", null)]
+        [TestCase("BMW 1985 325i", 1985)]
         public void ParseYear(string input, int? expected)
         {
             var sut = new YearParser();

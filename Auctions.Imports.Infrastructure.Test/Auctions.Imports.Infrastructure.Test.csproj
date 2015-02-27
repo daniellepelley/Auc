@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6FF1C31A-54AC-466E-8D9B-E393290E4123}</ProjectGuid>
+    <ProjectGuid>{E0209701-4AA1-46CE-B390-55563458DD6E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Auctions.Import.HAndH.Test</RootNamespace>
-    <AssemblyName>Auctions.Import.HAndH.Test</AssemblyName>
+    <RootNamespace>Auctions.Imports.Infrastructure.Test</RootNamespace>
+    <AssemblyName>Auctions.Imports.Infrastructure.Test</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
@@ -32,9 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Moq">
-      <HintPath>..\packages\Moq.4.2.1409.1722\lib\net40\Moq.dll</HintPath>
-    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
     </Reference>
@@ -47,43 +44,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AuctionImporterTest.cs" />
-    <Compile Include="AuctionListingImporterTests.cs" />
-    <Compile Include="HAndHSalesImporterTests.cs" />
-    <Compile Include="IntegrationTests.cs" />
-    <Compile Include="HAndHSalesWebScraperTests.cs" />
+    <Compile Include="MakeParserTests.cs" />
+    <Compile Include="PriceParserTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="YearParserTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Auctions.Import.HAndH\Auctions.Import.HAndH.csproj">
-      <Project>{ae53af22-8e26-42d0-9f1d-bf8ee461345e}</Project>
-      <Name>Auctions.Import.HAndH</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Auctions.Import.Infrastructure\Auctions.Import.Infrastructure.csproj">
       <Project>{82EB7F9C-5CF0-4B1E-9DD4-91766D19DA86}</Project>
       <Name>Auctions.Import.Infrastructure</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Auctions.Model\Auctions.Model.csproj">
-      <Project>{15B14F44-E827-469B-A86A-876843BDB747}</Project>
-      <Name>Auctions.Model</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Html\AuctionListingHtml.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Html\PageHtml2.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Html\PageHtml.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Html\PageHtmlEmpty.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

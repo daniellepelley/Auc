@@ -18,7 +18,7 @@ namespace Auctions.Import.Infrastructure.Parsers
                 return Convert.ToInt32(year);
             }
 
-            var regex = new Regex("[0-9]{4}");
+            var regex = new Regex("[1-2][0-9]{3}");
             year = regex.Match(year).Value;
 
             if (!string.IsNullOrEmpty(year))

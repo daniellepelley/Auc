@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Auctions.Import.Infrastructure.Parsers
@@ -24,7 +25,9 @@ namespace Auctions.Import.Infrastructure.Parsers
                 "Morris",
                 "Austin",
                 "Gravetti",
-                "Cadillac"
+                "Cadillac",
+                "Ford",
+                "MGC"
             })
         {}
         
@@ -35,7 +38,7 @@ namespace Auctions.Import.Infrastructure.Parsers
 
         public string Parse(string description)
         {
-            foreach (var key in _models.Keys.Where(description.Contains))
+            foreach (var key in _models.Keys.OrderByDescending(x => x.Length).Where(description.Contains))
             {
                 return _models[key];
             }

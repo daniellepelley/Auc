@@ -1,6 +1,7 @@
-using Auctions.Import.Infrastructure;
+using System.Linq;
+using Newtonsoft.Json.Linq;
 
-namespace Auctions.Import.Bonhams
+namespace Auctions.Import.Infrastructure
 {
     public abstract class JsonDataExtractor<T> : IJsonDataExtractor<T>
     {
