@@ -1,5 +1,7 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Linq;
+using Auctions.Import.Coys.Model;
 using Auctions.Import.Infrastructure;
 using Moq;
 using NUnit.Framework;
@@ -15,9 +17,6 @@ namespace Auctions.Import.Coys.Test
             var sales = GetAuctions();
             Assert.AreEqual(33, sales.Count());
         }
-
-//The Brundza Collection, Maastricht	Sat 10th January 2015 at 2:00pmView Results »
-//Autosport, NEC	Sat 10th January 2015 at 1:00pmView Results »
 
         [Test]
         [Category("Unit")]
@@ -40,7 +39,7 @@ namespace Auctions.Import.Coys.Test
         public void DateIsFormattedCorrectly1()
         {
             var sales = GetAuctions();
-            Assert.AreEqual("Sat 10th January 2015 at 2:00pm", sales[0].Date);
+            Assert.AreEqual(new DateTime(2015, 1, 10), sales[0].Date);
         }
 
         [Test]
@@ -48,7 +47,7 @@ namespace Auctions.Import.Coys.Test
         public void DateIsFormattedCorrectly2()
         {
             var sales = GetAuctions();
-            Assert.AreEqual("Sat 10th January 2015 at 1:00pm", sales[1].Date);
+            Assert.AreEqual(new DateTime(2014, 5, 9), sales[7].Date);
         }
 
         private static CoysAuction[] GetAuctions(string htmlFile = "/Html/AuctionsList.txt")

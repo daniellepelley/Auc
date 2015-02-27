@@ -25,7 +25,7 @@ namespace Auctions.Import.Silverstone.Test
             var sales = GetAuctions();
             Assert.AreEqual("Race Retro Classic Car Sale", sales[0].Name);
         }
-
+        
         [Test]
         [Category("Unit")]
         public void NameIsFormattedCorrectly2()

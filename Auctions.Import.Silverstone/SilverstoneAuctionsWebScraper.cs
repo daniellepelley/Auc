@@ -26,6 +26,7 @@ namespace Auctions.Import.Silverstone
 
         private static SilverstoneAuction CreateSilverstoneAuction(HtmlNode[] cells)
         {
+            var dateParser = new DateParser();
             var description = cells[0].Element("div").Element("div").InnerText;
             var year = _yearParser.Parse(description);
             var name = description.Split(new[] {year.ToString()}, StringSplitOptions.RemoveEmptyEntries)[0].Trim();
@@ -41,18 +42,9 @@ namespace Auctions.Import.Silverstone
                     var dateText = d.Trim()
                         .Replace("Auction:  ", string.Empty)
                         .Replace("onwards", string.Empty)
-                        .Replace("th", string.Empty)
-                        .Replace("st", string.Empty)
-                        .Replace("nd", string.Empty)
-                        .Replace("rd", string.Empty)
                         .Trim();
 
-                    try
-                    {
-                        dateTime = DateTime.ParseExact(dateText, "dd MMMM yyyy HH:mm", new DateTimeFormatInfo());
-                        dateTime = new DateTime(dateTime.Value.Year, dateTime.Value.Month, dateTime.Value.Day);
-                    }
-                    catch { }
+                    dateTime = dateParser.Parse(dateText, "dd MMMM yyyy HH:mm");
                 }
             }
 
