@@ -1,4 +1,4 @@
-﻿namespace Auctions.Import.Silverstone
+﻿namespace Auctions.Import.Silverstone.Model
 {
     public class SilverstoneSale
     {

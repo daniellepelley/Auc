@@ -51,7 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="SilverstoneSalesImporterTests.cs" />
-    <Compile Include="SilverstoneAuctionsImporterTests.cs" />
+    <Compile Include="SilverstoneAuctionsWebScraperTests.cs" />
     <Compile Include="SilverstoneSalesWebScraperTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

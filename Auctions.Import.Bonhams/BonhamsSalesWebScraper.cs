@@ -1,4 +1,5 @@
-﻿using Auctions.Import.Infrastructure;
+﻿using Auctions.Import.Bonhams.Model;
+using Auctions.Import.Infrastructure;
 
 namespace Auctions.Import.Bonhams
 {

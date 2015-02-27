@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Auctions.Model;
 
-namespace Auctions.Import.HAndH
+namespace Auctions.Import.HAndH.Model
 {
     public class HAndHAuction
     {

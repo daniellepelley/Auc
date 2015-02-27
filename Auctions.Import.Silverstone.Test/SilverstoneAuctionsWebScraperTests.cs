@@ -2,13 +2,13 @@ using System;
 using System.IO;
 using System.Linq;
 using Auctions.Import.Infrastructure;
-using Auctions.Model;
+using Auctions.Import.Silverstone.Model;
 using Moq;
 using NUnit.Framework;
 
 namespace Auctions.Import.Silverstone.Test
 {
-    public class SilverstoneAuctionsImporterTests
+    public class SilverstoneAuctionsWebScraperTests
     {
         [Test]
         [Category("Unit")]
@@ -34,13 +34,13 @@ namespace Auctions.Import.Silverstone.Test
             Assert.AreEqual("NEC Classic Motor Show Sale", sales[1].Name);
         }
 
-        //[Test]
-        //[Category("Unit")]
-        //public void DateIsFormattedCorrectly1()
-        //{
-        //    var sales = GetAuctions();
-        //    Assert.AreEqual(new DateTime(2015,2,22), sales[0].Date);
-        //}
+        [Test]
+        [Category("Unit")]
+        public void DateIsFormattedCorrectly1()
+        {
+            var sales = GetAuctions();
+            Assert.AreEqual(new DateTime(2015, 2, 22), sales[0].Date);
+        }
 
         [Test]
         [Category("Unit")]

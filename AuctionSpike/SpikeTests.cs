@@ -1,5 +1,6 @@
 ﻿using Auctions.Export;
 using Auctions.Import.Barons;
+using Auctions.Import.Barons.Model;
 using Auctions.Model;
 using NUnit.Framework;
 

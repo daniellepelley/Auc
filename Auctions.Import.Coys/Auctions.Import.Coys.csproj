@@ -46,7 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CoysSalesWebScraper.cs" />
-    <Compile Include="CoysSale.cs" />
+    <Compile Include="Model\CoysSale.cs" />
     <Compile Include="CoysSalesMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

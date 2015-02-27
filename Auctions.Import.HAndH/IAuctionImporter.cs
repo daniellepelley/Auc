@@ -1,4 +1,6 @@
-﻿namespace Auctions.Import.HAndH
+﻿using Auctions.Import.HAndH.Model;
+
+namespace Auctions.Import.HAndH
 {
     public interface IAuctionImporter
     {

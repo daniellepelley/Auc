@@ -1,4 +1,4 @@
-﻿namespace Auctions.Import.Coys
+﻿namespace Auctions.Import.Coys.Model
 {
     public class CoysSale
     {

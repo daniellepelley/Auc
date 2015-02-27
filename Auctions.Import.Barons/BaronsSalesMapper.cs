@@ -1,4 +1,4 @@
-﻿using Auctions.Import.Infrastructure.Parsers;
+﻿using Auctions.Import.Barons.Model;
 using Auctions.Model;
 
 namespace Auctions.Import.Barons

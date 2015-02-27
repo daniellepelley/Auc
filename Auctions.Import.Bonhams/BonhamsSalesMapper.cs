@@ -1,5 +1,5 @@
 ﻿using System;
-using Auctions.Import.Infrastructure.Parsers;
+using Auctions.Import.Bonhams.Model;
 using Auctions.Model;
 
 namespace Auctions.Import.Bonhams

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Auctions.Import.HAndH.Model;
 using Auctions.Model;
 using NUnit.Framework;
 

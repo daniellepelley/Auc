@@ -1,4 +1,5 @@
-﻿using Auctions.Model;
+﻿using Auctions.Import.Silverstone.Model;
+using Auctions.Model;
 
 namespace Auctions.Import.Silverstone
 {

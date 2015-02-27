@@ -1,3 +1,4 @@
+using Auctions.Import.Bonhams.Model;
 using Auctions.Import.Infrastructure;
 using Newtonsoft.Json.Linq;
 

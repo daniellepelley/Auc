@@ -1,4 +1,4 @@
-﻿using Auctions.Import.Infrastructure.Parsers;
+﻿using Auctions.Import.HAndH.Model;
 using Auctions.Model;
 
 namespace Auctions.Import.HAndH

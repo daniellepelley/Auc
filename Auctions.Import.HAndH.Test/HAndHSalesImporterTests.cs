@@ -1,5 +1,6 @@
 using System.IO;
 using System.Linq;
+using Auctions.Import.HAndH.Model;
 using Auctions.Import.Infrastructure;
 using Auctions.Model;
 using Moq;

@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using System.Web;
 using Auctions.Import.Infrastructure;
+using Auctions.Import.Silverstone.Model;
 using HtmlAgilityPack;
 
 namespace Auctions.Import.Silverstone
@@ -38,12 +35,6 @@ namespace Auctions.Import.Silverstone
             };
         }
 
-    }
-
-    public class SilverstoneAuction
-    {
-        public string Name { get; set; }
-        public DateTime? Date { get; set; }
     }
 }
 

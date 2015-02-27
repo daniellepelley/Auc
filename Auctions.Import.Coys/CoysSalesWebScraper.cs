@@ -1,4 +1,5 @@
 ﻿using System.Web;
+using Auctions.Import.Coys.Model;
 using Auctions.Import.Infrastructure;
 
 namespace Auctions.Import.Coys

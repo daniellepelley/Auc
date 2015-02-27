@@ -1,4 +1,4 @@
-namespace Auctions.Import.HAndH
+namespace Auctions.Import.HAndH.Model
 {
     public class HAndHSale
     {

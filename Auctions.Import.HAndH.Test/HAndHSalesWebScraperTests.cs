@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Auctions.Import.HAndH.Model;
 using Auctions.Import.Infrastructure;
 using Moq;
 using NUnit.Framework;

@@ -1,4 +1,5 @@
 using System.Web;
+using Auctions.Import.HAndH.Model;
 using Auctions.Import.Infrastructure;
 
 namespace Auctions.Import.HAndH

@@ -1,4 +1,4 @@
-﻿namespace Auctions.Import.Barons
+﻿namespace Auctions.Import.Barons.Model
 {
     public class BaronsSale
     {

@@ -1,4 +1,4 @@
-﻿namespace Auctions.Import.Bonhams
+﻿namespace Auctions.Import.Bonhams.Model
 {
     public class BonhamsSale
     {
