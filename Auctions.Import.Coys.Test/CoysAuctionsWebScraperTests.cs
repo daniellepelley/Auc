@@ -14,56 +14,56 @@ namespace Auctions.Import.Coys.Test
         [Category("Unit")]
         public void Import()
         {
-            var sales = GetAuctions();
-            Assert.AreEqual(33, sales.Count());
+            var auctions = GetAuctions();
+            Assert.AreEqual(33, auctions.Count());
         }
 
         [Test]
         [Category("Unit")]
         public void NameIsFormattedCorrectly1()
         {
-            var sales = GetAuctions();
-            Assert.AreEqual("The Brundza Collection, Maastricht", sales[0].Name);
+            var auctions = GetAuctions();
+            Assert.AreEqual("The Brundza Collection, Maastricht", auctions[0].Name);
         }
 
         [Test]
         [Category("Unit")]
         public void NameIsFormattedCorrectly2()
         {
-            var sales = GetAuctions();
-            Assert.AreEqual("Autosport, NEC", sales[1].Name);
+            var auctions = GetAuctions();
+            Assert.AreEqual("Autosport, NEC", auctions[1].Name);
         }
 
         [Test]
         [Category("Unit")]
         public void DateIsFormattedCorrectly1()
         {
-            var sales = GetAuctions();
-            Assert.AreEqual(new DateTime(2015, 1, 10), sales[0].Date);
+            var auctions = GetAuctions();
+            Assert.AreEqual(new DateTime(2015, 1, 10), auctions[0].Date);
         }
 
         [Test]
         [Category("Unit")]
         public void DateIsFormattedCorrectly2()
         {
-            var sales = GetAuctions();
-            Assert.AreEqual(new DateTime(2014, 5, 9), sales[7].Date);
+            var auctions = GetAuctions();
+            Assert.AreEqual(new DateTime(2014, 5, 9), auctions[7].Date);
         }
 
         [Test]
         [Category("Unit")]
         public void IdIsFormattedCorrectly1()
         {
-            var sales = GetAuctions();
-            Assert.AreEqual("51", sales[0].Id);
+            var auctions = GetAuctions();
+            Assert.AreEqual("51", auctions[0].Id);
         }
 
         [Test]
         [Category("Unit")]
         public void IdIsFormattedCorrectly2()
         {
-            var sales = GetAuctions();
-            Assert.AreEqual("47", sales[4].Id);
+            var auctions = GetAuctions();
+            Assert.AreEqual("47", auctions[4].Id);
         }
 
         private static CoysAuction[] GetAuctions(string htmlFile = "/Html/AuctionsList.txt")
@@ -74,8 +74,8 @@ namespace Auctions.Import.Coys.Test
                 .ReturnsAsync(File.ReadAllText(Directory.GetCurrentDirectory() + htmlFile));
 
             var sut = new CoysAuctionsWebScraper(mockHtmlLoader.Object, new DocumentBuilder());
-            var sales = sut.Import("http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx").Result;
-            return sales;
+            var auctions = sut.Import("http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx").Result;
+            return auctions;
         }
     }
 }
