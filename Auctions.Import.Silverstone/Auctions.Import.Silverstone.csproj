@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\SilverstoneAuction.cs" />
     <Compile Include="SilverstoneAuctionsWebScraper.cs" />
     <Compile Include="SilverstoneSalesMapperBase.cs" />
     <Compile Include="Model\SilverstoneSale.cs" />

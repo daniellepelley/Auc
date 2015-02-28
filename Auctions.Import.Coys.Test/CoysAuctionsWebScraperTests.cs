@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using Auctions.Import.Coys.Model;
 using Auctions.Import.Infrastructure;
+using Auctions.Model;
 using Moq;
 using NUnit.Framework;
 
@@ -18,55 +19,34 @@ namespace Auctions.Import.Coys.Test
             Assert.AreEqual(33, auctions.Count());
         }
 
-        [Test]
+        [TestCase(0, "The Brundza Collection, Maastricht")]
+        [TestCase(1, "Autosport, NEC")]
         [Category("Unit")]
-        public void NameIsFormattedCorrectly1()
+        public void NameIsFormattedCorrectly(int index, string expected)
         {
             var auctions = GetAuctions();
-            Assert.AreEqual("The Brundza Collection, Maastricht", auctions[0].Name);
+            Assert.AreEqual(expected, auctions[index].Name);
         }
 
-        [Test]
+        [TestCase(0, "10/01/2015")]
+        [TestCase(7, "09/05/2014")]
         [Category("Unit")]
-        public void NameIsFormattedCorrectly2()
+        public void DateIsFormattedCorrectly(int index, string expected)
         {
             var auctions = GetAuctions();
-            Assert.AreEqual("Autosport, NEC", auctions[1].Name);
+            Assert.AreEqual(expected, auctions[index].Date.Value.ToString("dd/MM/yyyy"));
         }
 
-        [Test]
+        [TestCase(0, "http://www.coys.co.uk/past-auctions.php?auctionID=51")]
+        [TestCase(4, "http://www.coys.co.uk/past-auctions.php?auctionID=47")]
         [Category("Unit")]
-        public void DateIsFormattedCorrectly1()
+        public void UrlIsFormattedCorrectly(int index, string expected)
         {
             var auctions = GetAuctions();
-            Assert.AreEqual(new DateTime(2015, 1, 10), auctions[0].Date);
+            Assert.AreEqual(expected, auctions[index].Url);
         }
 
-        [Test]
-        [Category("Unit")]
-        public void DateIsFormattedCorrectly2()
-        {
-            var auctions = GetAuctions();
-            Assert.AreEqual(new DateTime(2014, 5, 9), auctions[7].Date);
-        }
-
-        [Test]
-        [Category("Unit")]
-        public void IdIsFormattedCorrectly1()
-        {
-            var auctions = GetAuctions();
-            Assert.AreEqual("51", auctions[0].Id);
-        }
-
-        [Test]
-        [Category("Unit")]
-        public void IdIsFormattedCorrectly2()
-        {
-            var auctions = GetAuctions();
-            Assert.AreEqual("47", auctions[4].Id);
-        }
-
-        private static CoysAuction[] GetAuctions(string htmlFile = "/Html/AuctionsList.txt")
+        private static AuctionListing[] GetAuctions(string htmlFile = "/Html/AuctionsList.txt")
         {
             var mockHtmlLoader = new Mock<IHttpLoader>();
 

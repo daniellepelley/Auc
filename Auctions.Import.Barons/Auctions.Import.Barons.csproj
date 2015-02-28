@@ -46,7 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaronsSalesMapperBase.cs" />
-    <Compile Include="BaronsUrlProvider.cs" />
+    <Compile Include="BaronsAuctionListingProvider.cs" />
     <Compile Include="Model\BaronsSale.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BaronsSalesWebScraper.cs" />

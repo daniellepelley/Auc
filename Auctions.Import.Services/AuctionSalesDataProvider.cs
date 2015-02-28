@@ -7,24 +7,24 @@ namespace Auctions.Import.Services
 {
     public class AuctionSalesDataProvider : IDataProvider<AuctionSale>
     {
-        private readonly IUrlProvider _urlProvider;
+        private readonly IAuctionListingProvider _auctionListingProvider;
         private readonly IWebScraper<AuctionSale> _webScraper;
 
-        public AuctionSalesDataProvider(IWebScraper<AuctionSale> webScraper, IUrlProvider urlProvider)
+        public AuctionSalesDataProvider(IWebScraper<AuctionSale> webScraper, IAuctionListingProvider auctionListingProvider)
         {
             _webScraper = webScraper;
-            _urlProvider = urlProvider;
+            _auctionListingProvider = auctionListingProvider;
         }
 
         public async Task<AuctionSale[]> GetData()
         {
             var auctionSales = new List<AuctionSale>();
 
-            var urls = await _urlProvider.GetUrls();
+            var auctionListings = await _auctionListingProvider.GetAuctionListings();
 
-            foreach (var url in urls)
+            foreach (var auctionListing in auctionListings)
             {
-                auctionSales.AddRange(await _webScraper.Import(url));
+                auctionSales.AddRange(await _webScraper.Import(auctionListing.Url));
             }
 
             return auctionSales.ToArray();

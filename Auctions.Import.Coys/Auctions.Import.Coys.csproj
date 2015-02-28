@@ -47,7 +47,6 @@
   <ItemGroup>
     <Compile Include="CoysAuctionsWebScraper.cs" />
     <Compile Include="CoysSalesWebScraper.cs" />
-    <Compile Include="Model\CoysAuction.cs" />
     <Compile Include="Model\CoysSale.cs" />
     <Compile Include="CoysSalesMapperBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

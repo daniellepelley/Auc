@@ -4,14 +4,15 @@ using System.Web;
 using Auctions.Import.Coys.Model;
 using Auctions.Import.Infrastructure;
 using Auctions.Import.Infrastructure.Parsers;
+using Auctions.Model;
 using HtmlAgilityPack;
 
 namespace Auctions.Import.Coys
 {
-    public class CoysAuctionsWebScraper : HtmlWebScraper<CoysAuction>
+    public class CoysAuctionsWebScraper : HtmlWebScraper<AuctionListing>
     {
         public CoysAuctionsWebScraper(IHttpLoader httpLoader, IDocumentBuilder documentBuilder)
-            : base(httpLoader, documentBuilder, new HtmlDocumentDataExtracter<CoysAuction>(
+            : base(httpLoader, documentBuilder, new HtmlDocumentDataExtracter<AuctionListing>(
                 "//table//td",
                 3,
                 CreateAuction
@@ -22,18 +23,18 @@ namespace Auctions.Import.Coys
             : this(new HttpLoader(), new DocumentBuilder())
         { }
 
-        private static CoysAuction CreateAuction(HtmlNode[] nodes)
+        private static AuctionListing CreateAuction(HtmlNode[] nodes)
         {
             var dateParser = new DateParser();
 
             var href = nodes[2].SelectSingleNode("a").ChildAttributes("href").First().Value;
-            var id = href.Replace("/past-auctions.php?auctionID=", string.Empty);
+            var url = string.Format("http://www.coys.co.uk{0}", href);
 
-            return new CoysAuction
+            return new AuctionListing
             {
                 Name = nodes[0].InnerText,
                 Date = dateParser.Parse(nodes[1].InnerText, "d MMMM yyyy"),
-                Id = id
+                Url = url
             };
         }
     }

@@ -18,9 +18,19 @@ namespace Auctions.Import.Services.Test
             mockWebScraper.Setup(x => x.Import("bar"))
                 .ReturnsAsync(new[] { new AuctionSale(), new AuctionSale() });
 
-            var mockUrlProvider = new Mock<IUrlProvider>();
-            mockUrlProvider.Setup(x => x.GetUrls())
-                .ReturnsAsync(new[] {"foo", "bar"});
+            var mockUrlProvider = new Mock<IAuctionListingProvider>();
+            mockUrlProvider.Setup(x => x.GetAuctionListings())
+                .ReturnsAsync(new[]
+                {
+                    new AuctionListing
+                    {
+                        Url = "foo"
+                    },
+                    new AuctionListing
+                    {
+                        Url = "bar"
+                    }
+                });
 
             var sut = new AuctionSalesDataProvider(mockWebScraper.Object, mockUrlProvider.Object);
             var sales = sut.GetData().Result;

@@ -3,7 +3,7 @@ using Auctions.Model;
 
 namespace Auctions.Import.HAndH
 {
-    public class HandHSalesMapperBase : AuctionSaleMapperBase<HAndHSale>
+    public class HandHSalesMapper : AuctionSaleMapperBase<HAndHSale>
     {
         public override AuctionSale Map(HAndHSale source)
         {

@@ -45,13 +45,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\HAndHAuction.cs" />
     <Compile Include="AuctionImporter.cs" />
     <Compile Include="HAndHAuctionListing.cs" />
     <Compile Include="HAndHAuctionListingsWebScraper.cs" />
-    <Compile Include="HandHSalesMapperBase.cs" />
+    <Compile Include="HandHSalesMapper.cs" />
     <Compile Include="IAuctionImporter.cs" />
     <Compile Include="HAndHSalesWebScraper.cs" />
+    <Compile Include="Model\HAndHAuction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Model\HAndHSale.cs" />
   </ItemGroup>

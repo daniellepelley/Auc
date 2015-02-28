@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using Auctions.Import.Infrastructure;
 using Auctions.Import.Silverstone.Model;
+using Auctions.Model;
 using Moq;
 using NUnit.Framework;
 
@@ -10,7 +11,6 @@ namespace Auctions.Import.Silverstone.Test
 {
     public class SilverstoneAuctionsWebScraperTests
     {
-        [Test]
         [Category("Unit")]
         public void Import()
         {
@@ -18,39 +18,34 @@ namespace Auctions.Import.Silverstone.Test
             Assert.AreEqual(25, sales.Count());
         }
 
-        [Test]
+        [TestCase(0, "Race Retro Classic Car Sale")]
+        [TestCase(1, "NEC Classic Motor Show Sale")]
         [Category("Unit")]
-        public void NameIsFormattedCorrectly1()
+        public void NameIsFormattedCorrectly(int index, string expected)
         {
             var sales = GetAuctions();
-            Assert.AreEqual("Race Retro Classic Car Sale", sales[0].Name);
-        }
-        
-        [Test]
-        [Category("Unit")]
-        public void NameIsFormattedCorrectly2()
-        {
-            var sales = GetAuctions();
-            Assert.AreEqual("NEC Classic Motor Show Sale", sales[1].Name);
+            Assert.AreEqual(expected, sales[index].Name);
         }
 
-        [Test]
+        [TestCase(0, "22/02/2015")]
+        [TestCase(1, "16/11/2014")]
         [Category("Unit")]
-        public void DateIsFormattedCorrectly1()
+        public void DateIsFormattedCorrectly(int index, string expected)
         {
             var sales = GetAuctions();
-            Assert.AreEqual(new DateTime(2015, 2, 22), sales[0].Date);
+            Assert.AreEqual(expected, sales[index].Date.Value.ToString("dd/MM/yyyy"));
         }
 
-        [Test]
+        [TestCase(0, "https://www.silverstoneauctions.com/race-retro--classic-car-sale-2015/view_lots")]
+        [TestCase(1, "https://www.silverstoneauctions.com/nec-classic-motor-show-sale-2014/view_lots")]
         [Category("Unit")]
-        public void DateIsFormattedCorrectly2()
+        public void UrlIsFormattedCorrectly(int index, string expected)
         {
             var sales = GetAuctions();
-            Assert.AreEqual(new DateTime(2014, 11, 16), sales[1].Date);
+            Assert.AreEqual(expected, sales[index].Url);
         }
 
-        private static SilverstoneAuction[] GetAuctions(string htmlFile = "/Html/AuctionsList.txt")
+        private static AuctionListing[] GetAuctions(string htmlFile = "/Html/AuctionsList.txt")
         {
             var mockHtmlLoader = new Mock<IHttpLoader>();
 

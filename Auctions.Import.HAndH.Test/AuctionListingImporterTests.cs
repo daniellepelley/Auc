@@ -1,5 +1,6 @@
 using System.IO;
 using Auctions.Import.Infrastructure;
+using Auctions.Model;
 using Moq;
 using NUnit.Framework;
 
@@ -30,16 +31,7 @@ namespace Auctions.Import.HAndH.Test
         public void DateIsFormattedCorrectly(int index, string expected)
         {
             var auctions = GetAuctionListings();
-            Assert.AreEqual(expected, auctions[index].Date.ToString("dd/MM/yyyy"));
-        }
-
-        [TestCase(0, "Car")]
-        [TestCase(1, "Car")]
-        [Category("Unit")]
-        public void TypeIsFormattedCorrectly(int index, string expected)
-        {
-            var auctions = GetAuctionListings();
-            Assert.AreEqual(expected, auctions[index].Type);
+            Assert.AreEqual(expected, auctions[index].Date.Value.ToString("dd/MM/yyyy"));
         }
 
         [TestCase(0, "/Auctions/04-12-2013-ChateauImpney-1346.aspx")]
@@ -51,7 +43,7 @@ namespace Auctions.Import.HAndH.Test
             Assert.AreEqual(expected, auctions[index].Url);
         }
 
-        private static HAndHAuctionListing[] GetAuctionListings()
+        private static AuctionListing[] GetAuctionListings()
         {
             var mockHtmlLoader = new Mock<IHttpLoader>();
 

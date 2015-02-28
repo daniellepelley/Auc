@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Linq;
 using Auctions.Import.Bonhams.Model;
+using Auctions.Model;
 using NUnit.Framework;
 
 namespace Auctions.Import.Bonhams.Test
@@ -19,14 +20,14 @@ namespace Auctions.Import.Bonhams.Test
         public void IdIsFormattedCorrectly1()
         {
             var auctions = GetBonhamsAuctions();
-            Assert.AreEqual("22528", auctions.First().Id);
+            Assert.AreEqual("https://www.bonhams.com/api/v1/lots/22528/?category=results&length=540&minimal=false&page=1", auctions.First().Url);
         }
 
         [Test]
         public void IdIsFormattedCorrectly2()
         {
             var auctions = GetBonhamsAuctions();
-            Assert.AreEqual("22205", auctions[1].Id);
+            Assert.AreEqual("https://www.bonhams.com/api/v1/lots/22205/?category=results&length=540&minimal=false&page=1", auctions[1].Url);
         }
 
         [Test]
@@ -58,7 +59,7 @@ namespace Auctions.Import.Bonhams.Test
         }
 
 
-        private static BonhamsAuction[] GetBonhamsAuctions()
+        private static AuctionListing[] GetBonhamsAuctions()
         {
             var json = File.ReadAllText(Directory.GetCurrentDirectory() + "/Json/AuctionsList.json");
 

@@ -3,16 +3,17 @@ using System.Globalization;
 using Auctions.Import.Infrastructure;
 using Auctions.Import.Infrastructure.Parsers;
 using Auctions.Import.Silverstone.Model;
+using Auctions.Model;
 using HtmlAgilityPack;
 
 namespace Auctions.Import.Silverstone
 {
-    public class SilverstoneAuctionsWebScraper : HtmlWebScraper<SilverstoneAuction>
+    public class SilverstoneAuctionsWebScraper : HtmlWebScraper<AuctionListing>
     {
         private static YearParser _yearParser;
 
         public SilverstoneAuctionsWebScraper(IHttpLoader httpLoader, IDocumentBuilder documentBuilder)
-            : base(httpLoader, documentBuilder, new HtmlDocumentDataExtracter<SilverstoneAuction>(
+            : base(httpLoader, documentBuilder, new HtmlDocumentDataExtracter<AuctionListing>(
                 @"//div[@class=""auction""]//div[@class=""details""]",
                 1,
                 CreateSilverstoneAuction))
@@ -24,12 +25,14 @@ namespace Auctions.Import.Silverstone
             : this(new HttpLoader(), new DocumentBuilder())
         { }
 
-        private static SilverstoneAuction CreateSilverstoneAuction(HtmlNode[] cells)
+        private static AuctionListing CreateSilverstoneAuction(HtmlNode[] cells)
         {
             var dateParser = new DateParser();
             var description = cells[0].Element("div").Element("div").InnerText;
             var year = _yearParser.Parse(description);
             var name = description.Split(new[] {year.ToString()}, StringSplitOptions.RemoveEmptyEntries)[0].Trim();
+
+            var href = cells[0].Element("a").Attributes[0].Value + "/view_lots";
 
             var description2 = cells[0].InnerText.Split(new char[] { (char)13,(char)10 }, StringSplitOptions.RemoveEmptyEntries);
 
@@ -48,10 +51,11 @@ namespace Auctions.Import.Silverstone
                 }
             }
 
-            return new SilverstoneAuction
+            return new AuctionListing
             {
                 Name = name,
-                Date = dateTime
+                Date = dateTime,
+                Url = href
             };
         }
 

@@ -2,11 +2,12 @@ using System.Xml;
 using Auctions.Import.Bonhams.Model;
 using Auctions.Import.Infrastructure;
 using Auctions.Import.Infrastructure.Parsers;
+using Auctions.Model;
 using Newtonsoft.Json.Linq;
 
 namespace Auctions.Import.Bonhams
 {
-    public class BonhamsAuctionJsonDataExtractor : JsonDataExtractor<BonhamsAuction>
+    public class BonhamsAuctionJsonDataExtractor : JsonDataExtractor<AuctionListing>
     {
         private readonly JsonValueExtractor _nameExtractor;
         private readonly JsonValueExtractor _idExtractor;
@@ -22,11 +23,13 @@ namespace Auctions.Import.Bonhams
             _dateParser = new DateParser();
         }
 
-        protected override BonhamsAuction CreateItem(JToken jToken)
+        protected override AuctionListing CreateItem(JToken jToken)
         {
-            return new BonhamsAuction
+            var format = "https://www.bonhams.com/api/v1/lots/{0}/?category=results&length=540&minimal=false&page=1";
+
+            return new AuctionListing
             {
-                Id = _idExtractor.GetValue(jToken),
+                Url = string.Format(format, _idExtractor.GetValue(jToken)),
                 Name = _nameExtractor.GetValue(jToken),
                 Date = _dateParser.Parse(_dateExtractor.GetValue(jToken), "yyyy-MM-dd HH:mm")
             };

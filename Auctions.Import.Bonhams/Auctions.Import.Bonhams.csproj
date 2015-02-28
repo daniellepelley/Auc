@@ -46,8 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BonhamsUrlProvider.cs" />
-    <Compile Include="Model\BonhamsAuction.cs" />
+    <Compile Include="BonhamsAuctionListingProvider.cs" />
     <Compile Include="BonhamsAuctionJsonDataExtractor.cs" />
     <Compile Include="BonhamsSaleJsonDataExtractor.cs" />
     <Compile Include="Model\BonhamsSale.cs" />
