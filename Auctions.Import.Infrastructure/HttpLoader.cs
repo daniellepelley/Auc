@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using System;
+using System.Net;
 using System.Threading.Tasks;
 
 namespace Auctions.Import.Infrastructure
@@ -16,7 +17,18 @@ namespace Auctions.Import.Infrastructure
 
         public async Task<string> Load(string url)
         {
-            return await _webClient.DownloadStringTaskAsync(url);
+            if (string.IsNullOrEmpty(url))
+            {
+                return null;
+            }
+            try
+            {
+                return await _webClient.DownloadStringTaskAsync(url);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
         protected virtual void Dispose(bool disposing)

@@ -99,7 +99,7 @@ namespace Auctions.Import.Coys.Test
 
             var webScraper = new CoysSalesWebScraper(mockHtmlLoader.Object, new DocumentBuilder());
 
-            var sut = new AuctionSalesScraper<CoysSale>(webScraper, new CoysSalesMapperBase());
+            var sut = new AuctionSalesScraper<CoysSale>(webScraper, new CoysSalesMapper());
             var sales = sut.Import("http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx").Result;
             return sales;
         }

@@ -24,7 +24,11 @@ namespace Auctions.Import.Services
 
             foreach (var auctionListing in auctionListings)
             {
-                auctionSales.AddRange(await _webScraper.Import(auctionListing.Url));
+                foreach (var auctionSale in await _webScraper.Import(auctionListing.Url))
+                {
+                    auctionSale.AuctionListing = auctionListing;
+                    auctionSales.Add(auctionSale);
+                }
             }
 
             return auctionSales.ToArray();

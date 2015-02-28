@@ -44,6 +44,15 @@ namespace Auctions.Import.Coys.Test
             Assert.AreEqual(expected, auctions[index].Url);
         }
 
+        [TestCase(2, "http://www.coys.co.uk/A205results.php")]
+        [TestCase(4, "http://www.coys.co.uk/A203results.php")]
+        [Category("Unit")]
+        public void UrlIsFormattedCorrectlyForAuctionsOld(int index, string expected)
+        {
+            var auctions = GetAuctionsOld();
+            Assert.AreEqual(expected, auctions[index].Url);
+        }
+
         private static AuctionListing[] GetAuctions(string htmlFile = "/Html/AuctionsList.txt")
         {
             var mockHtmlLoader = new Mock<IHttpLoader>();
@@ -52,8 +61,14 @@ namespace Auctions.Import.Coys.Test
                 .ReturnsAsync(File.ReadAllText(Directory.GetCurrentDirectory() + htmlFile));
 
             var sut = new CoysAuctionsWebScraper(mockHtmlLoader.Object, new DocumentBuilder());
-            var auctions = sut.Import("http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx").Result;
+            var auctions = sut.Import("foo").Result;
             return auctions;
         }
+
+        private static AuctionListing[] GetAuctionsOld()
+        {
+            return GetAuctions("/Html/AuctionsListOld.txt");
+        }
+
     }
 }

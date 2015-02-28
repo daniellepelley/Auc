@@ -45,10 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoysAuctionUrlProvider.cs" />
+    <Compile Include="ConfigSettings.cs" />
     <Compile Include="CoysAuctionsWebScraper.cs" />
     <Compile Include="CoysSalesWebScraper.cs" />
     <Compile Include="Model\CoysSale.cs" />
-    <Compile Include="CoysSalesMapperBase.cs" />
+    <Compile Include="CoysSalesMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

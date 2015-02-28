@@ -5,10 +5,11 @@ using Auctions.Import.Barons.Model;
 using Auctions.Import.Bonhams;
 using Auctions.Import.Bonhams.Model;
 using Auctions.Import.Infrastructure;
+using Auctions.Import.Services;
 using Auctions.Model;
 using NUnit.Framework;
 
-namespace Auctions.Import.Services.Test
+namespace Auctions.Import.Integration.Test
 {
     public class BonhamsIntegrationTest
     {
@@ -24,22 +25,6 @@ namespace Auctions.Import.Services.Test
             var auctionSalesScraper = new AuctionSalesScraper<BonhamsSale>(webScraper, new BonhamsSalesMapper());
 
             var auctionSalesDataProvider = new AuctionSalesDataProvider(auctionSalesScraper, auctionListingProvider);
-            var service = new AuctionSalesImportService(auctionSalesDataProvider);
-
-            var results = service.Import().Result;
-            Assert.IsTrue(results.Any());
-        }
-    }
-
-    public class BaronsIntegrationTest
-    {
-        [Test]
-        [Ignore]
-        public void Test()
-        {
-            var auctionSalesScraper = new AuctionSalesScraper<BaronsSale>(new BaronsSalesWebScraper(), new BaronsSalesMapper());
-
-            var auctionSalesDataProvider = new AuctionSalesDataProvider(auctionSalesScraper, new BaronsAuctionListingProvider());
             var service = new AuctionSalesImportService(auctionSalesDataProvider);
 
             var results = service.Import().Result;

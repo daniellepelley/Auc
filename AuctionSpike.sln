@@ -87,6 +87,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auctions.Import.ConsoleApp"
 		{F284CFA6-B022-4461-BF05-C9A78F707DE2} = {F284CFA6-B022-4461-BF05-C9A78F707DE2}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auctions.Import.Integration.Test", "Auctions.Import.Integration.Test\Auctions.Import.Integration.Test.csproj", "{7E4C5E5C-AB5E-4D40-B781-336FEE311457}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -173,6 +175,10 @@ Global
 		{92124AD3-8510-48E7-8072-A32AA3109418}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92124AD3-8510-48E7-8072-A32AA3109418}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92124AD3-8510-48E7-8072-A32AA3109418}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E4C5E5C-AB5E-4D40-B781-336FEE311457}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E4C5E5C-AB5E-4D40-B781-336FEE311457}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E4C5E5C-AB5E-4D40-B781-336FEE311457}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E4C5E5C-AB5E-4D40-B781-336FEE311457}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -204,5 +210,6 @@ Global
 		{A453ED82-0130-4B9A-AF41-8687025ECA2E} = {52C6B9E1-3C4C-4B65-8E0E-29ED4BDC60AB}
 		{E0209701-4AA1-46CE-B390-55563458DD6E} = {AFC9218B-9A2D-4F81-A812-2753F6263C5A}
 		{C0130D4A-E09E-4641-92F3-1BC46A9CE0A6} = {AFC9218B-9A2D-4F81-A812-2753F6263C5A}
+		{7E4C5E5C-AB5E-4D40-B781-336FEE311457} = {AFC9218B-9A2D-4F81-A812-2753F6263C5A}
 	EndGlobalSection
 EndGlobal

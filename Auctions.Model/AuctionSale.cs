@@ -8,5 +8,6 @@ namespace Auctions.Model
         public string Model { get; set; }
         public bool Sold { get; set; }
         public int? Year { get; set; }
+        public AuctionListing AuctionListing { get; set; }
     }
 }

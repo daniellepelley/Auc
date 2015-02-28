@@ -59,6 +59,9 @@
     <Content Include="Html\SalesList.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Html\AuctionsListOld.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Auctions.Import.Coys\Auctions.Import.Coys.csproj">

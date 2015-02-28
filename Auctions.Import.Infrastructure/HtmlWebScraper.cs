@@ -19,8 +19,14 @@ namespace Auctions.Import.Infrastructure
         public async Task<T[]> Import(string url)
         {
             var html = await _httpLoader.Load(url);
-            var document = _documentBuilder.Build(html);
-            return _htmlDocumentDataExtracter.GetData(document);
+
+            if (!string.IsNullOrEmpty(html))
+            {
+                var document = _documentBuilder.Build(html);
+                return _htmlDocumentDataExtracter.GetData(document);                
+            }
+
+            return new T[0];
         }
 
         public void Dispose()
