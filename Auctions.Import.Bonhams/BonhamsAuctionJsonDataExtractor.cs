@@ -1,5 +1,7 @@
+using System.Xml;
 using Auctions.Import.Bonhams.Model;
 using Auctions.Import.Infrastructure;
+using Auctions.Import.Infrastructure.Parsers;
 using Newtonsoft.Json.Linq;
 
 namespace Auctions.Import.Bonhams
@@ -8,12 +10,16 @@ namespace Auctions.Import.Bonhams
     {
         private readonly JsonValueExtractor _nameExtractor;
         private readonly JsonValueExtractor _idExtractor;
+        private readonly JsonValueExtractor _dateExtractor;
+        private readonly DateParser _dateParser;
 
         public BonhamsAuctionJsonDataExtractor()
             : base(new JTokenExtractor("model_results", "sale", "items"))
         {
             _nameExtractor = new JsonValueExtractor("name_text");
             _idExtractor = new JsonValueExtractor("iSaleNo");
+            _dateExtractor = new JsonValueExtractor("dtStartUTC");
+            _dateParser = new DateParser();
         }
 
         protected override BonhamsAuction CreateItem(JToken jToken)
@@ -21,7 +27,8 @@ namespace Auctions.Import.Bonhams
             return new BonhamsAuction
             {
                 Id = _idExtractor.GetValue(jToken),
-                Name = _nameExtractor.GetValue(jToken)
+                Name = _nameExtractor.GetValue(jToken),
+                Date = _dateParser.Parse(_dateExtractor.GetValue(jToken), "yyyy-MM-dd HH:mm")
             };
         }
     }

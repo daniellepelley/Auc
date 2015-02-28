@@ -40,7 +40,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AuctionSaleMapper.cs" />
-    <Compile Include="AuctionSalesImporter.cs" />
     <Compile Include="ISaleMapper.cs" />
     <Compile Include="ISalesImporter.cs" />
     <Compile Include="IUrlProvider.cs" />

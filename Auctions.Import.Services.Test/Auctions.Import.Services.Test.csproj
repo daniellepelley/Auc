@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuctionSalesDataProviderTest.cs" />
     <Compile Include="ImportServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -55,6 +56,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Auctions.Import.Infrastructure\Auctions.Import.Infrastructure.csproj">
+      <Project>{82EB7F9C-5CF0-4B1E-9DD4-91766D19DA86}</Project>
+      <Name>Auctions.Import.Infrastructure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Auctions.Import.Services\Auctions.Import.Services.csproj">
       <Project>{73AF7759-8A77-4B18-9DD3-8B6B1425C3D5}</Project>
       <Name>Auctions.Import.Services</Name>

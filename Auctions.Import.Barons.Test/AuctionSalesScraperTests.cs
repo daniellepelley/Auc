@@ -1,5 +1,6 @@
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using Auctions.Import.Barons.Model;
 using Auctions.Import.Infrastructure;
 using Auctions.Model;
@@ -8,7 +9,7 @@ using NUnit.Framework;
 
 namespace Auctions.Import.Barons.Test
 {
-    public class SalesImporterScraperTests
+    public class AuctionSalesScraperTests
     {
         private static AuctionSale[] GetSales(string htmlFile = "/Html/BaronsAuctionHistoryHtml.txt")
         {
@@ -105,4 +106,6 @@ namespace Auctions.Import.Barons.Test
             Assert.AreEqual(5100, sales[25].Price);
         }
     }
+
+
 }

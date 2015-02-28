@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Auctions.Import.Infrastructure;
 using Auctions.Model;
 using Moq;
 using NUnit.Framework;
@@ -23,9 +24,5 @@ namespace Auctions.Import.Services.Test
             var sales = sut.Import().Result;
             Assert.AreEqual(1, sales.Count());
         } 
-
-
     }
-
-
 }
