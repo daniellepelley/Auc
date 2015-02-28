@@ -15,19 +15,18 @@ namespace Auctions.Import.HAndH
             _salesScraper = salesScraper;
         }
 
-        private bool IsLastPage(AuctionSale[] auctionSales, int page)
+        private bool IsLastPage(AuctionSale[] auctionSales)
         {
             return !auctionSales.Any() ||
-                   auctionSales.Length < 12 ||
-                   page > 1000;
+                   auctionSales.Length < 12;
         }
 
         private IEnumerable<AuctionSale> GetPages(string baseUrl)
         {
-            var page = 1;
-            do
+            var urlProvider = new HAndHUrlProvider(baseUrl);
+
+            foreach (var url in urlProvider.GetUrls())
             {
-                var url = string.Format(baseUrl, page);
                 var sales = _salesScraper.Import(url).Result;
 
                 foreach (var sale in sales)
@@ -35,14 +34,11 @@ namespace Auctions.Import.HAndH
                     yield return sale;
                 }
 
-                if (IsLastPage(sales, page))
+                if (IsLastPage(sales))
                 {
                     break;
                 }
-
-                page++;
             }
-            while (true);
         }
 
         public HAndHAuction Import(string baseUrl)
@@ -50,6 +46,28 @@ namespace Auctions.Import.HAndH
             var auction = new HAndHAuction();
             auction.Sales.AddRange(GetPages(baseUrl));
             return auction;
+        }
+    }
+
+    public class HAndHUrlProvider : IUrlProvider
+    {
+        private readonly string _baseUrl;
+
+        public HAndHUrlProvider(string baseUrl)
+        {
+            _baseUrl = baseUrl;
+        }
+
+        public IEnumerable<string> GetUrls()
+        {
+            var page = 1;
+
+            do
+            {
+                yield return string.Format(_baseUrl, page);
+                page++;
+            }
+            while (page < 10000);
         }
     }
 }

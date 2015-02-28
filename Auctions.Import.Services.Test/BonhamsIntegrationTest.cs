@@ -1,5 +1,7 @@
 using System;
 using System.Linq;
+using Auctions.Import.Barons;
+using Auctions.Import.Barons.Model;
 using Auctions.Import.Bonhams;
 using Auctions.Import.Bonhams.Model;
 using Auctions.Import.Infrastructure;
@@ -26,7 +28,22 @@ namespace Auctions.Import.Services.Test
 
             var results = service.Import().Result;
             Assert.IsTrue(results.Any());
+        }
+    }
 
+    public class BaronsIntegrationTest
+    {
+        [Test]
+        [Ignore]
+        public void Test()
+        {
+            var auctionSalesScraper = new AuctionSalesScraper<BaronsSale>(new BaronsSalesWebScraper(), new BaronsSalesMapper());
+
+            var auctionSalesDataProvider = new AuctionSalesDataProvider(auctionSalesScraper, new BaronsAuctionListingProvider());
+            var service = new AuctionSalesImportService(auctionSalesDataProvider);
+
+            var results = service.Import().Result;
+            Assert.IsTrue(results.Any());
         }
     }
 }

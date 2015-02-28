@@ -57,6 +57,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Auctions.Import.Barons\Auctions.Import.Barons.csproj">
+      <Project>{20684EEA-15B0-4CF7-8196-45AD949496C4}</Project>
+      <Name>Auctions.Import.Barons</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Auctions.Import.Bonhams\Auctions.Import.Bonhams.csproj">
       <Project>{F284CFA6-B022-4461-BF05-C9A78F707DE2}</Project>
       <Name>Auctions.Import.Bonhams</Name>

@@ -1,7 +1,9 @@
+using System.Collections.Generic;
+
 namespace Auctions.Model
 {
     public interface IUrlProvider
     {
-        string[] GetUrls();
+        IEnumerable<string> GetUrls();
     }
 }

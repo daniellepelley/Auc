@@ -14,7 +14,6 @@ namespace Auctions.Import.HAndH
                 {
                     Name = tds[0].InnerText,
                     Date = Convert.ToDateTime(tds[1].InnerText),
-                    //Type = tds[2].InnerText,
                     Url = tds[3].SelectSingleNode(".//a").Attributes["href"].Value
                 }
                 ))

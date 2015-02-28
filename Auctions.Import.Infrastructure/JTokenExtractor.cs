@@ -1,3 +1,4 @@
+using System.Linq;
 using Newtonsoft.Json.Linq;
 
 namespace Auctions.Import.Infrastructure
@@ -17,7 +18,15 @@ namespace Auctions.Import.Infrastructure
 
             foreach (var part in _parts)
             {
-                token = token[part];
+                if (part is int)
+                {
+                    token = token.Count() > (int)part ? token[part] : null;
+                }
+                else
+                {
+                    token = token[part];
+                }
+
                 if (token == null)
                 {
                     return string.Empty;

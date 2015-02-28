@@ -1,10 +1,11 @@
-﻿using Auctions.Model;
+﻿using System.Collections.Generic;
+using Auctions.Model;
 
 namespace Auctions.Import.Bonhams
 {
     public class BonhamsAuctionUrlProvider : IUrlProvider
     {
-        public string[] GetUrls()
+        public IEnumerable<string> GetUrls()
         {
             return new[] { ConfigSettings.AuctionsListUrl };
         }
