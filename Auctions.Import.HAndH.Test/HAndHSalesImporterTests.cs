@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Auctions.Import.HAndH.Model;
@@ -128,12 +129,12 @@ namespace Auctions.Import.HAndH.Test
             return sales;
         }
 
-        private static AuctionSale[] GetSalesFromEndPage()
+        private static IEnumerable<AuctionSale> GetSalesFromEndPage()
         {
             return GetSales("/Html/PageHtml2.txt");
         }
 
-        private static AuctionSale[] GetSalesFromEmptyPage()
+        private static IEnumerable<AuctionSale> GetSalesFromEmptyPage()
         {
             return GetSales("/Html/PageHtmlEmpty.txt");
         }

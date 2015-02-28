@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="DocumentBuilder.cs" />
     <Compile Include="HttpLoader.cs" />
+    <Compile Include="IDataProvider.cs" />
     <Compile Include="IDocumentBuilder.cs" />
     <Compile Include="EnumerableExtensions.cs" />
     <Compile Include="IHttpLoader.cs" />

@@ -50,6 +50,7 @@
     <Compile Include="IntegrationTests.cs" />
     <Compile Include="PageImporterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SalesImporterScraperTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
