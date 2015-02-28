@@ -105,9 +105,9 @@ namespace Auctions.Import.Bonhams.Test
             mockHtmlLoader.Setup(x => x.Load(It.IsAny<string>()))
                 .ReturnsAsync(File.ReadAllText(Directory.GetCurrentDirectory() + jsonFile));
 
-            var scraper = new BonhamsSalesWebScraper(mockHtmlLoader.Object, new BonhamsSaleJsonDataExtractor());
+            var scraper = new JsonWebScraper<BonhamsSale>(mockHtmlLoader.Object, new BonhamsSaleJsonDataExtractor());
 
-            var sut = new AuctionSalesScraper<BonhamsSale>(scraper, new BonhamsSalesMapperBase());
+            var sut = new AuctionSalesScraper<BonhamsSale>(scraper, new BonhamsSalesMapper());
             
             var sales = sut.Import("http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx").Result;
             return sales;

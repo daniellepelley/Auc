@@ -49,8 +49,8 @@
   <ItemGroup>
     <Compile Include="BonhamsAuctionJsonDataExtractorTest.cs" />
     <Compile Include="BonhamsSalesImporterTests.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="BonhamsSalesWebScraperTests.cs" />
+    <Compile Include="BonhamsUrlProviderTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

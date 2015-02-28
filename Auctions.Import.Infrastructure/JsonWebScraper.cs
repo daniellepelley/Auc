@@ -3,12 +3,12 @@ using System.Threading.Tasks;
 
 namespace Auctions.Import.Infrastructure
 {
-    public abstract class JsonWebScraper<T> : IWebScraper<T>, IDisposable
+    public class JsonWebScraper<T> : IWebScraper<T>, IDisposable
     {
         private readonly IHttpLoader _httpLoader;
         private readonly IJsonDataExtractor<T> _dataExtractor;
 
-        protected JsonWebScraper(IHttpLoader httpLoader, IJsonDataExtractor<T> dataExtractor)
+        public JsonWebScraper(IHttpLoader httpLoader, IJsonDataExtractor<T> dataExtractor)
         {
             _dataExtractor = dataExtractor;
             _httpLoader = httpLoader;

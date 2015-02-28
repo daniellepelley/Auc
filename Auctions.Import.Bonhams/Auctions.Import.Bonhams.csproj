@@ -46,12 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BonhamsUrlProvider.cs" />
     <Compile Include="Model\BonhamsAuction.cs" />
     <Compile Include="BonhamsAuctionJsonDataExtractor.cs" />
     <Compile Include="BonhamsSaleJsonDataExtractor.cs" />
-    <Compile Include="BonhamsSalesWebScraper.cs" />
     <Compile Include="Model\BonhamsSale.cs" />
-    <Compile Include="BonhamsSalesMapperBase.cs" />
+    <Compile Include="BonhamsSalesMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

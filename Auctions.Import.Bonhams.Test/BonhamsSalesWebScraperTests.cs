@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using Auctions.Import.Bonhams.Model;
 using Auctions.Import.Infrastructure;
@@ -41,14 +42,14 @@ namespace Auctions.Import.Bonhams.Test
             Assert.AreEqual("SOLD", sales.First().LotStatus);
         }
 
-        private static BonhamsSale[] GetSales(string jsonFile = "/Json/AuctionSalesList.json")
+        private static IEnumerable<BonhamsSale> GetSales(string jsonFile = "/Json/AuctionSalesList.json")
         {
             var mockHtmlLoader = new Mock<IHttpLoader>();
 
             mockHtmlLoader.Setup(x => x.Load(It.IsAny<string>()))
                 .ReturnsAsync(File.ReadAllText(Directory.GetCurrentDirectory() + jsonFile));
 
-            var sut = new BonhamsSalesWebScraper(mockHtmlLoader.Object, new BonhamsSaleJsonDataExtractor());
+            var sut = new JsonWebScraper<BonhamsSale>(mockHtmlLoader.Object, new BonhamsSaleJsonDataExtractor());
             var sales = sut.Import("http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx").Result;
             return sales;
         }

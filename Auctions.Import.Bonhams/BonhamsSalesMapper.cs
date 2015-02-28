@@ -4,7 +4,7 @@ using Auctions.Model;
 
 namespace Auctions.Import.Bonhams
 {
-    public class BonhamsSalesMapperBase : AuctionSaleMapperBase<BonhamsSale>
+    public class BonhamsSalesMapper : AuctionSaleMapperBase<BonhamsSale>
     {
         public override AuctionSale Map(BonhamsSale source)
         {
