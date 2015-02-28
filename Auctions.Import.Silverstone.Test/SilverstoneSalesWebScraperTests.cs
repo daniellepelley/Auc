@@ -17,36 +17,22 @@ namespace Auctions.Import.Silverstone.Test
             Assert.AreEqual(256, sales.Count());
         }
 
-        [Test]
+        [TestCase(1, "£18,000")]
+        [TestCase(2, "£18,900")]
         [Category("Unit")]
-        public void PriceIsFormattedCorrectly1()
+        public void PriceIsFormattedCorrectly(int index, string expected)
         {
             var sales = GetSales();
-            Assert.AreEqual("£18,000", sales[1].Price);
+            Assert.AreEqual(expected, sales[index].Price);
         }
 
-        [Test]
+        [TestCase(1, "1971 Ford Escort Twin-Cam")]
+        [TestCase(2, "1968 MGC Roadster")]
         [Category("Unit")]
-        public void PriceIsFormattedCorrectly2()
+        public void DescriptionIsFormattedCorrectly(int index, string expected)
         {
             var sales = GetSales();
-            Assert.AreEqual("£18,900", sales[2].Price);
-        }
-
-        [Test]
-        [Category("Unit")]
-        public void DescriptionIsFormattedCorrectly1()
-        {
-            var sales = GetSales();
-            Assert.AreEqual("1971 Ford Escort Twin-Cam", sales[1].Description);
-        }
-
-        [Test]
-        [Category("Unit")]
-        public void DescriptionIsFormattedCorrectly2()
-        {
-            var sales = GetSales();
-            Assert.AreEqual("1968 MGC Roadster", sales[2].Description);
+            Assert.AreEqual(expected, sales[index].Description);
         }
 
         private static SilverstoneSale[] GetSales(string htmlFile = "/Html/SalesList.txt")

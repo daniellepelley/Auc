@@ -20,82 +20,47 @@ namespace Auctions.Import.Silverstone.Test
 
         [Test]
         [Category("Unit")]
-        public void CurrencyIsFormattedCorrectly1()
+        public void CurrencyIsFormattedCorrectly()
         {
             var sales = GetSales();
             Assert.AreEqual("GBP", sales[0].Currency);
         }
 
-        [Test]
+        [TestCase(0, null)]
+        [TestCase(1, 18000)]
+        [TestCase(2, 18900)]
         [Category("Unit")]
-        public void SalePriceIsFormattedCorrectly1()
+        public void SalePriceIsFormattedCorrectly(int index, int? expected)
         {
             var sales = GetSales();
-            Assert.AreEqual(18000, sales[1].Price);
+            Assert.AreEqual(expected, sales[index].Price);
         }
 
-        [Test]
+        [TestCase(1, 1971)]
+        [TestCase(2, 1968)]
         [Category("Unit")]
-        public void SalePriceIsFormattedCorrectly2()
+        public void YearIsFormattedCorrectly(int index, int? expected)
         {
             var sales = GetSales();
-            Assert.AreEqual(18900, sales[2].Price);
+            Assert.AreEqual(expected, sales[index].Year);
         }
 
-        [Test]
+        [TestCase(1, "Ford")]
+        [TestCase(2, "MGC")]
         [Category("Unit")]
-        public void SalePriceIsFormattedCorrectly3()
+        public void MakeIsFormattedCorrectly(int index, string expected)
         {
             var sales = GetSales();
-            Assert.AreEqual(null, sales[0].Price);
+            Assert.AreEqual(expected, sales[index].Make);
         }
 
-        [Test]
+        [TestCase(1, "Escort Twin-Cam")]
+        [TestCase(2, "Roadster")]
         [Category("Unit")]
-        public void YearIsFormattedCorrectly1()
+        public void ModelIsFormattedCorrectly(int index, string expected)
         {
             var sales = GetSales();
-            Assert.AreEqual(1971, sales[1].Year);
-        }
-
-        [Test]
-        [Category("Unit")]
-        public void YearIsFormattedCorrectly2()
-        {
-            var sales = GetSales();
-            Assert.AreEqual(1968, sales[2].Year);
-        }
-
-        [Test]
-        [Category("Unit")]
-        public void MakeIsFormattedCorrectly1()
-        {
-            var sales = GetSales();
-            Assert.AreEqual("Ford", sales[1].Make);
-        }
-
-        [Test]
-        [Category("Unit")]
-        public void MakeIsFormattedCorrectly2()
-        {
-            var sales = GetSales();
-            Assert.AreEqual("MGC", sales[2].Make);
-        }
-
-        [Test]
-        [Category("Unit")]
-        public void ModelIsFormattedCorrectly1()
-        {
-            var sales = GetSales();
-            Assert.AreEqual("Escort Twin-Cam", sales[1].Model);
-        }
-
-        [Test]
-        [Category("Unit")]
-        public void ModelIsFormattedCorrectly2()
-        {
-            var sales = GetSales();
-            Assert.AreEqual("Roadster", sales[2].Model);
+            Assert.AreEqual(expected, sales[index].Model);
         }
 
         private static AuctionSale[] GetSales(string htmlFile = "/Html/SalesList.txt")

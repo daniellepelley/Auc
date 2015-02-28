@@ -48,6 +48,7 @@
     <Compile Include="AuctionImporter.cs" />
     <Compile Include="HAndHAuctionListingsWebScraper.cs" />
     <Compile Include="HandHSalesMapper.cs" />
+    <Compile Include="HAndHUrlProvider.cs" />
     <Compile Include="IAuctionImporter.cs" />
     <Compile Include="HAndHSalesWebScraper.cs" />
     <Compile Include="Model\HAndHAuction.cs" />

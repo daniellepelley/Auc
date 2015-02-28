@@ -42,15 +42,10 @@ namespace Auctions.Import.HAndH.Test
                 foreach (var auctionListing in auctionListings.ToArray())
                 {
                     var auctionUrl = "http://www.classic-auctions.com/" + auctionListing.Url + "?p={0}";
-                    var auction = auctionImporter.Import(auctionUrl);
-                    sales.AddRange(auction.Sales);
+                    var auctionSales = auctionImporter.Import(auctionUrl).Result;
+                    sales.AddRange(auctionSales);
                 }
             }
-
-            var triumph = sales
-                .Where(x => x.Make == "Triumph")
-                .OrderBy(x => x.Price)
-                .GroupBy(x => x.Model);
 
             Assert.IsTrue(sales.Count() > 100);
         }

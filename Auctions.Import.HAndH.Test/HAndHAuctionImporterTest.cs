@@ -15,20 +15,20 @@ namespace Auctions.Import.HAndH.Test
         [Category("Unit")]
         public void ImportAuction()
         {
-            IAuctionImporter auctionImporter = CreateSut();
+            IWebScraper<AuctionSale> auctionImporter = CreateSut();
 
-            HAndHAuction auction =
+            var sales =
                 auctionImporter.Import(
-                    "http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?p={0}");
+                    "http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?p={0}").Result;
 
-            Assert.AreEqual(15, auction.Sales.Count);
+            Assert.AreEqual(15, sales.Length);
         }
 
         [Test]
         [Category("Unit")]
         public void ImportAuctionVerifyCalls()
         {
-            IAuctionImporter auctionImporter = CreateSut();
+            IWebScraper<AuctionSale> auctionImporter = CreateSut();
 
             auctionImporter.Import(
                 "http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?p={0}");
@@ -49,7 +49,7 @@ namespace Auctions.Import.HAndH.Test
                 Times.Never);
         }
 
-        private IAuctionImporter CreateSut()
+        private IWebScraper<AuctionSale> CreateSut()
         {
             _mockHtmlLoader = new Mock<IHttpLoader>();
 

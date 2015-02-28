@@ -10,21 +10,6 @@ namespace Auctions.Import.Barons.Test
 {
     public class AuctionSalesScraperTests
     {
-        private static AuctionSale[] GetSales(string htmlFile = "/Html/BaronsAuctionHistoryHtml.txt")
-        {
-            var mockHtmlLoader = new Mock<IHttpLoader>();
-
-            mockHtmlLoader.Setup(x => x.Load(It.IsAny<string>()))
-                .ReturnsAsync(File.ReadAllText(Directory.GetCurrentDirectory() + htmlFile));
-
-            var webScraper = new BaronsSalesWebScraper(mockHtmlLoader.Object, new DocumentBuilder());
-
-            var sut = new AuctionSalesScraper<BaronsSale>(webScraper, new BaronsSalesMapper());
-
-            var sales = sut.Import("http://www.barons-auctions.com/fullresults.php");
-            return sales.Result;
-        }
-
         [Test]
         [Category("Unit")]
         public void Import()
@@ -41,70 +26,55 @@ namespace Auctions.Import.Barons.Test
             Assert.AreEqual("GBP", sales[0].Currency);
         }
 
-        [Test]
+        [TestCase(24, 1970)]
+        [TestCase(25, 1976)]
         [Category("Unit")]
-        public void YearIsCorrectlyImported()
+        public void YearIsCorrectlyImported(int index, int expected)
         {
             var sales = GetSales();
-            Assert.AreEqual(1970, sales[24].Year);
+            Assert.AreEqual(expected, sales[index].Year);
         }
 
-        [Test]
+        [TestCase(24, "Alfa Romeo")]
+        [TestCase(164, "Audi")]
         [Category("Unit")]
-        public void YearIsCorrectlyImported2()
+        public void MakeIsCorrectlyImported(int index, string expected)
         {
             var sales = GetSales();
-            Assert.AreEqual(1976, sales[25].Year);
+            Assert.AreEqual(expected, sales[index].Make);
         }
 
-        [Test]
+        [TestCase(24, "1300 Giulia GTA Stepfront")]
+        [TestCase(25, "1600 GT Junior")]
         [Category("Unit")]
-        public void MakeIsCorrectlyImported()
+        public void ModelIsCorrectlyImported(int index, string expected)
         {
             var sales = GetSales();
-            Assert.AreEqual("Alfa Romeo", sales[24].Make);
+            Assert.AreEqual(expected, sales[index].Model);
         }
 
-        [Test]
+        [TestCase(24, 13500)]
+        [TestCase(25, 5100)]
         [Category("Unit")]
-        public void MakeIsCorrectlyImported2()
+        public void PriceIsCorrectlyImported(int index, int expected)
         {
             var sales = GetSales();
-            Assert.AreEqual("Alfa Romeo", sales[25].Make);
+            Assert.AreEqual(expected, sales[index].Price);
         }
 
-        [Test]
-        [Category("Unit")]
-        public void ModelIsCorrectlyImported()
+        private static AuctionSale[] GetSales(string htmlFile = "/Html/BaronsAuctionHistoryHtml.txt")
         {
-            var sales = GetSales();
-            Assert.AreEqual("1300 Giulia GTA Stepfront", sales[24].Model);
-        }
+            var mockHtmlLoader = new Mock<IHttpLoader>();
 
-        [Test]
-        [Category("Unit")]
-        public void ModelIsCorrectlyImported2()
-        {
-            var sales = GetSales();
-            Assert.AreEqual("1600 GT Junior", sales[25].Model);
-        }
+            mockHtmlLoader.Setup(x => x.Load(It.IsAny<string>()))
+                .ReturnsAsync(File.ReadAllText(Directory.GetCurrentDirectory() + htmlFile));
 
-        [Test]
-        [Category("Unit")]
-        public void PriceIsCorrectlyImported()
-        {
-            var sales = GetSales();
-            Assert.AreEqual(13500, sales[24].Price);
-        }
+            var webScraper = new BaronsSalesWebScraper(mockHtmlLoader.Object, new DocumentBuilder());
 
-        [Test]
-        [Category("Unit")]
-        public void PriceIsCorrectlyImported2()
-        {
-            var sales = GetSales();
-            Assert.AreEqual(5100, sales[25].Price);
+            var sut = new AuctionSalesScraper<BaronsSale>(webScraper, new BaronsSalesMapper());
+
+            var sales = sut.Import("http://www.barons-auctions.com/fullresults.php");
+            return sales.Result;
         }
     }
-
-
 }
