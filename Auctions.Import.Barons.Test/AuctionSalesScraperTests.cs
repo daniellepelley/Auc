@@ -1,6 +1,5 @@
 using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
 using Auctions.Import.Barons.Model;
 using Auctions.Import.Infrastructure;
 using Auctions.Model;

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Web;
-using Auctions.Import.Coys.Model;
+﻿using System.Linq;
 using Auctions.Import.Infrastructure;
 using Auctions.Import.Infrastructure.Parsers;
 using Auctions.Model;

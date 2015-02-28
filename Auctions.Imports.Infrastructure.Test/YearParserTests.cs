@@ -1,4 +1,3 @@
-using System;
 using Auctions.Import.Infrastructure.Parsers;
 using NUnit.Framework;
 

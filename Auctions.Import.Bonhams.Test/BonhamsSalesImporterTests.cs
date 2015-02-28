@@ -12,7 +12,7 @@ namespace Auctions.Import.Bonhams.Test
     {
         [Test]
         [Category("Unit")]
-        public void CurrencyIsFormattedCorrectly1()
+        public void CurrencyIsFormattedCorrectly()
         {
             var sales = GetSales();
             Assert.AreEqual("GBP", sales[0].Currency);
@@ -30,7 +30,7 @@ namespace Auctions.Import.Bonhams.Test
         [TestCase(287, true)]
         [TestCase(283, true)]
         [Category("Unit")]
-        public void ImportPopulatesSold1(int index, bool expected)
+        public void ImportPopulatesSold(int index, bool expected)
         {
             var sales = GetSales();
             Assert.AreEqual(expected, sales.ToArray().ElementAt(index).Sold);
@@ -39,7 +39,7 @@ namespace Auctions.Import.Bonhams.Test
         [TestCase(287, "Rolls-Royce")]
         [TestCase(283, "Gravetti")]
         [Category("Unit")]
-        public void ImportPopulatesMake1(int index, string expected)
+        public void ImportPopulatesMake(int index, string expected)
         {
             var sales = GetSales();
             Assert.AreEqual(expected, sales.ToArray().ElementAt(index).Make);
@@ -48,7 +48,7 @@ namespace Auctions.Import.Bonhams.Test
         [TestCase(287, 27833)]
         [TestCase(283, 23000)]
         [Category("Unit")]
-        public void ImportPopulatesPrice1(int index, int expected)
+        public void ImportPopulatesPrice(int index, int expected)
         {
             var sales = GetSales();
             Assert.AreEqual(expected, sales.ToArray().ElementAt(index).Price);
@@ -57,7 +57,7 @@ namespace Auctions.Import.Bonhams.Test
         [TestCase(287, "20hp Six-Light Saloon")]
         [TestCase(283, "Cobra 427 Replica Roadster")]
         [Category("Unit")]
-        public void ImportPopulatesModel1(int index, string expected)
+        public void ImportPopulatesModel(int index, string expected)
         {
             var sales = GetSales();
             Assert.AreEqual(expected, sales.ToArray().ElementAt(index).Model);

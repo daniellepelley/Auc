@@ -1,7 +1,6 @@
 using System;
 using System.IO;
 using System.Linq;
-using Auctions.Import.Bonhams.Model;
 using Auctions.Import.Infrastructure;
 using Auctions.Model;
 using Moq;
@@ -37,7 +36,7 @@ namespace Auctions.Import.Bonhams.Test
 
             var scraper = new JsonWebScraper<AuctionListing>(mockHtmlLoader.Object, new BonhamsAuctionJsonDataExtractor());
 
-            var sut = new BonhamsAuctionListingProvider(x => x.Date >= new DateTime(2015, 1, 1), scraper, "foo");
+            var sut = new AuctionListingProvider(x => x.Date >= new DateTime(2015, 1, 1), scraper, new BonhamsAuctionUrlProvider());
 
             return sut.GetAuctionListings().Result;
         }

@@ -1,7 +1,5 @@
-using System;
 using System.IO;
 using System.Linq;
-using Auctions.Import.Bonhams.Model;
 using Auctions.Model;
 using NUnit.Framework;
 
@@ -43,10 +41,31 @@ namespace Auctions.Import.Bonhams.Test
             Assert.AreEqual(expected, auctions[index].Date.Value.ToString("dd/MM/yyyy"));
         }
 
+        [Test]
+        [Category("Unit")]
+        public void WhenJsonIsBlank()
+        {
+            var auctions = AuctionListings(string.Empty);
+            Assert.IsFalse(auctions.Any());
+        }
+
+        [Test]
+        [Category("Unit")]
+        public void WhenJsonIsInValid()
+        {
+            var auctions = AuctionListings("{ foo: 'bar' }");
+            Assert.IsFalse(auctions.Any());
+        }
+
         private static AuctionListing[] GetBonhamsAuctions()
         {
             var json = File.ReadAllText(Directory.GetCurrentDirectory() + "/Json/AuctionsList.json");
 
+            return AuctionListings(json);
+        }
+
+        private static AuctionListing[] AuctionListings(string json)
+        {
             var sut = new BonhamsAuctionJsonDataExtractor();
 
             var list = sut.Extract(json);

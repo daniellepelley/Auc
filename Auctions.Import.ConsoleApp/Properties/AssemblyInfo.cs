@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Auctions.Import.Services.Test")]
+[assembly: AssemblyTitle("Auctions.Import.ConsoleApp")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Auctions.Import.Services.Test")]
+[assembly: AssemblyProduct("Auctions.Import.ConsoleApp")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("2a3f26b7-6048-4be8-b3ff-be6c7b730f12")]
+[assembly: Guid("3f3fbdac-78dd-47b8-860f-dafb6456841b")]
 
 // Version information for an assembly consists of the following four values:
 //

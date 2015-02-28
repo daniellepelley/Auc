@@ -1,8 +1,6 @@
 using System;
-using System.Globalization;
 using Auctions.Import.Infrastructure;
 using Auctions.Import.Infrastructure.Parsers;
-using Auctions.Import.Silverstone.Model;
 using Auctions.Model;
 using HtmlAgilityPack;
 

@@ -14,3 +14,4 @@ bin/
 *.ncrunchsolution.user
 *.DotSettings.user
 *.ncrunchproject
+*.user

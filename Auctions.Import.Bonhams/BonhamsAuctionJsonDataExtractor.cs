@@ -1,5 +1,3 @@
-using System.Xml;
-using Auctions.Import.Bonhams.Model;
 using Auctions.Import.Infrastructure;
 using Auctions.Import.Infrastructure.Parsers;
 using Auctions.Model;

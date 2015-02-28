@@ -1,9 +1,4 @@
-﻿using System;
-using System.CodeDom;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Auctions.Import.Infrastructure;
 using Auctions.Model;
@@ -14,7 +9,7 @@ namespace Auctions.Import.Services
     {
         private readonly IDataProvider<AuctionSale>[] _dataProviders;
 
-        public AuctionSalesImportService(IDataProvider<AuctionSale>[] dataProviders)
+        public AuctionSalesImportService(params IDataProvider<AuctionSale>[] dataProviders)
         {
             _dataProviders = dataProviders;
         }

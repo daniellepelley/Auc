@@ -1,7 +1,5 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.Linq;
-using Auctions.Import.Coys.Model;
 using Auctions.Import.Infrastructure;
 using Auctions.Model;
 using Moq;
