@@ -107,7 +107,7 @@ namespace Auctions.Import.Bonhams.Test
 
             var scraper = new BonhamsSalesWebScraper(mockHtmlLoader.Object, new BonhamsSaleJsonDataExtractor());
 
-            var sut = new AuctionSalesScraper<BonhamsSale>(scraper, new BonhamsSalesMapper());
+            var sut = new AuctionSalesScraper<BonhamsSale>(scraper, new BonhamsSalesMapperBase());
             
             var sales = sut.Import("http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx").Result;
             return sales;

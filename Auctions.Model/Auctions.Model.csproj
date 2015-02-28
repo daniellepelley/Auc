@@ -39,7 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AuctionSaleMapper.cs" />
+    <Compile Include="AuctionSaleMapperBase.cs" />
     <Compile Include="ISaleMapper.cs" />
     <Compile Include="ISalesImporter.cs" />
     <Compile Include="IUrlProvider.cs" />

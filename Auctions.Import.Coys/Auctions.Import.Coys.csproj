@@ -49,7 +49,7 @@
     <Compile Include="CoysSalesWebScraper.cs" />
     <Compile Include="Model\CoysAuction.cs" />
     <Compile Include="Model\CoysSale.cs" />
-    <Compile Include="CoysSalesMapper.cs" />
+    <Compile Include="CoysSalesMapperBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

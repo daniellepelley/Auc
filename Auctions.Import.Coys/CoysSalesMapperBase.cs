@@ -3,7 +3,7 @@ using Auctions.Model;
 
 namespace Auctions.Import.Coys
 {
-    public class CoysSalesMapper : AuctionSaleMapper<CoysSale>
+    public class CoysSalesMapperBase : AuctionSaleMapperBase<CoysSale>
     {
         public override AuctionSale Map(CoysSale source)
         {

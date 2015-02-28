@@ -13,7 +13,7 @@ namespace AuctionSpike
         public void FullTest()
         {
             var auctionSalesScraper = new AuctionSalesScraper<BaronsSale>(new BaronsSalesWebScraper(),
-                new BaronsSalesMapper());
+                new BaronsSalesMapperBase());
 
             var sales = auctionSalesScraper.Import("http://www.barons-auctions.com/fullresults.php").Result;
 

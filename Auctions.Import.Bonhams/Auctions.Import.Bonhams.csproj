@@ -51,7 +51,7 @@
     <Compile Include="BonhamsSaleJsonDataExtractor.cs" />
     <Compile Include="BonhamsSalesWebScraper.cs" />
     <Compile Include="Model\BonhamsSale.cs" />
-    <Compile Include="BonhamsSalesMapper.cs" />
+    <Compile Include="BonhamsSalesMapperBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

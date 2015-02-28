@@ -124,7 +124,7 @@ namespace Auctions.Import.HAndH.Test
 
             var webScraper = new HAndHSalesWebScraper(mockHtmlLoader.Object, new DocumentBuilder());
 
-            var sut = new AuctionSalesScraper<HAndHSale>(webScraper, new HandHSalesMapper());
+            var sut = new AuctionSalesScraper<HAndHSale>(webScraper, new HandHSalesMapperBase());
             var sales = sut.Import("http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx").Result;
             return sales;
         }

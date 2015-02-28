@@ -28,7 +28,7 @@ namespace Auctions.Import.HAndH.Test
             
             var baseUrl = "http://www.classic-auctions.com/auctions/previous.aspx?year={0}";
 
-            var salesImporter = new AuctionSalesScraper<HAndHSale>(new HAndHSalesWebScraper(), new HandHSalesMapper());
+            var salesImporter = new AuctionSalesScraper<HAndHSale>(new HAndHSalesWebScraper(), new HandHSalesMapperBase());
 
             var auctionImporter = new AuctionImporter(salesImporter);
             var auctionListingImporter = new HAndHAuctionListingsWebScraper();

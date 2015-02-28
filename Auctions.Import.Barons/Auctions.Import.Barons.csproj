@@ -45,7 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaronsSalesMapper.cs" />
+    <Compile Include="BaronsSalesMapperBase.cs" />
     <Compile Include="BaronsUrlProvider.cs" />
     <Compile Include="Model\BaronsSale.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
