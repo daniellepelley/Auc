@@ -18,84 +18,49 @@ namespace Auctions.Import.Bonhams.Test
             Assert.AreEqual("GBP", sales[0].Currency);
         }
 
-        [Test]
+        [TestCase(287, 1926)]
+        [TestCase(283, 1990)]
         [Category("Unit")]
-        public void ImportPopulatesYear1()
+        public void ImportPopulatesYear(int index, int expected)
         {
             var sales = GetSales();
-            Assert.AreEqual(1926, sales.ToArray().ElementAt(287).Year);
+            Assert.AreEqual(expected, sales.ToArray().ElementAt(index).Year);
         }
 
-        [Test]
+        [TestCase(287, true)]
+        [TestCase(283, true)]
         [Category("Unit")]
-        public void ImportPopulatesYear2()
+        public void ImportPopulatesSold1(int index, bool expected)
         {
             var sales = GetSales();
-            Assert.AreEqual(1990, sales.ToArray().ElementAt(283).Year);
+            Assert.AreEqual(expected, sales.ToArray().ElementAt(index).Sold);
         }
 
-        [Test]
+        [TestCase(287, "Rolls-Royce")]
+        [TestCase(283, "Gravetti")]
         [Category("Unit")]
-        public void ImportPopulatesSold1()
+        public void ImportPopulatesMake1(int index, string expected)
         {
             var sales = GetSales();
-            Assert.AreEqual(true, sales.ToArray().ElementAt(287).Sold);
+            Assert.AreEqual(expected, sales.ToArray().ElementAt(index).Make);
         }
 
-        [Test]
+        [TestCase(287, 27833)]
+        [TestCase(283, 23000)]
         [Category("Unit")]
-        public void ImportPopulatesSold2()
+        public void ImportPopulatesPrice1(int index, int expected)
         {
             var sales = GetSales();
-            Assert.AreEqual(true, sales.ToArray().ElementAt(283).Sold);
+            Assert.AreEqual(expected, sales.ToArray().ElementAt(index).Price);
         }
 
-        [Test]
+        [TestCase(287, "20hp Six-Light Saloon")]
+        [TestCase(283, "Cobra 427 Replica Roadster")]
         [Category("Unit")]
-        public void ImportPopulatesMake1()
+        public void ImportPopulatesModel1(int index, string expected)
         {
             var sales = GetSales();
-            Assert.AreEqual("Rolls-Royce", sales.ToArray().ElementAt(287).Make);
-        }
-
-        [Test]
-        [Category("Unit")]
-        public void ImportPopulatesMake2()
-        {
-            var sales = GetSales();
-            Assert.AreEqual("Gravetti", sales.ToArray().ElementAt(283).Make);
-        }
-
-        [Test]
-        [Category("Unit")]
-        public void ImportPopulatesPrice1()
-        {
-            var sales = GetSales();
-            Assert.AreEqual(27833, sales.ToArray().ElementAt(287).Price);
-        }
-
-        [Test]
-        [Category("Unit")]
-        public void ImportPopulatesPrice2()
-        {
-            var sales = GetSales();
-            Assert.AreEqual(23000, sales.ToArray().ElementAt(283).Price);
-        }
-
-        [Test]
-        [Category("Unit")]
-        public void ImportPopulatesModel1()
-        {
-            var sales = GetSales();
-            Assert.AreEqual("20hp Six-Light Saloon", sales.ToArray().ElementAt(287).Model);
-        }
-
-        [Test]
-        [Category("Unit")]
-        public void ImportPopulatesModel2()
-        {
-            var sales = GetSales();
-            Assert.AreEqual("Cobra 427 Replica Roadster", sales.ToArray().ElementAt(283).Model);
+            Assert.AreEqual(expected, sales.ToArray().ElementAt(index).Model);
         }
 
         private static AuctionSale[] GetSales(string jsonFile = "/Json/AuctionSalesList.json")

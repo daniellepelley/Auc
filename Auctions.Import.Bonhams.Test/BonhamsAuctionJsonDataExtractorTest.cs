@@ -16,48 +16,32 @@ namespace Auctions.Import.Bonhams.Test
             Assert.IsTrue(auctions.Any());
         }
 
-        [Test]
-        public void IdIsFormattedCorrectly1()
+        [TestCase(0, "https://www.bonhams.com/api/v1/lots/22528/?category=results&length=540&minimal=false&page=1")]
+        [TestCase(1, "https://www.bonhams.com/api/v1/lots/22205/?category=results&length=540&minimal=false&page=1")]        
+        [Category("Unit")]
+        public void UrlIsFormattedCorrectly(int index, string expected)
         {
             var auctions = GetBonhamsAuctions();
-            Assert.AreEqual("https://www.bonhams.com/api/v1/lots/22528/?category=results&length=540&minimal=false&page=1", auctions.First().Url);
+            Assert.AreEqual(expected, auctions[index].Url);
         }
 
-        [Test]
-        public void IdIsFormattedCorrectly2()
+        [TestCase(0, "Les Grandes Marques du Monde au Grand Palais")]
+        [TestCase(1, "The Scottsdale Auction")]
+        [Category("Unit")]
+        public void NameIsFormattedCorrectly1(int index, string expected)
         {
             var auctions = GetBonhamsAuctions();
-            Assert.AreEqual("https://www.bonhams.com/api/v1/lots/22205/?category=results&length=540&minimal=false&page=1", auctions[1].Url);
+            Assert.AreEqual(expected, auctions[index].Name);
         }
 
-        [Test]
-        public void NameIsFormattedCorrectly1()
+        [TestCase(0, "05/02/2015")]
+        [TestCase(1, "15/01/2015")]
+        [Category("Unit")]
+        public void DateIsFormattedCorrectly(int index, string expected)
         {
             var auctions = GetBonhamsAuctions();
-            Assert.AreEqual("Les Grandes Marques du Monde au Grand Palais", auctions[0].Name);
+            Assert.AreEqual(expected, auctions[index].Date.Value.ToString("dd/MM/yyyy"));
         }
-
-        [Test]
-        public void NameIsFormattedCorrectly2()
-        {
-            var auctions = GetBonhamsAuctions();
-            Assert.AreEqual("The Scottsdale Auction", auctions[1].Name);
-        }
-
-        [Test]
-        public void DateIsFormattedCorrectly1()
-        {
-            var auctions = GetBonhamsAuctions();
-            Assert.AreEqual(new DateTime(2015, 2, 5), auctions[0].Date);
-        }
-
-        [Test]
-        public void DateIsFormattedCorrectly2()
-        {
-            var auctions = GetBonhamsAuctions();
-            Assert.AreEqual(new DateTime(2015, 1, 15), auctions[1].Date);
-        }
-
 
         private static AuctionListing[] GetBonhamsAuctions()
         {
