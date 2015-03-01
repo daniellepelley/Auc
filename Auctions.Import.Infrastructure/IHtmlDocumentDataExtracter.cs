@@ -2,7 +2,7 @@ using HtmlAgilityPack;
 
 namespace Auctions.Import.Infrastructure
 {
-    public interface IHtmlDocumentDataExtracter<T>
+    public interface IHtmlDocumentDataExtracter<out T>
     {
         T[] GetData(HtmlDocument htmlDocument);
     }

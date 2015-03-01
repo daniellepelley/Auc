@@ -3,7 +3,7 @@ using Auctions.Model;
 
 namespace Auctions.Import.Silverstone
 {
-    public class SilverstoneSalesMapperBase : AuctionSaleMapperBase<SilverstoneSale>
+    public class SilverstoneSalesMapper : AuctionSaleMapperBase<SilverstoneSale>
     {
         public override AuctionSale Map(SilverstoneSale source)
         {

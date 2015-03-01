@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Auctions.Model;
+using Auctions.Import.Infrastructure;
 
 namespace Auctions.Import.Bonhams
 {

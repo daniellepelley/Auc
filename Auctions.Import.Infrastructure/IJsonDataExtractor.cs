@@ -1,6 +1,6 @@
 namespace Auctions.Import.Infrastructure
 {
-    public interface IJsonDataExtractor<T>
+    public interface IJsonDataExtractor<out T>
     {
         T[] Extract(string data);
     }

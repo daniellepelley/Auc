@@ -90,7 +90,7 @@ namespace Auctions.Import.Coys
                     return new SafeGet<TOutput>(output);
                 }
             }
-            catch (Exception)
+            catch
             {
 
             }

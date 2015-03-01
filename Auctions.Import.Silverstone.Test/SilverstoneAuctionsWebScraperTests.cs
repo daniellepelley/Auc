@@ -34,8 +34,8 @@ namespace Auctions.Import.Silverstone.Test
             Assert.AreEqual(expected, sales[index].Date.Value.ToString("dd/MM/yyyy"));
         }
 
-        [TestCase(0, "https://www.silverstoneauctions.com/race-retro--classic-car-sale-2015/view_lots")]
-        [TestCase(1, "https://www.silverstoneauctions.com/nec-classic-motor-show-sale-2014/view_lots")]
+        [TestCase(0, "https://www.silverstoneauctions.com/race-retro--classic-car-sale-2015/view_lots/pn/all")]
+        [TestCase(1, "https://www.silverstoneauctions.com/nec-classic-motor-show-sale-2014/view_lots/pn/all")]
         [Category("Unit")]
         public void UrlIsFormattedCorrectly(int index, string expected)
         {

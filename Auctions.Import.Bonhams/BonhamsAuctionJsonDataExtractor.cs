@@ -23,7 +23,7 @@ namespace Auctions.Import.Bonhams
 
         protected override AuctionListing CreateItem(JToken jToken)
         {
-            var format = "https://www.bonhams.com/api/v1/lots/{0}/?category=results&length=540&minimal=false&page=1";
+            const string format = "https://www.bonhams.com/api/v1/lots/{0}/?category=results&length=540&minimal=false&page=1";
 
             return new AuctionListing
             {

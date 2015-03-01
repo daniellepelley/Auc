@@ -1,13 +1,12 @@
 using System.Collections.Generic;
-using Auctions.Model;
 
-namespace Auctions.Import.HAndH
+namespace Auctions.Import.Infrastructure
 {
-    public class HAndHUrlProvider : IUrlProvider
+    public class IncrementalUrlProvider : IUrlProvider
     {
         private readonly string _baseUrl;
 
-        public HAndHUrlProvider(string baseUrl)
+        public IncrementalUrlProvider(string baseUrl)
         {
             _baseUrl = baseUrl;
         }
@@ -15,7 +14,6 @@ namespace Auctions.Import.HAndH
         public IEnumerable<string> GetUrls()
         {
             var page = 1;
-
             do
             {
                 yield return string.Format(_baseUrl, page);

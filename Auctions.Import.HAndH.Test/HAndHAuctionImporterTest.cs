@@ -72,7 +72,7 @@ namespace Auctions.Import.HAndH.Test
 
             var salesImporter = new AuctionSalesScraper<HAndHSale>(webScraper, new HandHSalesMapper());
 
-            var auctionImporter = new AuctionImporter(salesImporter);
+            var auctionImporter = new HAndHAuctionImporter(salesImporter);
 
             return auctionImporter;
         }

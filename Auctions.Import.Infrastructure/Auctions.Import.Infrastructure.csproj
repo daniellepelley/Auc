@@ -56,6 +56,8 @@
     <Compile Include="EnumerableExtensions.cs" />
     <Compile Include="IHttpLoader.cs" />
     <Compile Include="IJsonDataExtractor.cs" />
+    <Compile Include="IncrementalUrlProvider.cs" />
+    <Compile Include="IUrlProvider.cs" />
     <Compile Include="IWebScraper.cs" />
     <Compile Include="JsonDataExtractor.cs" />
     <Compile Include="JsonValueExtractor.cs" />

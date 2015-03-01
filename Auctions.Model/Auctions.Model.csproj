@@ -42,10 +42,10 @@
     <Compile Include="AuctionListing.cs" />
     <Compile Include="AuctionListingProvider.cs" />
     <Compile Include="AuctionSaleMapperBase.cs" />
+    <Compile Include="AuctionImporter.cs" />
     <Compile Include="ISaleMapper.cs" />
     <Compile Include="ISalesImporter.cs" />
     <Compile Include="IAuctionListingProvider.cs" />
-    <Compile Include="IUrlProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AuctionSale.cs" />
     <Compile Include="AuctionSalesScraper.cs" />

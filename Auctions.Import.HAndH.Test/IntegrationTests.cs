@@ -26,11 +26,11 @@ namespace Auctions.Import.HAndH.Test
         {
             var sales = new List<AuctionSale>();
             
-            var baseUrl = "http://www.classic-auctions.com/auctions/previous.aspx?year={0}";
+            const string baseUrl = "http://www.classic-auctions.com/auctions/previous.aspx?year={0}";
 
             var salesImporter = new AuctionSalesScraper<HAndHSale>(new HAndHSalesWebScraper(), new HandHSalesMapper());
 
-            var auctionImporter = new AuctionImporter(salesImporter);
+            var auctionImporter = new HAndHAuctionImporter(salesImporter);
             var auctionListingImporter = new HAndHAuctionListingsWebScraper();
 
             for (int i = 2010; i < 2015; i++)

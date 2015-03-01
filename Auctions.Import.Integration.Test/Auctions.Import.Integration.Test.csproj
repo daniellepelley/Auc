@@ -48,7 +48,9 @@
     <Compile Include="BaronsIntegrationTest.cs" />
     <Compile Include="BonhamsIntegrationTest.cs" />
     <Compile Include="CoysIntegrationTest.cs" />
+    <Compile Include="HAndHIntegrationTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SilverstoneIntegrationTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -66,6 +68,10 @@
       <Project>{2DAF51C9-3452-4732-8F2C-E98943DB6487}</Project>
       <Name>Auctions.Import.Coys</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Auctions.Import.HAndH\Auctions.Import.HAndH.csproj">
+      <Project>{AE53AF22-8E26-42D0-9F1D-BF8EE461345E}</Project>
+      <Name>Auctions.Import.HAndH</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Auctions.Import.Infrastructure\Auctions.Import.Infrastructure.csproj">
       <Project>{82EB7F9C-5CF0-4B1E-9DD4-91766D19DA86}</Project>
       <Name>Auctions.Import.Infrastructure</Name>
@@ -73,6 +79,10 @@
     <ProjectReference Include="..\Auctions.Import.Services\Auctions.Import.Services.csproj">
       <Project>{73AF7759-8A77-4B18-9DD3-8B6B1425C3D5}</Project>
       <Name>Auctions.Import.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Auctions.Import.Silverstone\Auctions.Import.Silverstone.csproj">
+      <Project>{A453ED82-0130-4B9A-AF41-8687025ECA2E}</Project>
+      <Name>Auctions.Import.Silverstone</Name>
     </ProjectReference>
     <ProjectReference Include="..\Auctions.Model\Auctions.Model.csproj">
       <Project>{15B14F44-E827-469B-A86A-876843BDB747}</Project>

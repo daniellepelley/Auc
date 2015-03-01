@@ -34,8 +34,8 @@ namespace Auctions.Import.HAndH.Test
             Assert.AreEqual(expected, auctions[index].Date.Value.ToString("dd/MM/yyyy"));
         }
 
-        [TestCase(0, "/Auctions/04-12-2013-ChateauImpney-1346.aspx")]
-        [TestCase(1, "/Auctions/30-10-2013-ThePavilionGardens-1345.aspx")]
+        [TestCase(0, "http://www.classic-auctions.com/Auctions/04-12-2013-ChateauImpney-1346.aspx")]
+        [TestCase(1, "http://www.classic-auctions.com/Auctions/30-10-2013-ThePavilionGardens-1345.aspx")]
         [Category("Unit")]
         public void UrlIsFormattedCorrectly(int index, string expected)
         {

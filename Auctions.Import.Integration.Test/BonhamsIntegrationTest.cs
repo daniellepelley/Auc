@@ -1,7 +1,5 @@
 using System;
 using System.Linq;
-using Auctions.Import.Barons;
-using Auctions.Import.Barons.Model;
 using Auctions.Import.Bonhams;
 using Auctions.Import.Bonhams.Model;
 using Auctions.Import.Infrastructure;

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using System.Text;
 
 namespace Auctions.Import.Infrastructure.Parsers
@@ -15,10 +16,8 @@ namespace Auctions.Import.Infrastructure.Parsers
             
             date = date.ToLower();
 
-            foreach (var replace in replaces)
-            {
-                date = date.Replace(replace, string.Empty);
-            }
+            date = replaces
+                .Aggregate(date, (current, replace) => current.Replace(replace, string.Empty));
 
             foreach (var word in SplitWord(date))
             {
@@ -34,11 +33,11 @@ namespace Auctions.Import.Infrastructure.Parsers
             return dateTime;             
         }
 
-        private string[] SplitWord(string dateString)
+        private IEnumerable<string> SplitWord(string dateString)
         {
             var output = new List<string>();
 
-            var parts = dateString.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries);
+            var parts = dateString.Split(new[] { " " }, StringSplitOptions.RemoveEmptyEntries);
 
             var stringBuilder = new StringBuilder();
 

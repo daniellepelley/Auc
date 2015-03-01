@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Auctions.Model
+namespace Auctions.Import.Infrastructure
 {
     public interface IUrlProvider
     {

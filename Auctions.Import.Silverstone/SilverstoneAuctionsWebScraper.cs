@@ -30,9 +30,9 @@ namespace Auctions.Import.Silverstone
             var year = _yearParser.Parse(description);
             var name = description.Split(new[] {year.ToString()}, StringSplitOptions.RemoveEmptyEntries)[0].Trim();
 
-            var href = cells[0].Element("a").Attributes[0].Value + "/view_lots";
+            var href = cells[0].Element("a").Attributes[0].Value + "/view_lots/pn/all";
 
-            var description2 = cells[0].InnerText.Split(new char[] { (char)13,(char)10 }, StringSplitOptions.RemoveEmptyEntries);
+            var description2 = cells[0].InnerText.Split(new[] { (char)13,(char)10 }, StringSplitOptions.RemoveEmptyEntries);
 
             DateTime? dateTime = null;
 
