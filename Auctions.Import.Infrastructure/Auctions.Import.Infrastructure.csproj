@@ -56,6 +56,7 @@
     <Compile Include="EnumerableExtensions.cs" />
     <Compile Include="IHttpLoader.cs" />
     <Compile Include="IJsonDataExtractor.cs" />
+    <Compile Include="IMonitor.cs" />
     <Compile Include="IncrementalUrlProvider.cs" />
     <Compile Include="IUrlProvider.cs" />
     <Compile Include="IWebScraper.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="JsonValueExtractor.cs" />
     <Compile Include="JsonWebScraper.cs" />
     <Compile Include="JTokenExtractor.cs" />
+    <Compile Include="Monitor.cs" />
     <Compile Include="Parsers\MakeParser.cs" />
     <Compile Include="Parsers\DateParser.cs" />
     <Compile Include="Parsers\PriceParser.cs" />

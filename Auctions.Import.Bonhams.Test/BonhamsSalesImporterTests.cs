@@ -70,7 +70,7 @@ namespace Auctions.Import.Bonhams.Test
             mockHtmlLoader.Setup(x => x.Load(It.IsAny<string>()))
                 .ReturnsAsync(File.ReadAllText(Directory.GetCurrentDirectory() + jsonFile));
 
-            var scraper = new JsonWebScraper<BonhamsSale>(mockHtmlLoader.Object, new BonhamsSaleJsonDataExtractor());
+            var scraper = new JsonWebScraper<BonhamsSale>(mockHtmlLoader.Object, new BonhamsSaleJsonDataExtractor(), Mock.Of<IMonitor>());
 
             var sut = new AuctionSalesScraper<BonhamsSale>(scraper, new BonhamsSalesMapper());
             

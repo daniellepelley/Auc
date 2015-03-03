@@ -34,7 +34,7 @@ namespace Auctions.Import.Bonhams.Test
             mockHtmlLoader.Setup(x => x.Load(It.IsAny<string>()))
                 .ReturnsAsync(File.ReadAllText(Directory.GetCurrentDirectory() + jsonFile));
 
-            var scraper = new JsonWebScraper<AuctionListing>(mockHtmlLoader.Object, new BonhamsAuctionJsonDataExtractor());
+            var scraper = new JsonWebScraper<AuctionListing>(mockHtmlLoader.Object, new BonhamsAuctionJsonDataExtractor(), Mock.Of<IMonitor>());
 
             var sut = new AuctionListingProvider(x => x.Date >= new DateTime(2015, 1, 1), scraper, new BonhamsAuctionUrlProvider());
 

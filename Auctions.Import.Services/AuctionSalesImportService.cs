@@ -13,7 +13,7 @@ namespace Auctions.Import.Services
         {
             _dataProviders = dataProviders;
         }
-
+        
         public async Task<AuctionSale[]> Import()
         {
             var sales = new List<AuctionSale>();

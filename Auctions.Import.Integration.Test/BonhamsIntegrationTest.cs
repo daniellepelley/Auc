@@ -15,10 +15,12 @@ namespace Auctions.Import.Integration.Test
         [Ignore]
         public void Test()
         {
-            var jsonWebScraper = new JsonWebScraper<AuctionListing>(new HttpLoader(), new BonhamsAuctionJsonDataExtractor());
+            var jsonWebScraper = new JsonWebScraper<AuctionListing>(new HttpLoader(), new BonhamsAuctionJsonDataExtractor(), new Monitor(
+                s => { }));
             var auctionListingProvider = new AuctionListingProvider(x => x.Date >= new DateTime(2014, 1, 1), jsonWebScraper, new BonhamsAuctionUrlProvider());
 
-            var webScraper = new JsonWebScraper<BonhamsSale>(new HttpLoader(), new BonhamsSaleJsonDataExtractor());
+            var webScraper = new JsonWebScraper<BonhamsSale>(new HttpLoader(), new BonhamsSaleJsonDataExtractor(), new Monitor(
+                s => { }));
 
             var auctionSalesScraper = new AuctionSalesScraper<BonhamsSale>(webScraper, new BonhamsSalesMapper());
 
