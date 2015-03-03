@@ -56,7 +56,7 @@ namespace Auctions.Import.Coys.Test
             mockHtmlLoader.Setup(x => x.Load(It.IsAny<string>()))
                 .ReturnsAsync(File.ReadAllText(Directory.GetCurrentDirectory() + htmlFile));
 
-            var sut = new CoysSalesWebScraper(mockHtmlLoader.Object, new DocumentBuilder());
+            var sut = new CoysSalesWebDataImporter(mockHtmlLoader.Object, new DocumentBuilder());
             var sales = sut.Import("http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx").Result;
             return sales;
         }

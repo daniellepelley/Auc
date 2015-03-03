@@ -15,7 +15,7 @@ namespace Auctions.Import.HAndH.Test
         [Category("Unit")]
         public void ImportAuction()
         {
-            IWebScraper<AuctionSale> auctionImporter = CreateSut();
+            IWebDataImporter<AuctionSale> auctionImporter = CreateSut();
 
             var sales =
                 auctionImporter.Import(
@@ -28,7 +28,7 @@ namespace Auctions.Import.HAndH.Test
         [Category("Unit")]
         public void ImportAuctionVerifyCalls()
         {
-            IWebScraper<AuctionSale> auctionImporter = CreateSut();
+            IWebDataImporter<AuctionSale> auctionImporter = CreateSut();
 
             auctionImporter.Import(
                 "http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?p={0}");
@@ -49,7 +49,7 @@ namespace Auctions.Import.HAndH.Test
                 Times.Never);
         }
 
-        private IWebScraper<AuctionSale> CreateSut()
+        private IWebDataImporter<AuctionSale> CreateSut()
         {
             _mockHtmlLoader = new Mock<IHttpLoader>();
 
@@ -68,9 +68,9 @@ namespace Auctions.Import.HAndH.Test
                     x.Load("http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx?p=3"))
                 .ReturnsAsync(File.ReadAllText(Directory.GetCurrentDirectory() + "/Html/PageHtmlEmpty.txt"));
 
-            var webScraper = new HAndHSalesWebScraper(_mockHtmlLoader.Object, new DocumentBuilder());
+            var webScraper = new HAndHSalesWebDataImporter(_mockHtmlLoader.Object, new DocumentBuilder());
 
-            var salesImporter = new AuctionSalesScraper<HAndHSale>(webScraper, new HandHSalesMapper());
+            var salesImporter = new AuctionSalesDataImporter<HAndHSale>(webScraper, new HandHSalesMapper());
 
             var auctionImporter = new HAndHAuctionImporter(salesImporter);
 

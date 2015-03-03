@@ -13,7 +13,7 @@ namespace Spike.Auctions.SignalRClient
 
         static void Main(string[] args)
         {
-            string url = @"http://localhost:8081/";
+            string url = @"http://localhost:8080/";
             var connection = new HubConnection(url);
             _hubProxy = connection.CreateHubProxy("ImportHub");
             connection.Start().Wait();

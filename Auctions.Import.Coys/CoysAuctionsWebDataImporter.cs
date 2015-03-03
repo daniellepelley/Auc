@@ -7,9 +7,9 @@ using HtmlAgilityPack;
 
 namespace Auctions.Import.Coys
 {
-    public class CoysAuctionsWebScraper : HtmlWebScraper<AuctionListing>
+    public class CoysAuctionsWebDataImporter : HtmlWebDataImporter<AuctionListing>
     {
-        public CoysAuctionsWebScraper(IHttpLoader httpLoader, IDocumentBuilder documentBuilder)
+        public CoysAuctionsWebDataImporter(IHttpLoader httpLoader, IDocumentBuilder documentBuilder)
             : base(httpLoader, documentBuilder, new HtmlDocumentDataExtracter<AuctionListing>(
                 "//table//td",
                 3,
@@ -17,7 +17,7 @@ namespace Auctions.Import.Coys
                 ))
         { }
 
-        public CoysAuctionsWebScraper()
+        public CoysAuctionsWebDataImporter()
             : this(new HttpLoader(), new DocumentBuilder())
         { }
 

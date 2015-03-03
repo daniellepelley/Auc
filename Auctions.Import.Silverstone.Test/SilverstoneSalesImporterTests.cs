@@ -70,9 +70,9 @@ namespace Auctions.Import.Silverstone.Test
             mockHtmlLoader.Setup(x => x.Load(It.IsAny<string>()))
                 .ReturnsAsync(File.ReadAllText(Directory.GetCurrentDirectory() + htmlFile));
 
-            var webScraper = new SilverstoneSalesWebScraper(mockHtmlLoader.Object, new DocumentBuilder());
+            var webScraper = new SilverstoneSalesWebDataImporter(mockHtmlLoader.Object, new DocumentBuilder());
 
-            var sut = new AuctionSalesScraper<SilverstoneSale>(webScraper, new SilverstoneSalesMapper());
+            var sut = new AuctionSalesDataImporter<SilverstoneSale>(webScraper, new SilverstoneSalesMapper());
             var sales = sut.Import("http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx").Result;
             return sales;
         }

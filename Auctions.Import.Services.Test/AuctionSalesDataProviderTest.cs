@@ -11,7 +11,7 @@ namespace Auctions.Import.Services.Test
         [Test]
         public void ImportServiceImportsAllAuctionSales()
         {
-            var mockWebScraper = new Mock<IWebScraper<AuctionSale>>();
+            var mockWebScraper = new Mock<IWebDataImporter<AuctionSale>>();
             mockWebScraper.Setup(x => x.Import("foo"))
                 .ReturnsAsync(new[] { new AuctionSale() });
 

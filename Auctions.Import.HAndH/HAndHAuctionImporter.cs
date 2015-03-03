@@ -6,8 +6,8 @@ namespace Auctions.Import.HAndH
 {
     public class HAndHAuctionImporter : AuctionImporter
     {
-        public HAndHAuctionImporter(IWebScraper<AuctionSale> salesScraper)
-            : base(salesScraper, IsLastPage)
+        public HAndHAuctionImporter(IWebDataImporter<AuctionSale> salesDataImporter)
+            : base(salesDataImporter, IsLastPage)
         { }
 
         private static bool IsLastPage(AuctionSale[] auctionSales)

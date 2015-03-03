@@ -13,10 +13,10 @@ namespace Auctions.Import.Integration.Test
         [Ignore]
         public void Test()
         {
-            var auctionListingProvider = new AuctionListingProvider(x => true, new CoysAuctionsWebScraper(), new CoysAuctionUrlProvider());
+            var auctionListingProvider = new AuctionListingProvider(x => true, new CoysAuctionsWebDataImporter(), new CoysAuctionUrlProvider());
 
-            var webScraper = new CoysSalesWebScraper();
-            var auctionSalesScraper = new AuctionSalesScraper<CoysSale>(webScraper, new CoysSalesMapper());
+            var webScraper = new CoysSalesWebDataImporter();
+            var auctionSalesScraper = new AuctionSalesDataImporter<CoysSale>(webScraper, new CoysSalesMapper());
 
             var auctionSalesDataProvider = new AuctionSalesDataProvider(auctionSalesScraper, auctionListingProvider);
             var service = new AuctionSalesImportService(auctionSalesDataProvider);

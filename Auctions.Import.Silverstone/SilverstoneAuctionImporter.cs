@@ -6,7 +6,7 @@
 //{
 //    public class SilverstoneAuctionImporter : AuctionImporter
 //    {
-//        public SilverstoneAuctionImporter(IWebScraper<AuctionSale> salesScraper)
+//        public SilverstoneAuctionImporter(IWebDataImporter<AuctionSale> salesScraper)
 //            : base(salesScraper, IsLastPage)
 //        { }
 

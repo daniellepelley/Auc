@@ -49,7 +49,7 @@ namespace Auctions.Import.Bonhams.Test
             mockHtmlLoader.Setup(x => x.Load(It.IsAny<string>()))
                 .ReturnsAsync(File.ReadAllText(Directory.GetCurrentDirectory() + jsonFile));
 
-            var sut = new JsonWebScraper<BonhamsSale>(mockHtmlLoader.Object, new BonhamsSaleJsonDataExtractor(), Mock.Of<IMonitor>());
+            var sut = new JsonWebDataImporter<BonhamsSale>(mockHtmlLoader.Object, new BonhamsSaleJsonDataExtractor(), Mock.Of<IMonitor>());
             var sales = sut.Import("http://www.classic-auctions.com/Auctions/24-04-2014-ImperialWarMuseumDuxford-1365.aspx").Result;
             return sales;
         }

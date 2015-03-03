@@ -5,15 +5,15 @@ using Auctions.Import.Infrastructure;
 
 namespace Auctions.Model
 {
-    public class AuctionImporter : IWebScraper<AuctionSale>
+    public class AuctionImporter : IWebDataImporter<AuctionSale>
     {
-        private readonly IWebScraper<AuctionSale>  _salesScraper;
+        private readonly IWebDataImporter<AuctionSale>  _salesDataImporter;
         private readonly Func<AuctionSale[], bool> _isLastPageFunc;
 
-        public AuctionImporter(IWebScraper<AuctionSale> salesScraper, Func<AuctionSale[], bool> isLastPageFunc)
+        public AuctionImporter(IWebDataImporter<AuctionSale> salesDataImporter, Func<AuctionSale[], bool> isLastPageFunc)
         {
             _isLastPageFunc = isLastPageFunc;
-            _salesScraper = salesScraper;
+            _salesDataImporter = salesDataImporter;
         }
 
         public async Task<AuctionSale[]> Import(string url)
@@ -24,7 +24,7 @@ namespace Auctions.Model
 
             foreach (var u in urlProvider.GetUrls())
             {
-                var sales = await _salesScraper.Import(u);
+                var sales = await _salesDataImporter.Import(u);
 
                 output.AddRange(sales);
 

@@ -14,11 +14,11 @@ namespace Auctions.Import.Integration.Test
         [Ignore]
         public void Test()
         {
-            var auctionListingProvider = new AuctionListingProvider(x => x.Date >= new DateTime(2009, 1, 1), new SilverstoneAuctionsWebScraper(), new SilverstonesAuctionUrlProvider());
+            var auctionListingProvider = new AuctionListingProvider(x => x.Date >= new DateTime(2009, 1, 1), new SilverstoneAuctionsWebDataImporter(), new SilverstonesAuctionUrlProvider());
 
-            var webScraper = new SilverstoneSalesWebScraper();
+            var webScraper = new SilverstoneSalesWebDataImporter();
              
-            var auctionSalesScraper = new AuctionSalesScraper<SilverstoneSale>(webScraper, new SilverstoneSalesMapper());
+            var auctionSalesScraper = new AuctionSalesDataImporter<SilverstoneSale>(webScraper, new SilverstoneSalesMapper());
 
             var auctionSalesDataProvider = new AuctionSalesDataProvider(auctionSalesScraper, auctionListingProvider);
             var service = new AuctionSalesImportService(auctionSalesDataProvider);

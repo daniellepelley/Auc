@@ -9,7 +9,7 @@ namespace Auctions.Import.Barons.Test
         [Category("Integration")]
         public void PageImporterImport()
         {
-            var sut = new BaronsSalesWebScraper();
+            var sut = new BaronsSalesWebDataImporter();
             var sales = sut.Import("http://www.barons-auctions.com/fullresults.php");
 
             Assert.IsTrue(sales.Result.Length > 1000);

@@ -50,7 +50,7 @@ namespace Auctions.Import.HAndH.Test
             mockHtmlLoader.Setup(x => x.Load(It.IsAny<string>()))
                 .ReturnsAsync(File.ReadAllText(Directory.GetCurrentDirectory() + "/Html/AuctionListingHtml.txt"));
 
-            var sut = new HAndHAuctionListingsWebScraper(mockHtmlLoader.Object, new DocumentBuilder());
+            var sut = new HAndHAuctionListingsWebDataImporter(mockHtmlLoader.Object, new DocumentBuilder());
             return sut.Import("http://www.classic-auctions.com/auctions/previous.aspx?year=2013").Result;
         }
     }

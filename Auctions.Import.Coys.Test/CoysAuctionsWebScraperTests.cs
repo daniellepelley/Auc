@@ -60,7 +60,7 @@ namespace Auctions.Import.Coys.Test
             mockHtmlLoader.Setup(x => x.Load(It.IsAny<string>()))
                 .ReturnsAsync(File.ReadAllText(Directory.GetCurrentDirectory() + htmlFile));
 
-            var sut = new CoysAuctionsWebScraper(mockHtmlLoader.Object, new DocumentBuilder());
+            var sut = new CoysAuctionsWebDataImporter(mockHtmlLoader.Object, new DocumentBuilder());
             var auctions = sut.Import("foo").Result;
             return auctions;
         }

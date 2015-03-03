@@ -49,7 +49,7 @@
     <Compile Include="BaronsAuctionListingProvider.cs" />
     <Compile Include="Model\BaronsSale.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="BaronsSalesWebScraper.cs" />
+    <Compile Include="BaronsSalesWebDataImporter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

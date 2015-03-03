@@ -8,11 +8,11 @@ namespace Auctions.Import.Services
     public class AuctionSalesDataProvider : IDataProvider<AuctionSale>
     {
         private readonly IAuctionListingProvider _auctionListingProvider;
-        private readonly IWebScraper<AuctionSale> _webScraper;
+        private readonly IWebDataImporter<AuctionSale> _webDataImporter;
 
-        public AuctionSalesDataProvider(IWebScraper<AuctionSale> webScraper, IAuctionListingProvider auctionListingProvider)
+        public AuctionSalesDataProvider(IWebDataImporter<AuctionSale> webDataImporter, IAuctionListingProvider auctionListingProvider)
         {
-            _webScraper = webScraper;
+            _webDataImporter = webDataImporter;
             _auctionListingProvider = auctionListingProvider;
         }
 
@@ -24,7 +24,7 @@ namespace Auctions.Import.Services
 
             foreach (var auctionListing in auctionListings)
             {
-                foreach (var auctionSale in await _webScraper.Import(auctionListing.Url))
+                foreach (var auctionSale in await _webDataImporter.Import(auctionListing.Url))
                 {
                     auctionSale.AuctionListing = auctionListing;
                     auctionSales.Add(auctionSale);

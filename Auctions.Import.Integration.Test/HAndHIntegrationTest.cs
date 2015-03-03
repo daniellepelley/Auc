@@ -15,12 +15,12 @@ namespace Auctions.Import.Integration.Test
         public void Test()
         {
             var auctionListingProvider = new AuctionListingProvider(x => x.Date >= new DateTime(2009, 1, 1),
-                new HAndHAuctionListingsWebScraper(),
+                new HAndHAuctionListingsWebDataImporter(),
                 new HAndHAuctionUrlProvider("http://www.classic-auctions.com/auctions/previous.aspx?year={0}"));
 
-            var webScraper = new HAndHSalesWebScraper();
+            var webScraper = new HAndHSalesWebDataImporter();
 
-            var auctionSalesScraper = new AuctionSalesScraper<HAndHSale>(webScraper, new HandHSalesMapper());
+            var auctionSalesScraper = new AuctionSalesDataImporter<HAndHSale>(webScraper, new HandHSalesMapper());
 
             var auctionSalesDataProvider = new AuctionSalesDataProvider(auctionSalesScraper, auctionListingProvider);
             var service = new AuctionSalesImportService(auctionSalesDataProvider);

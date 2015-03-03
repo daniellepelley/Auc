@@ -59,10 +59,10 @@
     <Compile Include="IMonitor.cs" />
     <Compile Include="IncrementalUrlProvider.cs" />
     <Compile Include="IUrlProvider.cs" />
-    <Compile Include="IWebScraper.cs" />
+    <Compile Include="IWebDataImporter.cs" />
     <Compile Include="JsonDataExtractor.cs" />
     <Compile Include="JsonValueExtractor.cs" />
-    <Compile Include="JsonWebScraper.cs" />
+    <Compile Include="JsonWebDataImporter.cs" />
     <Compile Include="JTokenExtractor.cs" />
     <Compile Include="Monitor.cs" />
     <Compile Include="Parsers\MakeParser.cs" />
@@ -71,7 +71,7 @@
     <Compile Include="Parsers\YearParser.cs" />
     <Compile Include="HtmlDocumentDataExtracter.cs" />
     <Compile Include="IHtmlDocumentDataExtracter.cs" />
-    <Compile Include="HtmlWebScraper.cs" />
+    <Compile Include="HtmlWebDataImporter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

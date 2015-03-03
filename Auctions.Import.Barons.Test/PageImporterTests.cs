@@ -16,7 +16,7 @@ namespace Auctions.Import.Barons.Test
             mockHtmlLoader.Setup(x => x.Load(It.IsAny<string>()))
                 .ReturnsAsync(File.ReadAllText(Directory.GetCurrentDirectory() + htmlFile));
 
-            var sut = new BaronsSalesWebScraper(mockHtmlLoader.Object, new DocumentBuilder());
+            var sut = new BaronsSalesWebDataImporter(mockHtmlLoader.Object, new DocumentBuilder());
             var sales = sut.Import("http://www.barons-auctions.com/fullresults.php");
             return sales.Result;
         }

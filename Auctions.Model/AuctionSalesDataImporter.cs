@@ -4,20 +4,20 @@ using Auctions.Import.Infrastructure;
 
 namespace Auctions.Model
 {
-    public class AuctionSalesScraper<T> : IWebScraper<AuctionSale>
+    public class AuctionSalesDataImporter<T> : IWebDataImporter<AuctionSale>
     {
-        private readonly IWebScraper<T> _webScraper;
+        private readonly IWebDataImporter<T> _webDataImporter;
         private readonly ISaleMapper<T> _saleMapper;
 
-        public AuctionSalesScraper(IWebScraper<T> webScraper, ISaleMapper<T> saleMapper)
+        public AuctionSalesDataImporter(IWebDataImporter<T> webDataImporter, ISaleMapper<T> saleMapper)
         {
             _saleMapper = saleMapper;
-            _webScraper = webScraper;
+            _webDataImporter = webDataImporter;
         }
 
         public async Task<AuctionSale[]> Import(string url)
         {
-            var result = await _webScraper.Import(url);
+            var result = await _webDataImporter.Import(url);
 
             return
                 result.Select(_saleMapper.Map)

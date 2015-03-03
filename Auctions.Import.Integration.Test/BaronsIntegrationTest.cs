@@ -13,7 +13,7 @@ namespace Auctions.Import.Integration.Test
         [Ignore]
         public void Test()
         {
-            var auctionSalesScraper = new AuctionSalesScraper<BaronsSale>(new BaronsSalesWebScraper(), new BaronsSalesMapper());
+            var auctionSalesScraper = new AuctionSalesDataImporter<BaronsSale>(new BaronsSalesWebDataImporter(), new BaronsSalesMapper());
 
             var auctionSalesDataProvider = new AuctionSalesDataProvider(auctionSalesScraper, new BaronsAuctionListingProvider());
             var service = new AuctionSalesImportService(auctionSalesDataProvider);

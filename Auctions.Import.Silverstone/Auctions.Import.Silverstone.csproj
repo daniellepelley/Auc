@@ -46,10 +46,10 @@
     <Compile Include="ConfigSettings.cs" />
     <Compile Include="SilverstoneAuctionImporter.cs" />
     <Compile Include="SilverstonesAuctionUrlProvider.cs" />
-    <Compile Include="SilverstoneAuctionsWebScraper.cs" />
+    <Compile Include="SilverstoneAuctionsWebDataImporter.cs" />
     <Compile Include="SilverstoneSalesMapper.cs" />
     <Compile Include="Model\SilverstoneSale.cs" />
-    <Compile Include="SilverstoneSalesWebScraper.cs" />
+    <Compile Include="SilverstoneSalesWebDataImporter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -23,36 +23,26 @@ namespace Auctions.Import.ConsoleApp
 
             using (SignalR())
             {
+                Console.WriteLine("Return to start...");
                 Console.ReadLine();
                 var results = _service.Import().Result;
 
                 Console.WriteLine(results.Count());
 
-                //var hubContext = GlobalHost.ConnectionManager.GetHubContext<ImportHub>();
-
-                //var monitor = new Monitor(x => hubContext.Clients.All.UpdateProgress(x));
-
-
-                //for (int i = 0; i < 100; i++)
-                //{
-                //    System.Threading.Thread.Sleep(1000);
-                //    Console.WriteLine("Update");
-                //    monitor.Update("fdf");
-                //}
+                Console.ReadLine();
             }
-
         }
 
         private static void Init()
         {
             var builder = new ContainerBuilder();
 
-            builder.RegisterType<AuctionSalesDataProviderFactory>()
+            builder.RegisterType<BonhamsAuctionSalesDataProviderFactory>()
                 .As<IAuctionSalesDataProviderFactory>();
 
             var container = builder.Build();
 
-            var factories = container.Resolve<IEnumerable<IAuctionSalesDataProviderFactory>>();
+            var auctionSalesDataProviderFactories = container.Resolve<IEnumerable<IAuctionSalesDataProviderFactory>>();
 
             var func = new Func<AuctionListing, bool>(x => x.Date >= new DateTime(2014, 1, 1));
 
@@ -60,14 +50,14 @@ namespace Auctions.Import.ConsoleApp
 
             var monitor = new Monitor(x => hubContext.Clients.All.UpdateProgress(x));
 
-            var dataProviders = factories.Select(x => x.Create(func, monitor)).ToArray();
+            var dataProviders = auctionSalesDataProviderFactories.Select(x => x.Create(func, monitor)).ToArray();
 
             _service = new AuctionSalesImportService(dataProviders);
         }
 
         private static IDisposable SignalR()
         {
-            string url = @"http://localhost:8081/";
+            string url = @"http://localhost:8080/";
             var server = WebApp.Start<Startup>(url);
             
             Console.WriteLine(string.Format("Server running at {0}", url));

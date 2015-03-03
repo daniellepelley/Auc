@@ -46,10 +46,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HAndHAuctionImporter.cs" />
-    <Compile Include="HAndHAuctionListingsWebScraper.cs" />
+    <Compile Include="HAndHAuctionListingsWebDataImporter.cs" />
     <Compile Include="HAndHAuctionUrlProvider.cs" />
     <Compile Include="HandHSalesMapper.cs" />
-    <Compile Include="HAndHSalesWebScraper.cs" />
+    <Compile Include="HAndHSalesWebDataImporter.cs" />
     <Compile Include="Model\HAndHAuction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Model\HAndHSale.cs" />

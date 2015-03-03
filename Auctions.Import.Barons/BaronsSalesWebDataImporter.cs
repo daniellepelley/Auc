@@ -4,9 +4,9 @@ using Auctions.Import.Infrastructure;
 
 namespace Auctions.Import.Barons
 {
-    public class BaronsSalesWebScraper : HtmlWebScraper<BaronsSale>
+    public class BaronsSalesWebDataImporter : HtmlWebDataImporter<BaronsSale>
     {
-        public BaronsSalesWebScraper(IHttpLoader httpLoader, IDocumentBuilder documentBuilder)
+        public BaronsSalesWebDataImporter(IHttpLoader httpLoader, IDocumentBuilder documentBuilder)
             : base(httpLoader,
             documentBuilder,
             new HtmlDocumentDataExtracter<BaronsSale>(
@@ -23,7 +23,7 @@ namespace Auctions.Import.Barons
             sale => !string.IsNullOrEmpty(sale.Year)))
         { }
 
-        public BaronsSalesWebScraper()
+        public BaronsSalesWebDataImporter()
             :this(new HttpLoader(), new DocumentBuilder())
         { }
 
