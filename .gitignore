@@ -16,3 +16,4 @@ bin/
 *.ncrunchproject
 *.user
 /Spike.Auctions.SignalRClient/packages
+/MVC5_Seed_Project/packages
