@@ -1,6 +1,7 @@
 using System.Linq;
 using Auctions.Import.Barons;
 using Auctions.Import.Barons.Model;
+using Auctions.Import.Infrastructure;
 using Auctions.Import.Services;
 using Auctions.Model;
 using NUnit.Framework;
@@ -21,5 +22,14 @@ namespace Auctions.Import.Integration.Test
             var results = service.Import().Result;
             Assert.IsTrue(results.Any());
         }
+
+        [Test]
+        public void BaronsAuctionSalesDataProviderFactoryBuildsCorrectly()
+        {
+            var factory = new BaronsAuctionSalesDataProviderFactory();
+
+            factory.Create(x => true, new Monitor(x => { }));
+        }
+
     }
 }

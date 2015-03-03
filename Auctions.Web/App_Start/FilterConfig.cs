@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace Auctions.Web
+namespace Inspinia_MVC5_SeedProject
 {
     public class FilterConfig
     {

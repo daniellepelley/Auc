@@ -1,17 +1,25 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Main";
 }
 
-<div ng-app="app" ng-controller="auctionSalesCtrl">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="text-center m-t-lg panel">
+                <div ng-app="app" ng-controller="auctionSalesCtrl">
 
-    <form>
-        <div class="form-group">
-            <label>Price</label>
-            <input class="form-control"/>
+                    <form>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Name:</label>
+                            <div class="col-sm-10"><input type="text" class="form-control"></div>
+                        </div>
+
+                    </form>
+
+                    <div class="btn btn-default">Save</div>
+
+                </div>
+            </div>
         </div>
-
-
-    </form>
-
-
+    </div>
 </div>

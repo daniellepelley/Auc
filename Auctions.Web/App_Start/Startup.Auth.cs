@@ -3,7 +3,7 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Owin;
 
-namespace Auctions.Web
+namespace Inspinia_MVC5_SeedProject
 {
     public partial class Startup
     {

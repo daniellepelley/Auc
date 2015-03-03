@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Auctions.Web.Models
+namespace Inspinia_MVC5_SeedProject.Models
 {
     public class ExternalLoginConfirmationViewModel
     {

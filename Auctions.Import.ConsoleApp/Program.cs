@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using Auctions.Import.Bonhams;
-using Auctions.Import.Bonhams.Model;
 using Auctions.Import.Infrastructure;
 using Auctions.Import.Services;
 using Auctions.Model;
 using Autofac;
-using Autofac.Builder;
 using Microsoft.AspNet.SignalR;
 using Microsoft.Owin.Hosting;
 

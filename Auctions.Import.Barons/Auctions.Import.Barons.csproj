@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    </Reference>
     <Reference Include="HtmlAgilityPack">
       <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\Net45\HtmlAgilityPack.dll</HintPath>
     </Reference>
@@ -47,6 +50,7 @@
   <ItemGroup>
     <Compile Include="BaronsSalesMapper.cs" />
     <Compile Include="BaronsAuctionListingProvider.cs" />
+    <Compile Include="BaronsAuctionSalesDataProviderFactory.cs" />
     <Compile Include="Model\BaronsSale.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BaronsSalesWebDataImporter.cs" />
@@ -58,6 +62,10 @@
     <ProjectReference Include="..\Auctions.Import.Infrastructure\Auctions.Import.Infrastructure.csproj">
       <Project>{82EB7F9C-5CF0-4B1E-9DD4-91766D19DA86}</Project>
       <Name>Auctions.Import.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Auctions.Import.Services\Auctions.Import.Services.csproj">
+      <Project>{73AF7759-8A77-4B18-9DD3-8B6B1425C3D5}</Project>
+      <Name>Auctions.Import.Services</Name>
     </ProjectReference>
     <ProjectReference Include="..\Auctions.Model\Auctions.Model.csproj">
       <Project>{15B14F44-E827-469B-A86A-876843BDB747}</Project>

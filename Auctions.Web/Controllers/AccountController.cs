@@ -8,9 +8,9 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
-using Auctions.Web.Models;
+using Inspinia_MVC5_SeedProject.Models;
 
-namespace Auctions.Web.Controllers
+namespace Inspinia_MVC5_SeedProject.Controllers
 {
     [Authorize]
     public class AccountController : Controller
