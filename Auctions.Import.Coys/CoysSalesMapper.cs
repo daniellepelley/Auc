@@ -1,5 +1,5 @@
 ﻿using Auctions.Import.Coys.Model;
-using Auctions.Model;
+using Auctions.DomainModel;
 
 namespace Auctions.Import.Coys
 {

@@ -1,4 +1,5 @@
 using System.Linq;
+using Auctions.Export.Data;
 using Effort;
 
 namespace Auctions.Export.Tests.Builders

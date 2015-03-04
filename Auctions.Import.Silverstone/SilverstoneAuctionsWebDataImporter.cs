@@ -1,7 +1,7 @@
 using System;
 using Auctions.Import.Infrastructure;
 using Auctions.Import.Infrastructure.Parsers;
-using Auctions.Model;
+using Auctions.DomainModel;
 using HtmlAgilityPack;
 
 namespace Auctions.Import.Silverstone

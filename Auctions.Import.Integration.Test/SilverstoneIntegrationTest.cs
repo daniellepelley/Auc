@@ -4,7 +4,7 @@ using Auctions.Import.Infrastructure;
 using Auctions.Import.Services;
 using Auctions.Import.Silverstone;
 using Auctions.Import.Silverstone.Model;
-using Auctions.Model;
+using Auctions.DomainModel;
 using NUnit.Framework;
 
 namespace Auctions.Import.Integration.Test
@@ -13,7 +13,7 @@ namespace Auctions.Import.Integration.Test
     {
         [Test]
         [Ignore]
-        public void Test()
+        public void IntegrationTest()
         {
             var auctionListingProvider = new AuctionListingProvider(x => x.Date >= new DateTime(2009, 1, 1), new SilverstoneAuctionsWebDataImporter(), new SilverstonesAuctionUrlProvider());
 

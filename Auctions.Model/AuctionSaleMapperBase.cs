@@ -1,6 +1,6 @@
 using Auctions.Import.Infrastructure.Parsers;
 
-namespace Auctions.Model
+namespace Auctions.DomainModel
 {
     public abstract class AuctionSaleMapperBase<T> : ISaleMapper<T>
     {

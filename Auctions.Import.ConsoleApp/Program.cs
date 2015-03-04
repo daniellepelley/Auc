@@ -4,7 +4,7 @@ using System.Linq;
 using Auctions.Import.Bonhams;
 using Auctions.Import.Infrastructure;
 using Auctions.Import.Services;
-using Auctions.Model;
+using Auctions.DomainModel;
 using Autofac;
 using Microsoft.AspNet.SignalR;
 using Microsoft.Owin.Hosting;

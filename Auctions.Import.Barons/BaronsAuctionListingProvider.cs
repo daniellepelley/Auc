@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using Auctions.Model;
+using Auctions.DomainModel;
 
 namespace Auctions.Import.Barons
 {

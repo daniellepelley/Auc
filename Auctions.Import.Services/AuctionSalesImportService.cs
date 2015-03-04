@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Auctions.Import.Infrastructure;
-using Auctions.Model;
+using Auctions.DomainModel;
 
 namespace Auctions.Import.Services
 {

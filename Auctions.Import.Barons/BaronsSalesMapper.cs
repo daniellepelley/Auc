@@ -1,5 +1,5 @@
 ﻿using Auctions.Import.Barons.Model;
-using Auctions.Model;
+using Auctions.DomainModel;
 
 namespace Auctions.Import.Barons
 {

@@ -71,6 +71,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Auctions.Export.Data\Auctions.Export.Data.csproj">
+      <Project>{1671F06F-AADC-4978-A055-CCC3D55D4205}</Project>
+      <Name>Auctions.Export.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Auctions.Export\Auctions.Export.csproj">
       <Project>{1f5945dd-3222-4474-96d5-8115f9c957c7}</Project>
       <Name>Auctions.Export</Name>

@@ -1,4 +1,4 @@
-namespace Auctions.Model
+namespace Auctions.DomainModel
 {
     public interface ISaleMapper<in T>
     {

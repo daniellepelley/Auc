@@ -1,6 +1,6 @@
 using Auctions.Import.Infrastructure;
 using Auctions.Import.Infrastructure.Parsers;
-using Auctions.Model;
+using Auctions.DomainModel;
 using Newtonsoft.Json.Linq;
 
 namespace Auctions.Import.Bonhams

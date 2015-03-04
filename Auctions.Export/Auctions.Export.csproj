@@ -57,65 +57,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AuctionsModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AuctionsModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AuctionsModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AuctionsModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AuctionsModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AuctionsModel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Getter.cs" />
     <Compile Include="IUpdater.cs" />
     <Compile Include="SalesExporter.cs" />
     <Compile Include="ISalesExporter.cs" />
-    <Compile Include="Make.cs">
-      <DependentUpon>AuctionsModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model.cs">
-      <DependentUpon>AuctionsModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sale.cs">
-      <DependentUpon>AuctionsModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="BulkUpdater.cs" />
     <Compile Include="Updater.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="AuctionsModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>AuctionsModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.Config" />
-    <None Include="AuctionsModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AuctionsModel.edmx</DependentUpon>
-      <LastGenOutput>AuctionsModel.Context.cs</LastGenOutput>
-    </None>
-    <None Include="AuctionsModel.edmx.diagram">
-      <DependentUpon>AuctionsModel.edmx</DependentUpon>
-    </None>
-    <None Include="AuctionsModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AuctionsModel.edmx</DependentUpon>
-      <LastGenOutput>AuctionsModel.cs</LastGenOutput>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Auctions.Export.Data\Auctions.Export.Data.csproj">
+      <Project>{1671f06f-aadc-4978-a055-ccc3d55d4205}</Project>
+      <Name>Auctions.Export.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Auctions.Model\Auctions.Model.csproj">
       <Project>{15b14f44-e827-469b-a86a-876843bdb747}</Project>
       <Name>Auctions.Model</Name>

@@ -1,5 +1,5 @@
 ﻿using Auctions.Import.HAndH.Model;
-using Auctions.Model;
+using Auctions.DomainModel;
 
 namespace Auctions.Import.HAndH
 {

@@ -1,11 +1,10 @@
 using System;
 using System.Linq;
-using Auctions.Import.Coys;
 using Auctions.Import.HAndH;
 using Auctions.Import.HAndH.Model;
 using Auctions.Import.Infrastructure;
 using Auctions.Import.Services;
-using Auctions.Model;
+using Auctions.DomainModel;
 using NUnit.Framework;
 
 namespace Auctions.Import.Integration.Test

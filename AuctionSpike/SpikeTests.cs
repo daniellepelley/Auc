@@ -1,7 +1,8 @@
 ﻿using Auctions.Export;
+using Auctions.Export.Data;
 using Auctions.Import.Barons;
 using Auctions.Import.Barons.Model;
-using Auctions.Model;
+using Auctions.DomainModel;
 using NUnit.Framework;
 
 namespace AuctionSpike
@@ -27,8 +28,6 @@ namespace AuctionSpike
             var exporter = new SalesExporter(auctionEntities, new Updater<Sale>(auctionEntities));
 
             exporter.Export(sales);
-
-
         }
     }
 

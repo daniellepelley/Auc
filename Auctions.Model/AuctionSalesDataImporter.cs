@@ -2,7 +2,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Auctions.Import.Infrastructure;
 
-namespace Auctions.Model
+namespace Auctions.DomainModel
 {
     public class AuctionSalesDataImporter<T> : IWebDataImporter<AuctionSale>
     {

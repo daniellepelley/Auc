@@ -89,6 +89,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auctions.Import.ConsoleApp"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auctions.Import.Integration.Test", "Auctions.Import.Integration.Test\Auctions.Import.Integration.Test.csproj", "{7E4C5E5C-AB5E-4D40-B781-336FEE311457}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auctions.Export.Data", "Auctions.Export.Data\Auctions.Export.Data.csproj", "{1671F06F-AADC-4978-A055-CCC3D55D4205}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -179,6 +181,10 @@ Global
 		{7E4C5E5C-AB5E-4D40-B781-336FEE311457}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E4C5E5C-AB5E-4D40-B781-336FEE311457}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E4C5E5C-AB5E-4D40-B781-336FEE311457}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1671F06F-AADC-4978-A055-CCC3D55D4205}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1671F06F-AADC-4978-A055-CCC3D55D4205}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1671F06F-AADC-4978-A055-CCC3D55D4205}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1671F06F-AADC-4978-A055-CCC3D55D4205}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -211,5 +217,6 @@ Global
 		{E0209701-4AA1-46CE-B390-55563458DD6E} = {AFC9218B-9A2D-4F81-A812-2753F6263C5A}
 		{C0130D4A-E09E-4641-92F3-1BC46A9CE0A6} = {AFC9218B-9A2D-4F81-A812-2753F6263C5A}
 		{7E4C5E5C-AB5E-4D40-B781-336FEE311457} = {AFC9218B-9A2D-4F81-A812-2753F6263C5A}
+		{1671F06F-AADC-4978-A055-CCC3D55D4205} = {6CA6B7D9-11CD-4B24-B308-80BB22776A88}
 	EndGlobalSection
 EndGlobal

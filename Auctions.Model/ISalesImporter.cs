@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace Auctions.Model
+namespace Auctions.DomainModel
 {
     public interface ISalesImporter
     {

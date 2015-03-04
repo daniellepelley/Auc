@@ -1,6 +1,6 @@
 using System.IO;
 using System.Linq;
-using Auctions.Model;
+using Auctions.DomainModel;
 using NUnit.Framework;
 
 namespace Auctions.Import.Bonhams.Test

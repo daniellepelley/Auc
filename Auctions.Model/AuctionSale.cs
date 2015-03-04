@@ -1,4 +1,4 @@
-namespace Auctions.Model
+namespace Auctions.DomainModel
 {
     public class AuctionSale
     {

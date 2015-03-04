@@ -2,7 +2,7 @@ using System;
 using Auctions.Import.Infrastructure;
 using Auctions.Import.Services;
 using Auctions.Import.Silverstone.Model;
-using Auctions.Model;
+using Auctions.DomainModel;
 using Autofac;
 
 namespace Auctions.Import.Silverstone
@@ -12,11 +12,9 @@ namespace Auctions.Import.Silverstone
         public IDataProvider<AuctionSale> Create(Func<AuctionListing, bool> filter, IMonitor monitor)
         {
             var builder = CreateContainerBuilder();
-            
             builder.RegisterInstance(monitor).As<IMonitor>();
             builder.RegisterInstance(filter).As<Func<AuctionListing, bool>>();
             var container = builder.Build();
-
             return container.Resolve<IDataProvider<AuctionSale>>();
         }
 

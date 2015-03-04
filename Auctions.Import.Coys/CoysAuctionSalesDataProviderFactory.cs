@@ -2,7 +2,7 @@ using System;
 using Auctions.Import.Coys.Model;
 using Auctions.Import.Infrastructure;
 using Auctions.Import.Services;
-using Auctions.Model;
+using Auctions.DomainModel;
 using Autofac;
 
 namespace Auctions.Import.Coys

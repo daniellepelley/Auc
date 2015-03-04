@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using Auctions.Import.HAndH.Model;
 using Auctions.Import.Infrastructure;
-using Auctions.Model;
+using Auctions.DomainModel;
 using Moq;
 using NUnit.Framework;
 

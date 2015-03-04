@@ -2,7 +2,7 @@ using System.IO;
 using System.Linq;
 using Auctions.Import.Infrastructure;
 using Auctions.Import.Silverstone.Model;
-using Auctions.Model;
+using Auctions.DomainModel;
 using Moq;
 using NUnit.Framework;
 

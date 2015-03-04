@@ -1,6 +1,7 @@
 using System.Linq;
+using Auctions.Export.Data;
 using Auctions.Export.Tests.Builders;
-using Auctions.Model;
+using Auctions.DomainModel;
 using NUnit.Framework;
 
 namespace Auctions.Export.Tests

@@ -1,4 +1,4 @@
-﻿using Auctions.Model;
+﻿using Auctions.DomainModel;
 
 namespace Auctions.Export
 {

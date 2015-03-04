@@ -1,6 +1,6 @@
 ﻿using System;
 using Auctions.Import.Bonhams.Model;
-using Auctions.Model;
+using Auctions.DomainModel;
 
 namespace Auctions.Import.Bonhams
 {

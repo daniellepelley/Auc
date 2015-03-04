@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Auctions.Import.Infrastructure;
 
-namespace Auctions.Model
+namespace Auctions.DomainModel
 {
     public class AuctionImporter : IWebDataImporter<AuctionSale>
     {

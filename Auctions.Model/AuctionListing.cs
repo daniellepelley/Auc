@@ -1,6 +1,6 @@
 using System;
 
-namespace Auctions.Model
+namespace Auctions.DomainModel
 {
     public class AuctionListing
     {
