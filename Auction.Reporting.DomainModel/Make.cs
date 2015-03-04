@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Auctions.Export.Data
+namespace Auctions.Data.Ef
 {
     public class Make
     {

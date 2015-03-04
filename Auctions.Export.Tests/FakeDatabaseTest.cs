@@ -1,5 +1,5 @@
 ﻿using System.Linq;
-using Auctions.Export.Data;
+using Auctions.Data.Ef;
 using Effort;
 using NUnit.Framework;
 

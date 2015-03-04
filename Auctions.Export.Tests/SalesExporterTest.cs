@@ -1,5 +1,5 @@
 using System.Linq;
-using Auctions.Export.Data;
+using Auctions.Data.Ef;
 using Auctions.Export.Tests.Builders;
 using Auctions.DomainModel;
 using NUnit.Framework;

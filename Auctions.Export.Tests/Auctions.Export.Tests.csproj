@@ -71,17 +71,21 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Auctions.Export.Data\Auctions.Export.Data.csproj">
+    <ProjectReference Include="..\Auction.Reporting.DomainModel\Auction.Reporting.DomainModel.csproj">
+      <Project>{1BF9D6D6-98A6-467A-9973-A22BE2137DB5}</Project>
+      <Name>Auction.Reporting.DomainModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Auctions.Data.Ef\Auctions.Data.Ef.csproj">
       <Project>{1671F06F-AADC-4978-A055-CCC3D55D4205}</Project>
-      <Name>Auctions.Export.Data</Name>
+      <Name>Auctions.Data.Ef</Name>
     </ProjectReference>
     <ProjectReference Include="..\Auctions.Export\Auctions.Export.csproj">
       <Project>{1f5945dd-3222-4474-96d5-8115f9c957c7}</Project>
       <Name>Auctions.Export</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Auctions.Model\Auctions.Model.csproj">
+    <ProjectReference Include="..\Auctions.Model\Auctions.DomainModel.csproj">
       <Project>{15B14F44-E827-469B-A86A-876843BDB747}</Project>
-      <Name>Auctions.Model</Name>
+      <Name>Auctions.DomainModel</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

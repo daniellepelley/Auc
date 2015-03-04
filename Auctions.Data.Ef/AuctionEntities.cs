@@ -1,7 +1,7 @@
 ﻿using System.Data.Common;
 using System.Data.Entity;
 
-namespace Auctions.Export.Data
+namespace Auctions.Data.Ef
 {
     public partial class AuctionEntities : DbContext
     {

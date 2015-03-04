@@ -72,9 +72,9 @@
       <Project>{82eb7f9c-5cf0-4b1e-9dd4-91766d19da86}</Project>
       <Name>Auctions.Import.Infrastructure</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Auctions.Model\Auctions.Model.csproj">
+    <ProjectReference Include="..\Auctions.Model\Auctions.DomainModel.csproj">
       <Project>{15b14f44-e827-469b-a86a-876843bdb747}</Project>
-      <Name>Auctions.Model</Name>
+      <Name>Auctions.DomainModel</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

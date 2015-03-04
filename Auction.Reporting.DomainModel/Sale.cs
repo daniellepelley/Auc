@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Auctions.Export.Data
+namespace Auctions.Data.Ef
 {
     public class Sale
     {

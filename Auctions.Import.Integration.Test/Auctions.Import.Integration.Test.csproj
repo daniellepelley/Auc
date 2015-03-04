@@ -84,9 +84,9 @@
       <Project>{A453ED82-0130-4B9A-AF41-8687025ECA2E}</Project>
       <Name>Auctions.Import.Silverstone</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Auctions.Model\Auctions.Model.csproj">
+    <ProjectReference Include="..\Auctions.Model\Auctions.DomainModel.csproj">
       <Project>{15B14F44-E827-469B-A86A-876843BDB747}</Project>
-      <Name>Auctions.Model</Name>
+      <Name>Auctions.DomainModel</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

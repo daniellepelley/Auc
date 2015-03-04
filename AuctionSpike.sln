@@ -30,7 +30,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auctions.Export", "Auctions.Export\Auctions.Export.csproj", "{1F5945DD-3222-4474-96D5-8115F9C957C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auctions.Model", "Auctions.Model\Auctions.Model.csproj", "{15B14F44-E827-469B-A86A-876843BDB747}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auctions.DomainModel", "Auctions.Model\Auctions.DomainModel.csproj", "{15B14F44-E827-469B-A86A-876843BDB747}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auctions.Export.Tests", "Auctions.Export.Tests\Auctions.Export.Tests.csproj", "{2301E496-6BDC-4CC6-85D8-BE14024FD6FB}"
 EndProject
@@ -89,7 +89,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auctions.Import.ConsoleApp"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auctions.Import.Integration.Test", "Auctions.Import.Integration.Test\Auctions.Import.Integration.Test.csproj", "{7E4C5E5C-AB5E-4D40-B781-336FEE311457}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auctions.Export.Data", "Auctions.Export.Data\Auctions.Export.Data.csproj", "{1671F06F-AADC-4978-A055-CCC3D55D4205}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{CE9920E7-0575-4AB7-84B5-CB45C531F7AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auctions.Data.Ef", "Auctions.Data.Ef\Auctions.Data.Ef.csproj", "{1671F06F-AADC-4978-A055-CCC3D55D4205}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auction.Reporting.DomainModel", "Auction.Reporting.DomainModel\Auction.Reporting.DomainModel.csproj", "{1BF9D6D6-98A6-467A-9973-A22BE2137DB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -185,6 +189,10 @@ Global
 		{1671F06F-AADC-4978-A055-CCC3D55D4205}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1671F06F-AADC-4978-A055-CCC3D55D4205}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1671F06F-AADC-4978-A055-CCC3D55D4205}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BF9D6D6-98A6-467A-9973-A22BE2137DB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BF9D6D6-98A6-467A-9973-A22BE2137DB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BF9D6D6-98A6-467A-9973-A22BE2137DB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BF9D6D6-98A6-467A-9973-A22BE2137DB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -217,6 +225,7 @@ Global
 		{E0209701-4AA1-46CE-B390-55563458DD6E} = {AFC9218B-9A2D-4F81-A812-2753F6263C5A}
 		{C0130D4A-E09E-4641-92F3-1BC46A9CE0A6} = {AFC9218B-9A2D-4F81-A812-2753F6263C5A}
 		{7E4C5E5C-AB5E-4D40-B781-336FEE311457} = {AFC9218B-9A2D-4F81-A812-2753F6263C5A}
-		{1671F06F-AADC-4978-A055-CCC3D55D4205} = {6CA6B7D9-11CD-4B24-B308-80BB22776A88}
+		{1671F06F-AADC-4978-A055-CCC3D55D4205} = {CE9920E7-0575-4AB7-84B5-CB45C531F7AC}
+		{1BF9D6D6-98A6-467A-9973-A22BE2137DB5} = {CE9920E7-0575-4AB7-84B5-CB45C531F7AC}
 	EndGlobalSection
 EndGlobal

@@ -98,9 +98,9 @@
       <Project>{73AF7759-8A77-4B18-9DD3-8B6B1425C3D5}</Project>
       <Name>Auctions.Import.Services</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Auctions.Model\Auctions.Model.csproj">
+    <ProjectReference Include="..\Auctions.Model\Auctions.DomainModel.csproj">
       <Project>{15B14F44-E827-469B-A86A-876843BDB747}</Project>
-      <Name>Auctions.Model</Name>
+      <Name>Auctions.DomainModel</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

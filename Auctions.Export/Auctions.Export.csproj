@@ -73,13 +73,17 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Auctions.Export.Data\Auctions.Export.Data.csproj">
-      <Project>{1671f06f-aadc-4978-a055-ccc3d55d4205}</Project>
-      <Name>Auctions.Export.Data</Name>
+    <ProjectReference Include="..\Auction.Reporting.DomainModel\Auction.Reporting.DomainModel.csproj">
+      <Project>{1BF9D6D6-98A6-467A-9973-A22BE2137DB5}</Project>
+      <Name>Auction.Reporting.DomainModel</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Auctions.Model\Auctions.Model.csproj">
+    <ProjectReference Include="..\Auctions.Data.Ef\Auctions.Data.Ef.csproj">
+      <Project>{1671F06F-AADC-4978-A055-CCC3D55D4205}</Project>
+      <Name>Auctions.Data.Ef</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Auctions.Model\Auctions.DomainModel.csproj">
       <Project>{15b14f44-e827-469b-a86a-876843bdb747}</Project>
-      <Name>Auctions.Model</Name>
+      <Name>Auctions.DomainModel</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
