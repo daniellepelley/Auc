@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using Auctions.Import.Infrastructure;
 using Auctions.Import.Services;
 using Auctions.Import.Silverstone;
 using Auctions.Import.Silverstone.Model;
@@ -26,6 +27,14 @@ namespace Auctions.Import.Integration.Test
             var results = service.Import().Result;
 
             Assert.AreEqual(1000, results.Count());
+        }
+
+        [Test]
+        public void HAndHAuctionSalesDataProviderFactoryBuildsCorrectly()
+        {
+            var factory = new SilverstoneAuctionSalesDataProviderFactory();
+
+            factory.Create(x => true, new Monitor(x => { }));
         }
     }
 }

@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoysAuctionSalesDataProviderFactory.cs" />
     <Compile Include="CoysAuctionUrlProvider.cs" />
     <Compile Include="ConfigSettings.cs" />
     <Compile Include="CoysAuctionsWebDataImporter.cs" />
@@ -60,6 +61,10 @@
     <ProjectReference Include="..\Auctions.Import.Infrastructure\Auctions.Import.Infrastructure.csproj">
       <Project>{82eb7f9c-5cf0-4b1e-9dd4-91766d19da86}</Project>
       <Name>Auctions.Import.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Auctions.Import.Services\Auctions.Import.Services.csproj">
+      <Project>{73AF7759-8A77-4B18-9DD3-8B6B1425C3D5}</Project>
+      <Name>Auctions.Import.Services</Name>
     </ProjectReference>
     <ProjectReference Include="..\Auctions.Model\Auctions.Model.csproj">
       <Project>{15b14f44-e827-469b-a86a-876843bdb747}</Project>

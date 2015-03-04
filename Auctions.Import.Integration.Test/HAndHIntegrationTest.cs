@@ -1,7 +1,9 @@
 using System;
 using System.Linq;
+using Auctions.Import.Coys;
 using Auctions.Import.HAndH;
 using Auctions.Import.HAndH.Model;
+using Auctions.Import.Infrastructure;
 using Auctions.Import.Services;
 using Auctions.Model;
 using NUnit.Framework;
@@ -28,6 +30,14 @@ namespace Auctions.Import.Integration.Test
             AuctionSale[] results = service.Import().Result;
 
             Assert.AreEqual(1000, results.Count());
+        }
+
+        [Test]
+        public void HAndHAuctionSalesDataProviderFactoryBuildsCorrectly()
+        {
+            var factory = new HAndHAuctionSalesDataProviderFactory();
+
+            factory.Create(x => true, new Monitor(x => { }));
         }
     }
 }

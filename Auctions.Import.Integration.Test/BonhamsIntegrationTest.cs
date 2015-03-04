@@ -30,5 +30,13 @@ namespace Auctions.Import.Integration.Test
             var results = service.Import().Result;
             Assert.IsTrue(results.Any());
         }
+
+        [Test]
+        public void BonhamsAuctionSalesDataProviderFactoryBuildsCorrectly()
+        {
+            var factory = new BonhamsAuctionSalesDataProviderFactory();
+
+            factory.Create(x => true, new Monitor(x => { }));
+        }
     }
 }

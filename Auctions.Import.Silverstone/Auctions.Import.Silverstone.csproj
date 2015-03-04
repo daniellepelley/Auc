@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConfigSettings.cs" />
+    <Compile Include="SilverstoneAuctionSalesDataProviderFactory.cs" />
     <Compile Include="SilverstoneAuctionImporter.cs" />
     <Compile Include="SilverstonesAuctionUrlProvider.cs" />
     <Compile Include="SilverstoneAuctionsWebDataImporter.cs" />
@@ -61,6 +62,10 @@
     <ProjectReference Include="..\Auctions.Import.Infrastructure\Auctions.Import.Infrastructure.csproj">
       <Project>{82EB7F9C-5CF0-4B1E-9DD4-91766D19DA86}</Project>
       <Name>Auctions.Import.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Auctions.Import.Services\Auctions.Import.Services.csproj">
+      <Project>{73AF7759-8A77-4B18-9DD3-8B6B1425C3D5}</Project>
+      <Name>Auctions.Import.Services</Name>
     </ProjectReference>
     <ProjectReference Include="..\Auctions.Model\Auctions.Model.csproj">
       <Project>{15B14F44-E827-469B-A86A-876843BDB747}</Project>
