@@ -1,4 +1,5 @@
 using System.Linq;
+using Auction.Reporting.DomainModel;
 using Auctions.Data.Ef;
 using Effort;
 
@@ -31,10 +32,21 @@ namespace Auctions.Export.Tests.Builders
                 Make = _auctionEntities.Makes.FirstOrDefault(x => x.Name == "Austin")
             });
 
+            _auctionEntities.AuctionHouses.Add(new AuctionHouse
+            {
+                Name = "Coys"
+            });
+
+            _auctionEntities.Auctions.Add(new Auction.Reporting.DomainModel.Auction()
+            {
+                Name = "Great Cars",
+            });
+
             _auctionEntities.Sales.Add(new Sale
             {
                 Price = 1000,
-                Model = _auctionEntities.Models.FirstOrDefault(x => x.Name == "7")
+                Model = _auctionEntities.Models.FirstOrDefault(x => x.Name == "7"),
+                Auction = _auctionEntities.Auctions.FirstOrDefault(x => x.Name == "Great Cars")
             });
 
             _auctionEntities.SaveChanges();

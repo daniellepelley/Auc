@@ -1,4 +1,5 @@
 using System.Linq;
+using Auction.Reporting.DomainModel;
 using Auctions.Data.Ef;
 using Auctions.Export.Tests.Builders;
 using Auctions.DomainModel;
@@ -25,13 +26,18 @@ namespace Auctions.Export.Tests
                     Model = "7",
                     Price = 120,
                     Sold = true,
-                    Year = 1937
+                    Year = 1937,
+                    AuctionListing = new AuctionListing
+                    {
+                        Name = "Best Auction"
+                    }
                 }
             });
 
             Assert.AreEqual(120, entities.Sales.First().Price);
             Assert.AreEqual("7", entities.Models.First().Name);
             Assert.AreEqual("Austin", entities.Makes.First().Name);
+            Assert.AreEqual("Best Auction", entities.Auctions.First().Name);
         }
 
         [Test]
@@ -51,7 +57,11 @@ namespace Auctions.Export.Tests
                     Model = "7",
                     Price = 120,
                     Sold = true,
-                    Year = 1937
+                    Year = 1937,
+                    AuctionListing = new AuctionListing
+                    {
+                        Name = "Best Auction"
+                    }
                 },
                 new AuctionSale
                 {
@@ -59,13 +69,18 @@ namespace Auctions.Export.Tests
                     Model = "7",
                     Price = 120,
                     Sold = true,
-                    Year = 1937
+                    Year = 1937,
+                    AuctionListing = new AuctionListing
+                    {
+                        Name = "Best Auction"
+                    }
                 }
             });
 
             Assert.AreEqual(1, entities.Models.Count());
             Assert.AreEqual(1, entities.Makes.Count());
             Assert.AreEqual(1, entities.Sales.Count());
+            Assert.AreEqual("Best Auction", entities.Auctions.First().Name);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using Auction.Reporting.DomainModel;
 using Auctions.Data.Ef;
 using Effort;
 using NUnit.Framework;

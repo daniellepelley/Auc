@@ -1,4 +1,5 @@
-﻿using Auctions.Data.Ef;
+﻿using Auction.Reporting.DomainModel;
+using Auctions.Data.Ef;
 using Auctions.Export;
 using Auctions.Import.Barons;
 using Auctions.Import.Barons.Model;
