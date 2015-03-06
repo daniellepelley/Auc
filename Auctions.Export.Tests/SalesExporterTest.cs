@@ -9,78 +9,79 @@ namespace Auctions.Export.Tests
 {
     public class SalesExporterTest
     {
+        private SalesExporter _sut;
+        private AuctionEntities _auctionEntities;
+
+        [SetUp]
+        public void SetUp()
+        {
+            _auctionEntities = new FakeAuctionEntitiesBuilder().Build();
+            var updater = new Updater<Sale>(_auctionEntities);
+            _sut = new SalesExporter(_auctionEntities, updater);
+        }
+
         [Test]
         public void ExportingASingleSale()
         {
-            var entities = new FakeAuctionEntitiesBuilder().Build();
-
-            var updater = new Updater<Sale>(entities);
-
-            var sut = new SalesExporter(entities, updater);
-
-            sut.Export(new[]
+            _sut.Export(new[]
             {
-                new AuctionSale
-                {
-                    Make = "Austin",
-                    Model = "7",
-                    Price = 120,
-                    Sold = true,
-                    Year = 1937,
-                    AuctionListing = new AuctionListing
-                    {
-                        Name = "Best Auction"
-                    }
-                }
+                CreateAuctionSale()
             });
 
-            Assert.AreEqual(120, entities.Sales.First().Price);
-            Assert.AreEqual("7", entities.Models.First().Name);
-            Assert.AreEqual("Austin", entities.Makes.First().Name);
-            Assert.AreEqual("Best Auction", entities.Auctions.First().Name);
+            Assert.AreEqual(120, _auctionEntities.Sales.First().Price);
+            Assert.AreEqual("7", _auctionEntities.Models.First().Name);
+            Assert.AreEqual("Austin", _auctionEntities.Makes.First().Name);
+            Assert.AreEqual("Best Auction", _auctionEntities.Auctions.First().Name);
         }
 
         [Test]
         public void When2IdenticalSalesAreUpdatedOnlyOneRecordIsCreated()
         {
-            var entities = new FakeAuctionEntitiesBuilder().Build();
-
-            var updater = new Updater<Sale>(entities);
-
-            var sut = new SalesExporter(entities, updater);
-
-            sut.Export(new[]
+            _sut.Export(new[]
             {
-                new AuctionSale
-                {
-                    Make = "Austin",
-                    Model = "7",
-                    Price = 120,
-                    Sold = true,
-                    Year = 1937,
-                    AuctionListing = new AuctionListing
-                    {
-                        Name = "Best Auction"
-                    }
-                },
-                new AuctionSale
-                {
-                    Make = "Austin",
-                    Model = "7",
-                    Price = 120,
-                    Sold = true,
-                    Year = 1937,
-                    AuctionListing = new AuctionListing
-                    {
-                        Name = "Best Auction"
-                    }
-                }
+                CreateAuctionSale(),
+                CreateAuctionSale()
             });
 
-            Assert.AreEqual(1, entities.Models.Count());
-            Assert.AreEqual(1, entities.Makes.Count());
-            Assert.AreEqual(1, entities.Sales.Count());
-            Assert.AreEqual("Best Auction", entities.Auctions.First().Name);
+            Assert.AreEqual(1, _auctionEntities.Models.Count());
+            Assert.AreEqual(1, _auctionEntities.Makes.Count());
+            Assert.AreEqual(1, _auctionEntities.Sales.Count());
+            Assert.AreEqual("Best Auction", _auctionEntities.Auctions.First().Name);
+        }
+
+        [Test]
+        public void WhenASaleIsIdenticalToAPreviousSaleNoNewRecordIsCreated()
+        {
+            _sut.Export(new[]
+            {
+                CreateAuctionSale()
+            });
+
+            _sut.Export(new[]
+            {
+                CreateAuctionSale()
+            });
+
+            Assert.AreEqual(1, _auctionEntities.Models.Count());
+            Assert.AreEqual(1, _auctionEntities.Makes.Count());
+            Assert.AreEqual(1, _auctionEntities.Sales.Count());
+            Assert.AreEqual("Best Auction", _auctionEntities.Auctions.First().Name);
+        }
+
+        private static AuctionSale CreateAuctionSale()
+        {
+            return new AuctionSale
+            {
+                Make = "Austin",
+                Model = "7",
+                Price = 120,
+                Sold = true,
+                Year = 1937,
+                AuctionListing = new AuctionListing
+                {
+                    Name = "Best Auction"
+                }
+            };
         }
     }
 }
